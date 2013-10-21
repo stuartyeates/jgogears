@@ -11,6 +11,11 @@ import java.util.*;
 
 public class Zobrist extends BitSet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5031699980490524586L;
+
 	/** The Constant MAX_BOARD_SIZE. */
 	public static final short MAX_BOARD_SIZE = 25;
 
