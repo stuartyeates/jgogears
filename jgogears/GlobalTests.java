@@ -1,6 +1,5 @@
 package jgogears;
 
-import jgogears.engine.*;
 import junit.framework.*;
 
 // TODO: Auto-generated Javadoc

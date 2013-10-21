@@ -121,7 +121,7 @@ public class GnuGoEngineTest2 extends TestCase {
 			this.engine.setBoardSize((short) 19);
 			this.engine.clearBoard();
 			Move move = this.engine.genMove(BoardI.VERTEX_BLACK);
-			if (this.DEBUG)
+			if (DEBUG)
 				System.err.println(move);
 			this.engine.quit();
 		} catch (Throwable t) {
@@ -141,7 +141,7 @@ public class GnuGoEngineTest2 extends TestCase {
 		try {
 			this.engine.initialise();
 			String s = this.engine.getEngineName();
-			if (this.DEBUG)
+			if (DEBUG)
 				System.err.println(s);
 			this.engine.quit();
 		} catch (Throwable t) {

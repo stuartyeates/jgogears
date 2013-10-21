@@ -658,7 +658,8 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	public boolean undo() {
 		try {
 			this.write(GTPConstants.UNDO + "\n\n");
-			String s = this.read();
+			//TODO do I need to do anything with what I read?
+			this.read();
 			return true;
 		} catch (GTPError e) {
 			if (e.getMessage().contains(GTPConstants.CANNOTUNDO)) {
