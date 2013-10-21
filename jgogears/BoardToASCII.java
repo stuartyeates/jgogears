@@ -70,8 +70,8 @@ public final class BoardToASCII {
 	 */
 	static String Transform(BoardI board) {
 		StringBuffer buf = new StringBuffer();
-		int size = board.getSize();
-		String head = headerRow(board.getSize());
+		short size = board.getSize();
+		String head = headerRow(size);
 		buf.append(head);
 		buf.append("\n");
 		for (short i = 0; i < size; i++) {

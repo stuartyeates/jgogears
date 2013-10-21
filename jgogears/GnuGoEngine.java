@@ -208,9 +208,19 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	 */
 	public GTPScore getFinalScore() {
 		this.write(GTPConstants.FINALSCORE + "\n\n");
-		String result = this.read();
-		result = GTPParserUtils.stripIntro(result);
-		return new GTPScore(result);
+		GTPScore score = null;
+		String result = null;
+		String result2 = null;
+		try {
+			result = this.read();	
+			result2 = GTPParserUtils.stripIntro(result);
+			score = new GTPScore(result2);
+		} catch (Throwable t) {
+			throw new Error ("GnuGoEngine::getFinalScore() couldn't convert \"" + result +
+						"\" / \"" + result2 +
+						"\" into a GTPScore");
+		}
+		return score;
 	}
 
 	/*

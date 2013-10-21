@@ -14,20 +14,33 @@ import junit.framework.TestCase;
 public class TwoGTPTest extends TestCase {
 
 	/**
-	 * Test raw.
+	 * 
 	 * 
 	 * @throws Exception
 	 *             the exception
 	 */
-	public void testRaw() throws Exception {
+	public void raw(short i) throws Exception {
 		TwoGTPRaw two = new TwoGTPRaw();
 		assertNotNull(two);
-		two.setBlack(new GnuGoEngine(9));
-		two.setWhite(new GnuGoEngine(9));
+		two.setBlack(new GnuGoEngine(i));
+		two.setWhite(new GnuGoEngine(i));
 		two.playOutGame();
 		GTPScore scoreb = two.getBlack().getFinalScore();
 		GTPScore scorew = two.getWhite().getFinalScore();
 		assertTrue(scoreb + " " + scorew, scoreb.equals(scorew));
 	}
+
+	/**
+	 * 
+	 * 
+	 * @throws Exception
+	 *             the exception
+	 */
+	public void testRaw() throws Exception {
+		for (short x=0; x< 100;x++)
+			for (short i=7; 14 >= i;i++)
+				raw(i);
+	}
+
 
 }

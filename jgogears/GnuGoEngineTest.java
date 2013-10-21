@@ -16,8 +16,8 @@ public class GnuGoEngineTest extends TestCase {
 	 * Test a.
 	 */
 	public void testA() {
-		if (true)
-			return;
+//		if (true)
+//			return;
 		try {
 			GnuGoEngine engine = new GnuGoEngine();
 			engine.initialise();
