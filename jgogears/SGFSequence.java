@@ -7,6 +7,11 @@ import java.util.*;
  */
 public class SGFSequence extends Vector<SGFNode> {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5676939490740223788L;
+
 	/*
 	 * (non-Javadoc)
 	 * 
