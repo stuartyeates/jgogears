@@ -88,11 +88,11 @@ public class Zobrist extends BitSet {
 	 * @return 0 if equal, otherwise 1/-1
 	 */
 	public int compareTo(Object o) {
+		if (o == null)
+			throw new Error();
 		if (o.getClass() != this.getClass())
 			return this.hashCode() > o.hashCode() ? 1 : -1;
 		Zobrist other = (Zobrist) o;
-		if (other == null)
-			throw new Error();
 		for (int i = 0; i < this.size(); i++)
 			if (this.get(i) != other.get(i))
 				return this.get(i) == true ? 1 : -1;
