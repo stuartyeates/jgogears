@@ -13,7 +13,7 @@ import junit.framework.TestCase;
 public class ModelTest extends TestCase {
 
 	/** are we being verbose debugging. */
-	public static final boolean DEBUG = false;
+	public static final boolean DEBUG = true;
 
 	/** The model. */
 	static Model model = null;
