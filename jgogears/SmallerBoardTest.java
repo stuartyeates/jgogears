@@ -67,7 +67,7 @@ public class SmallerBoardTest extends TestCase {
 											+ BoardI.VERTEX_EMPTY,
 									board.getColour(l, m) == BoardI.VERTEX_EMPTY);
 							assertTrue(board.getColour(l, m) == BoardI.VERTEX_EMPTY);
-							assertTrue(BoardI.VERTEX_EMPTY == BoardI.VERTEX_EMPTY);
+//							assertTrue(BoardI.VERTEX_EMPTY == BoardI.VERTEX_EMPTY);
 							assertTrue(board.getColour(l, m) == board
 									.getColour(l, m));
 							assertTrue(board.getColour(l, m) == BoardI.VERTEX_EMPTY);
