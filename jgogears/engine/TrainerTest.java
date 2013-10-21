@@ -20,7 +20,7 @@ public class TrainerTest extends TestCase {
 		Iterator<String> iterator = plain.iterator();
 		assertNotNull(iterator);
 		int count = 0;
-		TreeSet<String> tree = new TreeSet();
+		TreeSet<String> tree = new TreeSet<String>();
 
 		while (iterator.hasNext()) {
 			String s = iterator.next();
@@ -29,6 +29,7 @@ public class TrainerTest extends TestCase {
 			assertFalse(tree.contains(s));
 			tree.add(s);
 		}
+		assertTrue(plain.size() == count);
 	}
 
 	public void testLoadAllSGFfilesGeneric() throws IOException {

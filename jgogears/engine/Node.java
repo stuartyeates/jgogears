@@ -5,8 +5,6 @@ package jgogears.engine;
 
 import java.util.Iterator;
 
-import jgogears.BoardI;
-
 /**
  * Class to hold a single node in the tree.
  * 
