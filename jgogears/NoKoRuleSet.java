@@ -62,9 +62,10 @@ public class NoKoRuleSet extends RuleSet {
 	 *            the column
 	 * @return the tree set< vertex>
 	 */
+	@SuppressWarnings("unused")
 	public TreeSet<Vertex> captureshelper(BoardI board, Move move, int row,
 			int column) {
-		if (DEBUG && EMPTY.size() != 0)
+		if (DEBUG && (EMPTY.size() != 0))
 			throw new Error("EMPTY not empty");
 		short colour = move.getColour();
 		short acolour = board.getColour(row, column);
