@@ -5,16 +5,16 @@ import java.util.List;
 
 public interface Game {
 
-	public Properties getProperties();
+	public List<Board> getBoards();
 
 	public List<Move> getMoves();
 
-	public List<Board> getBoards();
+	public Properties getProperties();
+
+	public boolean GetRuleset();
 
 	public boolean isFinished();
 
 	public boolean isScored();
-
-	public boolean GetRuleset();
 
 }
