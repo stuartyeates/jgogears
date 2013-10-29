@@ -25,6 +25,7 @@ Board Support
 
 General
 =======
+* Decent docs
 * Decent ASCII board output
 * Parse GnuGo board output
   * direct
