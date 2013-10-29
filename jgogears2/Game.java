@@ -13,7 +13,6 @@ public interface Game {
 	/**
 	 * Get a list of boards associated with the game. If the game has not yet had any moves, there will be no items on the list.
 	 * 
-	 *
 	 */
 
 	public List<Board> getBoards();
