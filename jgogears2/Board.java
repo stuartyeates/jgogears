@@ -43,7 +43,7 @@ public interface Board {
 		public boolean blackToPlay();
 		/**
 		 * What game is this board a part of?
-		 * @return
+		 * @return 
 		 */
 		public Game getGame();
 }
