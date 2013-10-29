@@ -14,15 +14,27 @@ public class BoardTestKoRecover extends TestCase {
 		assertNotNull(board);
 		board = board.newBoard(new Move("b c5"));
 		assertNotNull(board);
+		
 		board = board.newBoard(new Move("w b5"));
 		assertNotNull(board);
+		board = board.newBoard(new Move("w a6"));
+		assertNotNull(board);
+		board = board.newBoard(new Move("w c6"));
+		assertNotNull(board);
+		board = board.newBoard(new Move("w b7"));
+		assertNotNull(board);
+		
+		//
 		board = board.newBoard(new Move("b b6"));
 		assertNotNull(board);
+		
 		short colour = board.getColour(5, 2);
-		assertTrue(colour == Board.VERTEX_EMPTY);
-		//assertNotNull();
+		assertTrue(Board.VERTEX_KO == colour);
 
 		System.err.println(board);
+
+		//assertNotNull();
+
 
 		
 //		BoardI board2 = board1.newBoard(new Move((short) 1,
