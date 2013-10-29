@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 import jgogears.*;
+import jgogears.sgf.SGFGameTree;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc
@@ -46,7 +47,7 @@ public class ModelTest extends TestCase {
 		try {
 			FileReader reader = new FileReader(
 					"sgf/testing/2007-01-12- BamboField- tokabe.sgf");
-			jgogears.SGF.SGF parser = new jgogears.SGF.SGF(reader);
+			jgogears.sgf.auto.SGF parser = new jgogears.sgf.auto.SGF(reader);
 			SGFGameTree tree = parser.gameTree();
 			Game game = new Game(tree);
 			return game;

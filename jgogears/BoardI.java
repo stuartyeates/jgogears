@@ -87,7 +87,7 @@ public abstract class BoardI {
 	protected Zobrist zobrist = null;
 
 	/** the size of the board. */
-	protected short size = 19;
+	protected short size = Statics.DEFAULT_BOARD_SIZE;
 
 	/** the ruleset. */
 	protected RuleSet ruleSet = new NoKoRuleSet();

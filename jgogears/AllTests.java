@@ -1,5 +1,9 @@
 package jgogears;
 
+import jgogears.sgf.SGFGameTest;
+import jgogears.sgf.SGFNodeTest;
+import jgogears.sgf.SGFParserTest;
+import jgogears.sgf.SGFPropertyTest;
 import junit.framework.*;
 
 /**

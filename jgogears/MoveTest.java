@@ -1,6 +1,6 @@
 package jgogears;
 
-import jgogears.SGF.ParseException;
+import jgogears.sgf.auto.ParseException;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc

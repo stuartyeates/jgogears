@@ -4,6 +4,8 @@ import java.io.StringReader;
 import java.util.Iterator;
 
 import jgogears.*;
+import jgogears.sgf.SGFGameTree;
+import jgogears.sgf.SGFParser;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc
@@ -588,7 +590,7 @@ public class StraightVertexLineariserTest extends TestCase {
 			String example = examples[i];
 
 			StringReader reader = new StringReader(example);
-			jgogears.SGF.SGF parser = new jgogears.SGF.SGF(reader);
+			jgogears.sgf.auto.SGF parser = new jgogears.sgf.auto.SGF(reader);
 			SGFGameTree tree = parser.gameTree();
 
 			assertTrue(parser != null);
