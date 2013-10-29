@@ -227,7 +227,7 @@ public class Trainer {
 			if (DEBUG)
 				System.err.println("Model::train about to train on: " + move);
 			int colour = move.getColour();
-			boolean isBlack = colour == BoardI.VERTEX_BLACK;
+			boolean isBlack = colour == Statics.VERTEX_BLACK;
 			// float str = (float) (isBlack ? strengthB : strengthW);
 
 			if (isBlack == playingBlack) {
@@ -289,7 +289,7 @@ public class Trainer {
 			boolean expandMore = !onlyOneNewNodePerSymmetry;
 
 			switch (colour) {
-			case BoardI.VERTEX_BLACK:
+			case Statics.VERTEX_BLACK:
 				freeRideUsed = true;
 				if (root.getBlack() == null)
 					if (expand) {
@@ -301,7 +301,7 @@ public class Trainer {
 				else
 					root = root.getBlack();
 				break;
-			case BoardI.VERTEX_WHITE:
+			case Statics.VERTEX_WHITE:
 				freeRideUsed = true;
 				if (root.getWhite() == null)
 					if (expand) {
@@ -313,8 +313,8 @@ public class Trainer {
 				else
 					root = root.getWhite();
 				break;
-			case BoardI.VERTEX_KO:
-			case BoardI.VERTEX_EMPTY:
+			case Statics.VERTEX_KO:
+			case Statics.VERTEX_EMPTY:
 				if (root.getEmpty() == null)
 					if (expand || (!freeRideUsed && freeRideForEmpty)) {
 						root.setEmpty(new Node());
@@ -325,7 +325,7 @@ public class Trainer {
 				else
 					root = root.getEmpty();
 				break;
-			case BoardI.VERTEX_OFF_BOARD:
+			case Statics.VERTEX_OFF_BOARD:
 				if (root.getOff() == null)
 					if (expand || (!freeRideUsed && freeRideForEmpty)) {
 						root.setOff(new Node());

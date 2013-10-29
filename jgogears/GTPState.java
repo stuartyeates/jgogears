@@ -11,7 +11,7 @@ import java.util.*;
 public class GTPState {
 
 	/** The boardsize. */
-	protected short boardsize = BoardI.DEFAULT_BOARD_SIZE;
+	protected short boardsize = Statics.DEFAULT_BOARD_SIZE;
 
 	/** The board. */
 	protected BoardI board = null;
@@ -179,10 +179,10 @@ public class GTPState {
 		while (each.hasNext()) {
 			Vertex vert = each.next();
 			switch (this.board.getColour(vert)) {
-			case BoardI.VERTEX_BLACK:
+			case Statics.VERTEX_BLACK:
 				this.whiteCapturedCount++;
 				break;
-			case BoardI.VERTEX_WHITE:
+			case Statics.VERTEX_WHITE:
 				this.blackCapturedCount++;
 				break;
 			default:

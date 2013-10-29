@@ -29,7 +29,7 @@ public class BoardTestKoRecover extends TestCase {
 		assertNotNull(board);
 		
 		short colour = board.getColour(5, 2);
-		assertTrue(Board.VERTEX_KO == colour);
+		assertTrue(Statics.VERTEX_KO == colour);
 
 		System.err.println(board);
 

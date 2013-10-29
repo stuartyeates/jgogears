@@ -44,7 +44,7 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	/** The DEBUG. */
 	public boolean DEBUG = false;
 
-	private short size = BoardI.DEFAULT_BOARD_SIZE;
+	private short size = Statics.DEFAULT_BOARD_SIZE;
 
 	/**
 	 * Instantiates a new gnu go engine.
@@ -153,7 +153,7 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	 * @see jgogears.GTPInterfaceRaw#genMove(short)
 	 */
 	public Move genMove(short colour) {
-		this.write(GTPConstants.GENMOVE + " " + BoardI.colourString(colour)
+		this.write(GTPConstants.GENMOVE + " " + Statics.colourString(colour)
 				+ "\n\n");
 		String s = this.read();
 		// GoMove move = GoMove.createVertex(s.substring(2));
@@ -605,7 +605,7 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	 */
 	public boolean setTimeLeft(short colour, double byoYomiTime,
 			double byoYomiStones) {
-		this.write(GTPConstants.TIMELEFT + " " + BoardI.colourString(colour)
+		this.write(GTPConstants.TIMELEFT + " " + Statics.colourString(colour)
 				+ " " + (int) byoYomiTime + " " + (int) byoYomiStones + "\n\n");
 		String s = this.read();
 		Error e = GTPParserUtils.getError(s);

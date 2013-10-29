@@ -273,9 +273,9 @@ public class SGFNode {
 		Move move = new Move();
 
 		if (prop.getIdentifier().compareToIgnoreCase("B") == 0) {
-			move.setColour(BoardI.VERTEX_BLACK);
+			move.setColour(Statics.VERTEX_BLACK);
 		} else if (prop.getIdentifier().compareToIgnoreCase("W") == 0) {
-			move.setColour(BoardI.VERTEX_WHITE);
+			move.setColour(Statics.VERTEX_WHITE);
 		} else {
 			return null;
 		}

@@ -120,7 +120,7 @@ public class GnuGoEngineTest2 extends TestCase {
 			this.engine.initialise();
 			this.engine.setBoardSize((short) 19);
 			this.engine.clearBoard();
-			Move move = this.engine.genMove(BoardI.VERTEX_BLACK);
+			Move move = this.engine.genMove(Statics.VERTEX_BLACK);
 			if (DEBUG)
 				System.err.println(move);
 			this.engine.quit();
@@ -260,7 +260,7 @@ public class GnuGoEngineTest2 extends TestCase {
 			this.engine.initialise();
 			Boolean b = this.engine.loadsgf("sgf/testing/seki.sgf", 20);
 			assertTrue(b);
-			Move move = this.engine.genMove(BoardI.VERTEX_BLACK);
+			Move move = this.engine.genMove(Statics.VERTEX_BLACK);
 			assertNotNull(move);
 			BoardI board = this.engine.showBoard();
 			if (DEBUG)
@@ -398,7 +398,7 @@ public class GnuGoEngineTest2 extends TestCase {
 	public final void testRegGenMove() {
 		try {
 			this.engine.initialise();
-			Move move = this.engine.regGenMove(BoardI.VERTEX_BLACK);
+			Move move = this.engine.regGenMove(Statics.VERTEX_BLACK);
 			if (DEBUG)
 				System.err.println(move);
 			this.engine.quit();
@@ -454,7 +454,7 @@ public class GnuGoEngineTest2 extends TestCase {
 	public final void testSetTimeLeft() {
 		try {
 			this.engine.initialise();
-			this.engine.setTimeLeft(BoardI.VERTEX_BLACK, 1.0, 1.0);
+			this.engine.setTimeLeft(Statics.VERTEX_BLACK, 1.0, 1.0);
 			this.engine.quit();
 		} catch (Throwable t) {
 			if (DEBUG)

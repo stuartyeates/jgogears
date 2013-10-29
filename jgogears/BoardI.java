@@ -11,75 +11,13 @@ import java.util.*;
  */
 public abstract class BoardI {
 
-	/** The default board size. */
-	public static final short DEFAULT_BOARD_SIZE = 19;
-
-	/** The MAXIMUM value for a vertex colour. */
-	public static final short VERTEX_MAX = 4;
-
-	/** A vertex in ko. */
-	public static final short VERTEX_OFF_BOARD = 4;
-
-	/** A vertex in ko. */
-	public static final short VERTEX_KO = 3;
-
-	/** A vertex with a black stone. */
-	public static final short VERTEX_BLACK = 2;
-
-	/** A vertex with a white stone. */
-	public static final short VERTEX_WHITE = 1;
-
-	/** A vertex without a stone (and not in KO. */
-	public static final short VERTEX_EMPTY = 0;
-
-	/** The MINIMUM value for a vertex colour. */
-	public static final short VERTEX_MIN = 0;
-
-	/** The Constant DEFAULT_ZOBRIST. */
-	public final static boolean DEFAULT_ZOBRIST = true;
-
-	/** Are we sanity checking moves? */
-	public final static boolean SANITY_CHECK_MOVES = true;
-
-	/**
-	 * Colour string.
-	 * 
-	 * @param colour
-	 *            the colour
-	 * @return the colour as a string
-	 */
-	public static String colourString(int colour) {
-		// find the colour of the move
-		String colourS = "";
-		switch (colour) {
-		case BoardI.VERTEX_WHITE:
-			colourS = "white";
-			break;
-		case BoardI.VERTEX_BLACK:
-			colourS = "black";
-			break;
-		case BoardI.VERTEX_KO:
-			colourS = "ko";
-			break;
-		case BoardI.VERTEX_EMPTY:
-			colourS = "empty";
-			break;
-		case BoardI.VERTEX_OFF_BOARD:
-			colourS = "off board";
-			break;
-		default:
-			throw new java.lang.InternalError();
-		}
-		return colourS;
-	}
-
 	/**
 	 * create an empty board of the default class
 	 * 
 	 * @return the new empty board
 	 */
 	public static BoardI newBoard() {
-		return new Board(DEFAULT_BOARD_SIZE);
+		return new Board(Statics.DEFAULT_BOARD_SIZE);
 	}
 
 	/**
@@ -145,29 +83,6 @@ public abstract class BoardI {
 		return new Board((short) size, rule, zobrist);
 	}
 
-	/**
-	 * parse the colour of a move.
-	 * 
-	 * @param colourString
-	 *            the colour string
-	 * @return the colour as a short
-	 */
-	public static short parseColour(String colourString) {
-
-		if (colourString.compareTo("w") == 0) {
-			return BoardI.VERTEX_WHITE;
-		} else if (colourString.compareTo("white") == 0) {
-			return BoardI.VERTEX_WHITE;
-		} else if (colourString.compareTo("b") == 0) {
-			return BoardI.VERTEX_BLACK;
-		} else if (colourString.compareTo("black") == 0) {
-			return BoardI.VERTEX_BLACK;
-		} else {
-			throw new IllegalArgumentException("trying to parse (1) \""
-					+ colourString + "\" as a colour");
-		}
-	}
-
 	/** The zobrist. */
 	protected Zobrist zobrist = null;
 
@@ -181,7 +96,7 @@ public abstract class BoardI {
 	 * Instantiates a new board
 	 */
 	public BoardI() {
-		if (DEFAULT_ZOBRIST)
+		if (Statics.DEFAULT_ZOBRIST)
 			this.zobrist = new Zobrist();
 	}
 
@@ -205,21 +120,16 @@ public abstract class BoardI {
 	 *            the old board we're coping data from
 	 */
 	protected void copydata(BoardI old, Move move) {
+		//copy the basics over
 		this.size = old.getSize();
-		if (this.size < 3 || this.size > 25)
-			throw new Error();
-
 		this.zobrist = old.getZobrist();
 		this.ruleSet = old.getRuleSet();
 
+			// copy the board state
 		for (short i = 0; i < this.size; i++)
-			for (short j = 0; j < this.size; j++) {
-				short colour = old.getColour(i, j);
-				if (colour == VERTEX_KO)
-					this.setColour(i, j, VERTEX_EMPTY);
-				else
-					this.setColour(i, j, colour);
-			}
+			for (short j = 0; j < this.size; j++) 
+				this.setColour(i, j, old.getColour(i, j));
+			
 		if (move == null)
 			return;
 		if (move.getResign()) {
@@ -228,23 +138,23 @@ public abstract class BoardI {
 			// do nothing, since GoBoard doesn't know whose turn it is
 		} else {
 			// check the sanity of moves
-			if (SANITY_CHECK_MOVES) {
+			if (Statics.SANITY_CHECK_MOVES) {
 				short oldColour = old
 						.getColour(move.getRow(), move.getColumn());
 				switch (oldColour) {
-				case VERTEX_KO:
-				case VERTEX_EMPTY:
+				case Statics.VERTEX_KO:
+				case Statics.VERTEX_EMPTY:
 					break;
-				case VERTEX_WHITE:
-				case VERTEX_BLACK:
-					if (move.getColour() == VERTEX_KO
-							|| move.getColour() == VERTEX_EMPTY) {
+				case Statics.VERTEX_WHITE:
+				case Statics.VERTEX_BLACK:
+					if (move.getColour() == Statics.VERTEX_KO
+							|| move.getColour() == Statics.VERTEX_EMPTY) {
 						break;
 					} else {
 						throw new Error(move + "\n " + old);
 					}
-				case VERTEX_OFF_BOARD:
-					if (move.getColour() != VERTEX_OFF_BOARD) {
+				case Statics.VERTEX_OFF_BOARD:
+					if (move.getColour() != Statics.VERTEX_OFF_BOARD) {
 						throw new Error(move + "");
 					} else {
 						break;
@@ -258,7 +168,7 @@ public abstract class BoardI {
 			this.setColour(move.getRow(), move.getColumn(), move.getColour());
 			if (this.zobrist != null)
 				this.setZobrist(new Zobrist(this.zobrist, move.getRow(), move
-						.getColumn(), BoardI.VERTEX_EMPTY));
+						.getColumn(), Statics.VERTEX_EMPTY));
 
 			// take the captures
 			TreeSet<Vertex> captures = old.getRuleSet().captures(null, old,
@@ -270,11 +180,11 @@ public abstract class BoardI {
 					Vertex v = i.next();
 					// System.err.println("captured" + v);
 					this.setColour(v.getRow(), v.getColumn(),
-							BoardI.VERTEX_EMPTY);
+							Statics.VERTEX_EMPTY);
 
 					if (this.zobrist != null)
 						this.setZobrist(new Zobrist(this.getZobrist(), v
-								.getRow(), v.getColumn(), BoardI.VERTEX_EMPTY));
+								.getRow(), v.getColumn(), Statics.VERTEX_EMPTY));
 				}
 			}
 			// mark the kos
@@ -285,7 +195,7 @@ public abstract class BoardI {
 				while (i.hasNext()) {
 					Vertex v = i.next();
 					// System.err.println("captured" + v);
-					this.setColour(v.getRow(), v.getColumn(), BoardI.VERTEX_KO);
+					this.setColour(v.getRow(), v.getColumn(), Statics.VERTEX_KO);
 
 				}
 			}

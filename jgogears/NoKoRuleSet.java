@@ -40,7 +40,7 @@ public class NoKoRuleSet extends RuleSet {
 		TreeSet<Vertex> captures = new TreeSet<Vertex>();
 
 		// there can only be captures when placing a stone
-		if (colour != BoardI.VERTEX_BLACK || colour != BoardI.VERTEX_WHITE) {
+		if (colour != Statics.VERTEX_BLACK || colour != Statics.VERTEX_WHITE) {
 			captures.addAll(this.captureshelper(board, move, row + 1, column));
 			captures.addAll(this.captureshelper(board, move, row - 1, column));
 			captures.addAll(this.captureshelper(board, move, row, column + 1));
@@ -69,14 +69,14 @@ public class NoKoRuleSet extends RuleSet {
 			throw new Error("EMPTY not empty");
 		short colour = move.getColour();
 		short acolour = board.getColour(row, column);
-		if (acolour == BoardI.VERTEX_EMPTY || acolour == BoardI.VERTEX_KO) {
+		if (acolour == Statics.VERTEX_EMPTY || acolour == Statics.VERTEX_KO) {
 			if (DEBUG)
 				System.err.println("captures == empty");
 			return EMPTY;
 		}
-		if (colour == BoardI.VERTEX_BLACK && acolour == BoardI.VERTEX_WHITE
-				|| colour == BoardI.VERTEX_WHITE
-				&& acolour == BoardI.VERTEX_BLACK) {
+		if (colour == Statics.VERTEX_BLACK && acolour == Statics.VERTEX_WHITE
+				|| colour == Statics.VERTEX_WHITE
+				&& acolour == Statics.VERTEX_BLACK) {
 			int libs = this.countLiberties(row, column, board);
 			if (libs == 1) {
 				TreeSet<Vertex> string = this.getString(row, column, board);
@@ -111,9 +111,9 @@ public class NoKoRuleSet extends RuleSet {
 	 */
 	@Override
 	public TreeSet<Vertex> getLiberties(short rowb, short columnb, BoardI board) {
-		if (board.getColour(rowb, columnb) == BoardI.VERTEX_EMPTY
-				|| board.getColour(rowb, columnb) == BoardI.VERTEX_KO
-				|| board.getColour(rowb, columnb) == BoardI.VERTEX_OFF_BOARD) {
+		if (board.getColour(rowb, columnb) == Statics.VERTEX_EMPTY
+				|| board.getColour(rowb, columnb) == Statics.VERTEX_KO
+				|| board.getColour(rowb, columnb) == Statics.VERTEX_OFF_BOARD) {
 			throw new Error("empty sqaures don't have liberties");
 		}
 
@@ -125,23 +125,23 @@ public class NoKoRuleSet extends RuleSet {
 			Vertex current = i.next();
 			short row = current.getRow();
 			short column = current.getColumn();
-			if (board.getColour(row, column + 1) == BoardI.VERTEX_EMPTY
-					|| board.getColour(row, column + 1) == BoardI.VERTEX_KO) {
+			if (board.getColour(row, column + 1) == Statics.VERTEX_EMPTY
+					|| board.getColour(row, column + 1) == Statics.VERTEX_KO) {
 				Vertex adjacent = new Vertex(row, column + 1);
 				liberties.add(adjacent);
 			}
-			if (board.getColour(row, column - 1) == BoardI.VERTEX_EMPTY
-					|| board.getColour(row, column - 1) == BoardI.VERTEX_KO) {
+			if (board.getColour(row, column - 1) == Statics.VERTEX_EMPTY
+					|| board.getColour(row, column - 1) == Statics.VERTEX_KO) {
 				Vertex adjacent = new Vertex(row, column - 1);
 				liberties.add(adjacent);
 			}
-			if (board.getColour(row + 1, column) == BoardI.VERTEX_EMPTY
-					|| board.getColour(row + 1, column) == BoardI.VERTEX_KO) {
+			if (board.getColour(row + 1, column) == Statics.VERTEX_EMPTY
+					|| board.getColour(row + 1, column) == Statics.VERTEX_KO) {
 				Vertex adjacent = new Vertex(row + 1, column);
 				liberties.add(adjacent);
 			}
-			if (board.getColour(row - 1, column) == BoardI.VERTEX_EMPTY
-					|| board.getColour(row - 1, column) == BoardI.VERTEX_KO) {
+			if (board.getColour(row - 1, column) == Statics.VERTEX_EMPTY
+					|| board.getColour(row - 1, column) == Statics.VERTEX_KO) {
 				Vertex adjacent = new Vertex(row - 1, column);
 				liberties.add(adjacent);
 			}
@@ -178,7 +178,7 @@ public class NoKoRuleSet extends RuleSet {
 	public TreeSet<Vertex> getString(short rowb, short columnb, BoardI board) {
 		TreeSet<Vertex> string = new TreeSet<Vertex>();
 		short colour = board.getColour(rowb, columnb);
-		if (colour == BoardI.VERTEX_OFF_BOARD)
+		if (colour == Statics.VERTEX_OFF_BOARD)
 			return string;
 
 		Vertex seed = new Vertex(rowb, columnb);
@@ -260,7 +260,7 @@ public class NoKoRuleSet extends RuleSet {
 			if (DEBUG)
 				System.err.println("position == same");
 		}
-		if (acolour == BoardI.VERTEX_EMPTY || acolour == BoardI.VERTEX_EMPTY)
+		if (acolour == Statics.VERTEX_EMPTY || acolour == Statics.VERTEX_EMPTY)
 			liberties.add(new Vertex(row, column));
 		return liberties;
 	}
@@ -288,13 +288,13 @@ public class NoKoRuleSet extends RuleSet {
 		short column = move.getColumn();
 		short colour = move.getColour();
 
-		if (board.getColour(row, column) != BoardI.VERTEX_EMPTY) {
+		if (board.getColour(row, column) != Statics.VERTEX_EMPTY) {
 			if (DEBUG)
 				System.err.println("illegal move, not empty");
 			return false;
 		}
 
-		if (colour != BoardI.VERTEX_BLACK && colour != BoardI.VERTEX_WHITE)
+		if (colour != Statics.VERTEX_BLACK && colour != Statics.VERTEX_WHITE)
 			throw new Error("Internal error, bad colour");
 		TreeSet<Vertex> liberties = new TreeSet<Vertex>();
 

@@ -572,13 +572,13 @@ public class VertexLineariserTest extends TestCase {
 
 		if (DEBUG)
 			System.err.print("VertexLineariserTest::testFirst() Black = "
-					+ BoardI.parseColour("black"));
+					+ Statics.parseColour("black"));
 		if (DEBUG)
-			System.err.print(" White = " + BoardI.parseColour("white"));
+			System.err.print(" White = " + Statics.parseColour("white"));
 		if (DEBUG)
-			System.err.print(" Empty = " + BoardI.VERTEX_EMPTY);
+			System.err.print(" Empty = " + Statics.VERTEX_EMPTY);
 		if (DEBUG)
-			System.err.print(" Off = " + BoardI.VERTEX_OFF_BOARD);
+			System.err.print(" Off = " + Statics.VERTEX_OFF_BOARD);
 		if (DEBUG)
 			System.err.println("");
 		for (short j = 0; j < 8; j++) {
@@ -605,8 +605,8 @@ public class VertexLineariserTest extends TestCase {
 			assertTrue(a != null);
 			if (a == null)
 				throw new Error();
-			assertTrue(a + " " + BoardI.VERTEX_WHITE + "\n" + board,
-					a.equals(new Short(BoardI.VERTEX_WHITE)));
+			assertTrue(a + " " + Statics.VERTEX_WHITE + "\n" + board,
+					a.equals(new Short(Statics.VERTEX_WHITE)));
 		}
 	}
 
@@ -622,13 +622,13 @@ public class VertexLineariserTest extends TestCase {
 
 		if (DEBUG)
 			System.err.print("VertexLineariserTest::testFirst() Black = "
-					+ BoardI.parseColour("black"));
+					+ Statics.parseColour("black"));
 		if (DEBUG)
-			System.err.print(" White = " + BoardI.parseColour("white"));
+			System.err.print(" White = " + Statics.parseColour("white"));
 		if (DEBUG)
-			System.err.print(" Empty = " + BoardI.VERTEX_EMPTY);
+			System.err.print(" Empty = " + Statics.VERTEX_EMPTY);
 		if (DEBUG)
-			System.err.print(" Off = " + BoardI.VERTEX_OFF_BOARD);
+			System.err.print(" Off = " + Statics.VERTEX_OFF_BOARD);
 		if (DEBUG)
 			System.err.println("");
 		for (short row = 0; row < board.getSize(); row++)
@@ -688,13 +688,13 @@ public class VertexLineariserTest extends TestCase {
 		if (DEBUG)
 			System.err
 					.print("VertexLineariserTest::testVertexLineariser() Black = "
-							+ BoardI.parseColour("black"));
+							+ Statics.parseColour("black"));
 		if (DEBUG)
-			System.err.print(" White = " + BoardI.parseColour("white"));
+			System.err.print(" White = " + Statics.parseColour("white"));
 		if (DEBUG)
-			System.err.print(" Empty = " + BoardI.VERTEX_EMPTY);
+			System.err.print(" Empty = " + Statics.VERTEX_EMPTY);
 		if (DEBUG)
-			System.err.print(" Off = " + BoardI.VERTEX_OFF_BOARD);
+			System.err.print(" Off = " + Statics.VERTEX_OFF_BOARD);
 		if (DEBUG)
 			System.err.println("");
 		for (short j = 0; j < 8; j++) {

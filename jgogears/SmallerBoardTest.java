@@ -48,13 +48,13 @@ public class SmallerBoardTest extends TestCase {
 
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
-				Move move = new Move(i, j, BoardI.VERTEX_BLACK);
+				Move move = new Move(i, j, Statics.VERTEX_BLACK);
 				board = board.newBoard(move);
 				assertTrue(
 						"" + size + "," + i + "," + j + ","
 								+ board.getColour(i, j) + ","
-								+ BoardI.VERTEX_BLACK,
-						board.getColour(i, j) == BoardI.VERTEX_BLACK);
+								+ Statics.VERTEX_BLACK,
+						board.getColour(i, j) == Statics.VERTEX_BLACK);
 
 				for (int l = 0; l < size; l++) {
 					for (int m = 0; m < size; m++) {
@@ -64,19 +64,19 @@ public class SmallerBoardTest extends TestCase {
 									"" + size + "," + i + "," + j + "," + l
 											+ "," + m + ","
 											+ board.getColour(l, m) + ","
-											+ BoardI.VERTEX_EMPTY,
-									board.getColour(l, m) == BoardI.VERTEX_EMPTY);
-							assertTrue(board.getColour(l, m) == BoardI.VERTEX_EMPTY);
+											+ Statics.VERTEX_EMPTY,
+									board.getColour(l, m) == Statics.VERTEX_EMPTY);
+							assertTrue(board.getColour(l, m) == Statics.VERTEX_EMPTY);
 //							assertTrue(BoardI.VERTEX_EMPTY == BoardI.VERTEX_EMPTY);
 							assertTrue(board.getColour(l, m) == board
 									.getColour(l, m));
-							assertTrue(board.getColour(l, m) == BoardI.VERTEX_EMPTY);
+							assertTrue(board.getColour(l, m) == Statics.VERTEX_EMPTY);
 						}
 					}
 				}
-				move = new Move(i, j, BoardI.VERTEX_EMPTY);
+				move = new Move(i, j, Statics.VERTEX_EMPTY);
 				board = board.newBoard(move);
-				assertTrue(board.getColour(i, j) == BoardI.VERTEX_EMPTY);
+				assertTrue(board.getColour(i, j) == Statics.VERTEX_EMPTY);
 
 				for (int l = 0; l < size; l++) {
 					for (int m = 0; m < size; m++) {
@@ -85,13 +85,13 @@ public class SmallerBoardTest extends TestCase {
 									"" + size + "," + i + "," + j + "," + l
 											+ "," + m + ","
 											+ board.getColour(l, m) + ",",
-									board.getColour(i, j) == BoardI.VERTEX_EMPTY);
+									board.getColour(i, j) == Statics.VERTEX_EMPTY);
 						}
 					}
 				}
-				move = new Move(i, j, BoardI.VERTEX_WHITE);
+				move = new Move(i, j, Statics.VERTEX_WHITE);
 				board = board.newBoard(move);
-				assertTrue(board.getColour(i, j) == BoardI.VERTEX_WHITE);
+				assertTrue(board.getColour(i, j) == Statics.VERTEX_WHITE);
 
 				for (int l = 0; l < size; l++) {
 					for (int m = 0; m < size; m++) {
@@ -100,13 +100,13 @@ public class SmallerBoardTest extends TestCase {
 									"" + size + "," + i + "," + j + "," + l
 											+ "," + m + ","
 											+ board.getColour(l, m) + ",",
-									board.getColour(l, m) == BoardI.VERTEX_EMPTY);
+									board.getColour(l, m) == Statics.VERTEX_EMPTY);
 						}
 					}
 				}
-				move = new Move(i, j, BoardI.VERTEX_KO);
+				move = new Move(i, j, Statics.VERTEX_KO);
 				board = board.newBoard(move);
-				assertTrue(board.getColour(i, j) == BoardI.VERTEX_KO);
+				assertTrue(board.getColour(i, j) == Statics.VERTEX_KO);
 
 				for (int l = 0; l < size; l++) {
 					for (int m = 0; m < size; m++) {
@@ -115,13 +115,13 @@ public class SmallerBoardTest extends TestCase {
 									"" + size + "," + i + "," + j + "," + l
 											+ "," + m + ","
 											+ board.getColour(l, m) + ",",
-									board.getColour(l, m) == BoardI.VERTEX_EMPTY);
+									board.getColour(l, m) == Statics.VERTEX_EMPTY);
 						}
 					}
 				}
-				move = new Move(i, j, BoardI.VERTEX_EMPTY);
+				move = new Move(i, j, Statics.VERTEX_EMPTY);
 				board = board.newBoard(move);
-				assertTrue(board.getColour(i, j) == BoardI.VERTEX_EMPTY);
+				assertTrue(board.getColour(i, j) == Statics.VERTEX_EMPTY);
 
 				for (int l = 0; l < size; l++) {
 					for (int m = 0; m < size; m++) {
@@ -130,7 +130,7 @@ public class SmallerBoardTest extends TestCase {
 									"" + size + "," + i + "," + j + "," + l
 											+ "," + m + ","
 											+ board.getColour(l, m) + ",",
-									board.getColour(l, m) == BoardI.VERTEX_EMPTY);
+									board.getColour(l, m) == Statics.VERTEX_EMPTY);
 						}
 					}
 				}
@@ -240,9 +240,9 @@ public class SmallerBoardTest extends TestCase {
 
 					BoardI board1 = new SmallerBoard();
 					BoardI board2 = board1.newBoard(new Move((short) 1,
-							(short) 1, BoardI.VERTEX_BLACK));
+							(short) 1, Statics.VERTEX_BLACK));
 					BoardI board3 = board1.newBoard(new Move((short) 1,
-							(short) 1, BoardI.VERTEX_BLACK));
+							(short) 1, Statics.VERTEX_BLACK));
 					// BoardI board4 = board2.newBoard(new Move((short) 1,
 					// (short) 1, BoardI.VERTEX_BLACK));
 
@@ -273,9 +273,9 @@ public class SmallerBoardTest extends TestCase {
 
 					BoardI board1 = new SmallerBoard(true);
 					BoardI board2 = board1.newBoard(new Move((short) 1,
-							(short) 1, BoardI.VERTEX_BLACK));
+							(short) 1, Statics.VERTEX_BLACK));
 					BoardI board3 = board1.newBoard(new Move((short) 1,
-							(short) 1, BoardI.VERTEX_BLACK));
+							(short) 1, Statics.VERTEX_BLACK));
 					// BoardI board4 = board2.newBoard(new Move((short) 1,
 					// (short) 1, BoardI.VERTEX_BLACK));
 
@@ -306,9 +306,9 @@ public class SmallerBoardTest extends TestCase {
 
 					BoardI board1 = new SmallerBoard(false);
 					BoardI board2 = board1.newBoard(new Move((short) 1,
-							(short) 1, BoardI.VERTEX_BLACK));
+							(short) 1, Statics.VERTEX_BLACK));
 					BoardI board3 = board1.newBoard(new Move((short) 1,
-							(short) 1, BoardI.VERTEX_BLACK));
+							(short) 1, Statics.VERTEX_BLACK));
 					// BoardI board4 = board2.newBoard(new Move((short) 1,
 					// (short) 1, BoardI.VERTEX_BLACK));
 

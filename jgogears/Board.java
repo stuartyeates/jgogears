@@ -147,7 +147,7 @@ public class Board extends BoardI {
 		// System.err.println("getColour() " + " " + row + " " + column + " " +
 		// size);
 		if (row < 0 || column < 0 || row >= this.size || column >= this.size)
-			return VERTEX_OFF_BOARD;
+			return Statics.VERTEX_OFF_BOARD;
 		return this.board[row][column];
 	}
 
@@ -158,7 +158,7 @@ public class Board extends BoardI {
 		this.board = new short[this.size][this.size];
 		for (int i = 0; i < this.size; i++)
 			for (int j = 0; j < this.size; j++)
-				this.board[i][j] = VERTEX_EMPTY;
+				this.board[i][j] = Statics.VERTEX_EMPTY;
 	}
 
 	/**

@@ -3,6 +3,7 @@ package jgogears.engine;
 import java.util.*;
 
 import jgogears.BoardI;
+import jgogears.Statics;
 
 /**
  * The Class Straight Vertex Lineariser.
@@ -215,10 +216,10 @@ final public class StraightVertexLineariser implements Iterator<Short> {
 	 */
 	public Short invert(Short colour) {
 		switch (colour.shortValue()) {
-		case BoardI.VERTEX_BLACK:
-			return BoardI.VERTEX_WHITE;
-		case BoardI.VERTEX_WHITE:
-			return BoardI.VERTEX_BLACK;
+		case Statics.VERTEX_BLACK:
+			return Statics.VERTEX_WHITE;
+		case Statics.VERTEX_WHITE:
+			return Statics.VERTEX_BLACK;
 		default:
 			return colour;
 

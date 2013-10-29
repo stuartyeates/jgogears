@@ -19,7 +19,7 @@ public final class Move {
 	 */
 	public static Move createHandicapStone(String s) {
 		Vertex v = new Vertex(s);
-		Move result = new Move(v.getRow(), v.getColumn(), BoardI.VERTEX_BLACK);
+		Move result = new Move(v.getRow(), v.getColumn(), Statics.VERTEX_BLACK);
 		return result;
 	}
 
@@ -36,7 +36,7 @@ public final class Move {
 	private boolean resign = false;
 
 	/** The colour. */
-	private short colour = BoardI.VERTEX_KO;
+	private short colour = Statics.VERTEX_KO;
 
 	/**
 	 * create an empty GoMove.
@@ -111,7 +111,7 @@ public final class Move {
 			throw new IllegalArgumentException("Bad argument to GoMove(" + move
 					+ ")");
 		String colourString = move.substring(0, space);
-		this.colour = BoardI.parseColour(colourString);
+		this.colour = Statics.parseColour(colourString);
 		String vertexString = move.substring(space + 1, move.length());
 		if (vertexString.contains("resign")) {
 			this.resign = true;
@@ -390,7 +390,7 @@ public final class Move {
 	public String toStringGTP() {
 
 		// find the colour of the move
-		String colourS = BoardI.colourString(this.colour);
+		String colourS = Statics.colourString(this.colour);
 
 		// calculate the position
 		String vertexS = this.toVertexString();

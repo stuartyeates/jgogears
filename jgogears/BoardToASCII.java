@@ -80,16 +80,16 @@ public final class BoardToASCII {
 			buf.append(" ").append(size - i).append(" ");
 			for (short j = 0; j < size; j++) {
 				switch (board.getColour(j, size - 1 - i)) {
-				case BoardI.VERTEX_KO:
+				case Statics.VERTEX_KO:
 					buf.append("!");
 					break;
-				case BoardI.VERTEX_BLACK:
+				case Statics.VERTEX_BLACK:
 					buf.append("X");
 					break;
-				case BoardI.VERTEX_WHITE:
+				case Statics.VERTEX_WHITE:
 					buf.append("O");
 					break;
-				case BoardI.VERTEX_EMPTY:
+				case Statics.VERTEX_EMPTY:
 					if (isEyeVertex(i, j, (short) size))
 						buf.append("+");
 					else

@@ -116,19 +116,19 @@ public class SmallBoard extends BoardI {
 	@Override
 	public short getColour(int row, int column) {
 		if (row < 0 || column < 0 || row >= this.size || column >= this.size)
-			return VERTEX_OFF_BOARD;
+			return Statics.VERTEX_OFF_BOARD;
 
 		int offset = row * BITS_PER_VERTEX * this.size + column
 				* BITS_PER_VERTEX;
 		if (this.bits.get(offset))
 			if (this.bits.get(offset + 1))
-				return VERTEX_WHITE;
+				return Statics.VERTEX_WHITE;
 			else
-				return VERTEX_BLACK;
+				return Statics.VERTEX_BLACK;
 		else if (this.bits.get(offset + 1))
-			return VERTEX_KO;
+			return Statics.VERTEX_KO;
 		else
-			return VERTEX_EMPTY;
+			return Statics.VERTEX_EMPTY;
 
 	}
 
@@ -163,19 +163,19 @@ public class SmallBoard extends BoardI {
 				* BITS_PER_VERTEX;
 
 		switch (colour) {
-		case VERTEX_EMPTY:
+		case Statics.VERTEX_EMPTY:
 			this.bits.set(offset, false);
 			this.bits.set(offset + 1, false);
 			break;
-		case VERTEX_KO:
+		case Statics.VERTEX_KO:
 			this.bits.set(offset, false);
 			this.bits.set(offset + 1, true);
 			break;
-		case VERTEX_BLACK:
+		case Statics.VERTEX_BLACK:
 			this.bits.set(offset, true);
 			this.bits.set(offset + 1, false);
 			break;
-		case VERTEX_WHITE:
+		case Statics.VERTEX_WHITE:
 			this.bits.set(offset, true);
 			this.bits.set(offset + 1, true);
 			break;
