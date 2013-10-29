@@ -8,5 +8,10 @@ package jgogears2;
  *
  */
 public interface Score {
+	/**
+	 * 
+	 * @return
+	 */
+	public String toString();
 
 }
