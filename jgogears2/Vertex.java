@@ -11,22 +11,42 @@ public class Vertex {
 			this.row=row;
 			this.column=column;
 	}
+	/**
+	 * 
+	 * @param row
+	 * @param column
+	 */
 	public Vertex(int row, int column){
 		this.row=(short)row;
 		this.column=(short)column;
 	
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public short getRow() {
 		return row;
 	}
+	/**
+	 * 
+	 * @param row
+	 */
 	public void setRow(short row) {
 		this.row = row;
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public short getColumn() {
 		return column;
 	}
+	/**
+	 * 
+	 * @param column
+	 */
 	public void setColumn(short column) {
 		this.column = column;
 	}
-
 }
