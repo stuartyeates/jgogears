@@ -10,14 +10,27 @@ import java.util.List;
  *
  */
 
-public interface Board {
+public class Board {
+		
+		private short[][] board;
+		private short size = 19;
+			public Board(){	
+			}
+			public Board(short size){
+				this.size = size;
+			}
+			public Board(int size){
+				this.size = (short) size;
+			}
 	/**
 	 * What colour is this vertex?
 	 * @param row
 	 * @param column
 	 * @return
 	 */
-		public short getColour(short row, short column);
+		public short getColour(short row, short column){
+			return board[row][column];
+		}
 		/**
 		 * Return a new Board based on the current board and the given move
 		 * @param move
