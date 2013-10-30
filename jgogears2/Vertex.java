@@ -1,5 +1,9 @@
 package jgogears2;
-
+/**
+ * 
+ * @author syeates@gmail.com
+ *
+ */
 public class Vertex {
 	public short row;
 	public short column;

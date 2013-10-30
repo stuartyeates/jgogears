@@ -3,7 +3,6 @@ package jgogears2;
 import java.util.Stack;
 import java.util.Collection;
 
-
 final public class Liberty {
 
 	/**
@@ -17,7 +16,7 @@ final public class Liberty {
 	 *            the board
 	 * @return the tree set< vertex>
 	 */
-	public Collection<Vertex> captures(Game game, Board board, Move move){
+	public Collection<Vertex> captures(Game game, Board board, Move move) {
 		throw new Error();
 
 	}
@@ -52,7 +51,6 @@ final public class Liberty {
 		return (short) this.getLiberties(rowb, columnb, board).size();
 	}
 
-
 	/**
 	 * Get all the legal moves
 	 * 
@@ -64,12 +62,12 @@ final public class Liberty {
 	 *            the colour being played
 	 * @return the collection of vertexes
 	 */
-	static public Collection<Vertex> getAllLegalVertexes(Game game, Board board,
-			short colour) {
+	static public Collection<Vertex> getAllLegalVertexes(Game game,
+			Board board, short colour) {
 		Stack<Vertex> moves = new Stack<Vertex>();
 		for (int i = 0; i < board.getSize(); i++)
 			for (int j = 0; j < board.getSize(); j++)
-				if (board.isLegal( new Move(i, j, colour)))
+				if (board.isLegal(new Move(i, j, colour)))
 					moves.push(new Vertex(i, j));
 		return moves;
 	}
@@ -101,7 +99,7 @@ final public class Liberty {
 	 * @return the liberties
 	 */
 	public Collection<Vertex> getLiberties(short rowb, short columnb,
-			Board board){
+			Board board) {
 		throw new Error();
 	}
 
