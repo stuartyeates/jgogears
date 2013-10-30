@@ -99,9 +99,8 @@ final public class Liberty {
 	 *            the board
 	 * @return the liberties
 	 */
-	public List<Vertex> getLiberties(short rowb, short columnb,
-			BoardI board){
-	}
+	public Collection<Vertex> getLiberties(short rowb, short columnb,
+			Board board){
 	}
 
 	/**
