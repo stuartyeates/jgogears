@@ -4,7 +4,7 @@
 package jgogears;
 
 /**
- * @author stuartyeates
+ * @author syeates@gmail.com
  *
  */
 public interface SimpleBoard {

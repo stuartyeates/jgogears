@@ -8,7 +8,7 @@ import jgogears.sgf.auto.ParseException;
  * Front end to the SGF parser. Also holds the SGF examples from the SGF
  * standard
  * 
- * @author stuart
+ * @author syeates@gmail.com
  */
 public class SGFParser {
 

@@ -8,7 +8,7 @@ import java.util.Iterator;
 /**
  * Class to hold a single node in the tree.
  * 
- * @author stuart
+ * @author syeates@gmail.com
  */
 public final class Node implements Comparable<Node> {
 

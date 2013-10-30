@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * Really simple and fast ruleset
  * 
- * @author Stuart
+ * @author syeates@gmail.com
  */
 public class NoKoRuleSet extends RuleSet {
 

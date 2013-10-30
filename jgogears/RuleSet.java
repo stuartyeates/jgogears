@@ -9,7 +9,7 @@ import java.util.*;
 /**
  * The Class RuleSet.
  * 
- * @author Stuart
+ * @author syeates@gmail.com
  */
 public abstract class RuleSet {
 	/**

@@ -5,7 +5,7 @@ package jgogears;
  * does NOT represent the number of prisoners, the number (or order) of previous
  * moves or whose turn it is too play.
  * 
- * @author stuart
+ * @author syeates@gmail.com
  */
 public class Board extends BoardI {
 
