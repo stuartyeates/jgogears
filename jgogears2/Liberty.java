@@ -18,7 +18,8 @@ final public class Liberty {
 	 * @return the tree set< vertex>
 	 */
 	public Collection<Vertex> captures(Game game, Board board, Move move){
-		
+		throw new Error();
+
 	}
 
 	/**
@@ -101,6 +102,7 @@ final public class Liberty {
 	 */
 	public Collection<Vertex> getLiberties(short rowb, short columnb,
 			Board board){
+		throw new Error();
 	}
 
 }
