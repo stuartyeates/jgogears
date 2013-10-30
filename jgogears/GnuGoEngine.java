@@ -78,7 +78,7 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public GnuGoEngine(short size) throws IOException {
-		this.size = size;
+		this.size = size; 
 		this.initialise();
 	}
 
