@@ -27,8 +27,8 @@ public class Board {
 			}
 			public Board(Board board){
 				throw new Error();
-				this.size = (short) size;
-				init();
+				//this.size = (short) size;
+				//init();
 			}
 			protected void init(){
 				board = new short[size][size];
