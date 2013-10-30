@@ -1,8 +1,7 @@
 package jgogears2;
 
-import java.util.Collection;
 import java.util.Stack;
-import java.util.TreeSet;
+import java.util.Collection;
 
 import jgogears.BoardI;
 import jgogears.Game;
@@ -24,7 +23,9 @@ final public class Liberty {
 	 *            the board
 	 * @return the tree set< vertex>
 	 */
-	public TreeSet<Vertex> captures(Game game, Board board, Move move);
+	public Collection<Vertex> captures(Game game, Board board, Move move){
+		
+	}
 
 	/**
 	 * Count liberties.
@@ -52,33 +53,10 @@ final public class Liberty {
 	 *            the board
 	 * @return the short
 	 */
-	public short countLiberties(short rowb, short columnb, BoardI board) {
+	public short countLiberties(short rowb, short columnb, Board board) {
 		return (short) this.getLiberties(rowb, columnb, board).size();
 	}
 
-	/**
-	 * Get all the legal moves
-	 * 
-	 * @param game
-	 *            the game being played
-	 * @param board
-	 *            the current state of the baord
-	 * @param colour
-	 *            the colour being played
-	 * @return the collection of moves
-	 */
-
-	public Collection<Move> getAllLegalMoves(Game game, BoardI board,
-			short colour) {
-		Stack<Move> moves = new Stack<Move>();
-		for (int i = 0; i < board.getSize(); i++)
-			for (int j = 0; j < board.getSize(); j++) {
-				Move move = new Move(i, j, colour);
-				if (this.moveIsLegal(game, board, move))
-					moves.push(move);
-			}
-		return moves;
-	}
 
 	/**
 	 * Get all the legal moves
@@ -91,7 +69,7 @@ final public class Liberty {
 	 *            the colour being played
 	 * @return the collection of vertexes
 	 */
-	public Collection<Vertex> getAllLegalVertexes(Game game, BoardI board,
+	public Collection<Vertex> getAllLegalVertexes(Game game, Board board,
 			short colour) {
 		Stack<Vertex> moves = new Stack<Vertex>();
 		for (int i = 0; i < board.getSize(); i++)
@@ -100,13 +78,6 @@ final public class Liberty {
 					moves.push(new Vertex(i, j));
 		return moves;
 	}
-
-	/**
-	 * Get a description of this Ko rule.
-	 * 
-	 * @return the description
-	 */
-	public abstract String getDescription();
 
 	/**
 	 * Gets the liberties.
@@ -134,8 +105,10 @@ final public class Liberty {
 	 *            the board
 	 * @return the liberties
 	 */
-	abstract public TreeSet<Vertex> getLiberties(short rowb, short columnb,
-			BoardI board);
+	public List<Vertex> getLiberties(short rowb, short columnb,
+			BoardI board){
+	}
+	}
 
 	/**
 	 * Get the name of this Ko rule.

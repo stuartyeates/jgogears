@@ -46,4 +46,6 @@ public interface Board {
 		 * @return 
 		 */
 		public Game getGame();
+		
+		public short getSize();
 }
