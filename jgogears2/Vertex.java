@@ -12,5 +12,17 @@ public class Vertex {
 		this.column=(short)column;
 	
 	}
+	public short getRow() {
+		return row;
+	}
+	public void setRow(short row) {
+		this.row = row;
+	}
+	public short getColumn() {
+		return column;
+	}
+	public void setColumn(short column) {
+		this.column = column;
+	}
 
 }
