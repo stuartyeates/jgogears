@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * The Game defines everything about a particular occurrence of a game.
  * 
- * @author <syeates@gmail.com
+ * @author syeates@gmail.com
  *
  */
 public interface Game {
