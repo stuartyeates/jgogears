@@ -3,12 +3,6 @@ package jgogears2;
 import java.util.Stack;
 import java.util.Collection;
 
-import jgogears.BoardI;
-import jgogears.Game;
-import jgogears.Move;
-import jgogears.NoKoRuleSet;
-import jgogears.RuleSet;
-import jgogears.Vertex;
 
 final public class Liberty {
 
@@ -38,7 +32,7 @@ final public class Liberty {
 	 *            the board
 	 * @return the short
 	 */
-	public short countLiberties(int rowb, int columnb, BoardI board) {
+	public short countLiberties(int rowb, int columnb, Board board) {
 		return this.countLiberties((short) rowb, (short) columnb, board);
 	}
 
@@ -90,7 +84,7 @@ final public class Liberty {
 	 *            the board
 	 * @return the liberties
 	 */
-	public TreeSet<Vertex> getLiberties(int rowb, int columnb, BoardI board) {
+	public Collection<Vertex> getLiberties(int rowb, int columnb, Board board) {
 		return this.getLiberties((short) rowb, (short) columnb, board);
 	}
 
