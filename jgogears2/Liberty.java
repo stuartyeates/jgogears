@@ -69,12 +69,12 @@ final public class Liberty {
 	 *            the colour being played
 	 * @return the collection of vertexes
 	 */
-	public Collection<Vertex> getAllLegalVertexes(Game game, Board board,
+	static public Collection<Vertex> getAllLegalVertexes(Game game, Board board,
 			short colour) {
 		Stack<Vertex> moves = new Stack<Vertex>();
 		for (int i = 0; i < board.getSize(); i++)
 			for (int j = 0; j < board.getSize(); j++)
-				if (this.moveIsLegal(game, board, new Move(i, j, colour)))
+				if (board.isLegal( new Move(i, j, colour)))
 					moves.push(new Vertex(i, j));
 		return moves;
 	}
