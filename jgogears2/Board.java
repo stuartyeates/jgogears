@@ -14,15 +14,28 @@ public class Board {
 		
 		private short[][] board;
 		private short size = 19;
-			public Board(){	
+			public Board(){
+				init();
 			}
 			public Board(short size){
 				this.size = size;
+				init();
 			}
 			public Board(int size){
 				this.size = (short) size;
+				init();
 			}
-	/**
+			public Board(Board board){
+				throw new Error();
+				this.size = (short) size;
+				init();
+			}
+			protected void init(){
+				board = new short[size][size];
+			}
+			
+
+			/**
 	 * What colour is this vertex?
 	 * @param row
 	 * @param column
