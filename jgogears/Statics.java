@@ -11,6 +11,7 @@ public final class Statics {
 
 	/** The default board size. */
 	public static final short DEFAULT_BOARD_SIZE = 19;
+	
 	/** The MAXIMUM value for a vertex colour. */
 	public static final short VERTEX_MAX = 4;
 	/** A vertex in ko. */
@@ -25,8 +26,10 @@ public final class Statics {
 	public static final short VERTEX_EMPTY = 0;
 	/** The MINIMUM value for a vertex colour. */
 	public static final short VERTEX_MIN = 0;
+	
 	/** The Constant DEFAULT_ZOBRIST. */
 	public final static boolean DEFAULT_ZOBRIST = true;
+	
 	/** Are we sanity checking moves? */
 	public final static boolean SANITY_CHECK_MOVES = true;
 
