@@ -49,4 +49,8 @@ public class Vertex {
 	public void setColumn(short column) {
 		this.column = column;
 	}
+	public String toString(){
+		return "(" + row + "," + column + ")";
+		
+	}
 }
