@@ -25,6 +25,15 @@ public class Board {
 	/**
 	 * 
 	 */
+	private Game game;
+	/**
+	 * 
+	 */
+	private short colour;
+	/**
+	 * 
+	 */
+	
 
 	public Board() {
 		init();
@@ -120,14 +129,15 @@ public class Board {
 	 * @return
 	 */
 	public Game getGame(){
-		throw new Error();
+		if (null == this.game)
+			throw new Error("No game in Board.");	
+		return game;
 	}
 /**
  * 
  * @return
  */
 	public short getSize(){
-		throw new Error();
-	
+		return this.size;
 	}
 }
