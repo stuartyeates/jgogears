@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 public class Board {
-/**
+	/**
  * 
  */
 	private short[][] board;
@@ -30,39 +30,43 @@ public class Board {
 	 * 
 	 */
 	private short colour;
+
 	/**
 	 * 
 	 */
-	
 
 	public Board() {
 		init();
 	}
-/**
- * 
- * @param size
- */
+
+	/**
+	 * 
+	 * @param size
+	 */
 	public Board(short size) {
 		this.size = size;
 		init();
 	}
-/**
- * 
- * @param size
- */
+
+	/**
+	 * 
+	 * @param size
+	 */
 	public Board(int size) {
 		this.size = (short) size;
 		init();
 	}
-/**
- * 
- * @param board
- */
+
+	/**
+	 * 
+	 * @param board
+	 */
 	public Board(Board board) {
 		throw new Error();
 		// this.size = (short) size;
 		// init();
 	}
+
 	/**
 	 * 
 	 * @param board
@@ -89,10 +93,10 @@ public class Board {
 	 * @param move
 	 * @return
 	 */
-	public Board playMove(Move move){
+	public Board playMove(Move move) {
 		Board board = new Board(this);
 		throw new Error();
-//		return board;
+		// return board;
 	}
 
 	/**
@@ -101,7 +105,7 @@ public class Board {
 	 * @param move
 	 * @return
 	 */
-	public boolean isLegal(Move move){
+	public boolean isLegal(Move move) {
 		throw new Error();
 	}
 
@@ -110,7 +114,7 @@ public class Board {
 	 * 
 	 * @return
 	 */
-	public List<Move> getLegalMoves(){
+	public List<Move> getLegalMoves() {
 		throw new Error();
 	}
 
@@ -119,7 +123,7 @@ public class Board {
 	 * 
 	 * @return
 	 */
-	public boolean blackToPlay(){
+	public boolean blackToPlay() {
 		throw new Error();
 	}
 
@@ -128,16 +132,17 @@ public class Board {
 	 * 
 	 * @return
 	 */
-	public Game getGame(){
+	public Game getGame() {
 		if (null == this.game)
-			throw new Error("No game in Board.");	
+			throw new Error("No game in Board.");
 		return game;
 	}
-/**
- * 
- * @return
- */
-	public short getSize(){
+
+	/**
+	 * 
+	 * @return
+	 */
+	public short getSize() {
 		return this.size;
 	}
 }
