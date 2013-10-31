@@ -14,8 +14,13 @@ import java.util.List;
  */
 
 public class Board {
-
+/**
+ * 
+ */
 	private short[][] board;
+	/**
+	 * 
+	 */
 	private short size = 19;
 
 	public Board() {
