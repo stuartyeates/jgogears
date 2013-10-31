@@ -22,6 +22,9 @@ public class Board {
 	 * 
 	 */
 	private short size = 19;
+	/**
+	 * 
+	 */
 
 	public Board() {
 		init();
