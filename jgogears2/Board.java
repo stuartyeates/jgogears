@@ -59,7 +59,11 @@ public class Board {
 	 * @param move
 	 * @return
 	 */
-	public Board playMove(Move move);
+	public Board playMove(Move move){
+		Board board = new Board(this);
+		
+		return board;
+	}
 
 	/**
 	 * Is the given move legal?
