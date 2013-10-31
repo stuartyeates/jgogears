@@ -61,7 +61,7 @@ public class Board {
 	 */
 	public Board playMove(Move move){
 		Board board = new Board(this);
-		
+		board.
 		return board;
 	}
 
