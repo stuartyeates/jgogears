@@ -29,22 +29,35 @@ public class Board {
 	public Board() {
 		init();
 	}
-
+/**
+ * 
+ * @param size
+ */
 	public Board(short size) {
 		this.size = size;
 		init();
 	}
-
+/**
+ * 
+ * @param size
+ */
 	public Board(int size) {
 		this.size = (short) size;
 		init();
 	}
-
+/**
+ * 
+ * @param board
+ */
 	public Board(Board board) {
 		throw new Error();
 		// this.size = (short) size;
 		// init();
 	}
+	/**
+	 * 
+	 * @param board
+	 */
 
 	protected void init() {
 		board = new short[size][size];
@@ -69,8 +82,8 @@ public class Board {
 	 */
 	public Board playMove(Move move){
 		Board board = new Board(this);
-		board.
-		return board;
+		throw new Error();
+//		return board;
 	}
 
 	/**
@@ -79,28 +92,42 @@ public class Board {
 	 * @param move
 	 * @return
 	 */
-	public boolean isLegal(Move move);
+	public boolean isLegal(Move move){
+		throw new Error();
+	}
 
 	/**
 	 * What are all the legal moves?
 	 * 
 	 * @return
 	 */
-	public List<Move> getLegalMoves();
+	public List<Move> getLegalMoves(){
+		throw new Error();
+	}
 
 	/**
 	 * Is black to play next?
 	 * 
 	 * @return
 	 */
-	public boolean blackToPlay();
+	public boolean blackToPlay(){
+		throw new Error();
+	}
 
 	/**
 	 * What game is this board a part of?
 	 * 
 	 * @return
 	 */
-	public Game getGame();
-
-	public short getSize();
+	public Game getGame(){
+		throw new Error();
+	}
+/**
+ * 
+ * @return
+ */
+	public short getSize(){
+		throw new Error();
+	
+	}
 }
