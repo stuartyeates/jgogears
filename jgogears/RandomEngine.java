@@ -62,9 +62,9 @@ public class RandomEngine extends SkeletonEngine implements GTPInterface {
 		short row;
 		short column;
 		do {
-			row = (short) Random.nextInt(state.boardsize);
-			column = (short) Random.nextInt(state.boardsize);
-		} while (state.board.getColour(row, column) == Statics.VERTEX_EMPTY);
+			row = (short) Random.nextInt(state.getBoardsize());
+			column = (short) Random.nextInt(state.getBoardsize());
+		} while (state.getBoard().getColour(row, column) == Statics.VERTEX_EMPTY);
 		return new Move(row, column, colour);
 	}
 
