@@ -2,6 +2,8 @@ package jgogears2;
 
 import java.util.List;
 
+import jgogears.Statics;
+
 /**
  * A Board represents a particular state of the board at a particular point in
  * time.
@@ -73,6 +75,10 @@ public class Board {
 	 */
 	protected void init(Board old) {
 		board = new short[size][size];
+		for (short i=0;i<size;i++)
+			for (short j=0;j<size;j++)
+				board[i][j] = old.board[i][j];
+
 	}
 	/**
 	 * 
@@ -82,7 +88,7 @@ public class Board {
 		board = new short[size][size];
 		for (short i=0;i<size;i++)
 			for (short j=0;j<size;j++)
-				board[][] = 
+				board[i][j] = Statics.VERTEX_EMPTY;
 	}
 
 	/**
