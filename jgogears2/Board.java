@@ -64,9 +64,9 @@ public class Board {
 	 * @param board
 	 */
 	public Board(Board board) {
-		throw new Error();
-		// this.size = (short) size;
-		// init();
+		game = board.game;
+		size = board.size;
+		init(board);
 	}
 
 	/**
@@ -82,7 +82,6 @@ public class Board {
 	}
 	/**
 	 * 
-	 * @param board
 	 */
 	protected void init() {
 		board = new short[size][size];
