@@ -3,6 +3,7 @@ package jgogears.engine;
 import jgogears.*;
 import jgogears.gtp.GTPScore;
 import jgogears.gtp.GTPState;
+import jgogears.gtp.SkeletonEngine;
 
 /**
  * @author syeates

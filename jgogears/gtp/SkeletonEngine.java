@@ -1,8 +1,7 @@
-package jgogears;
+package jgogears.gtp;
 
-import jgogears.gtp.GTPHandicaps;
-import jgogears.gtp.GTPInterface;
-import jgogears.gtp.GTPState;
+import jgogears.BoardI;
+import jgogears.Move;
 
 /**
  * A skeleton GTP player TODO complete this implementation TODO add tests

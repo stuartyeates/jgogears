@@ -5,6 +5,7 @@ import java.util.*;
 import jgogears.gtp.GTPInterface;
 import jgogears.gtp.GTPScore;
 import jgogears.gtp.GTPState;
+import jgogears.gtp.SkeletonEngine;
 
 // TODO: Auto-generated Javadoc
 /**
