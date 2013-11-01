@@ -5,8 +5,19 @@ package jgogears2;
  *
  */
 public class Vertex {
+	/**
+	 * 
+	 */
 	public short row;
+	/**
+	 * 
+	 */
 	public short column;
+	/**
+	 * 
+	 * @param row
+	 * @param column
+	 */
 	public Vertex(short row, short column){
 			this.row=row;
 			this.column=column;
@@ -23,10 +34,19 @@ public class Vertex {
 	}
 	/**
 	 * 
+	 * @param vertex
+	 */
+	public Vertex(Vertex vertex){
+		this.row=vertex.row;
+		this.column=vertex.column;
+	
+	}
+	/**
+	 * 
 	 * @return
 	 */
 	public short getRow() {
-		return row;
+		return this.row;
 	}
 	/**
 	 * 
@@ -40,7 +60,7 @@ public class Vertex {
 	 * @return
 	 */
 	public short getColumn() {
-		return column;
+		return this.column;
 	}
 	/**
 	 * 
