@@ -3,6 +3,7 @@ package jgogears;
 import java.io.*;
 import java.util.*;
 
+import jgogears.gtp.GTPScore;
 import jgogears.sgf.SGFGameTree;
 
 /**

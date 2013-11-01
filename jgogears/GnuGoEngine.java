@@ -3,6 +3,12 @@ package jgogears;
 import java.io.*;
 import java.util.TreeSet;
 
+import jgogears.gtp.GTPConstants;
+import jgogears.gtp.GTPError;
+import jgogears.gtp.GTPInterfaceRaw;
+import jgogears.gtp.GTPParserUtils;
+import jgogears.gtp.GTPScore;
+
 // TODO: Auto-generated Javadoc
 /**
  * An engine wrapping an instance of the GnuGo computer-go player.

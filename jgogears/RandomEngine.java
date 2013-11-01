@@ -2,6 +2,10 @@ package jgogears;
 
 import java.util.*;
 
+import jgogears.gtp.GTPInterface;
+import jgogears.gtp.GTPScore;
+import jgogears.gtp.GTPState;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class RandomEngine.

@@ -1,6 +1,8 @@
-package jgogears;
+package jgogears.gtp;
 
 import java.util.TreeSet;
+
+import jgogears.Vertex;
 
 // TODO: Auto-generated Javadoc
 /**

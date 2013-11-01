@@ -1,5 +1,6 @@
 package jgogears;
 
+import jgogears.gtp.GTPConstants;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc

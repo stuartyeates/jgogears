@@ -1,6 +1,11 @@
-package jgogears;
+package jgogears.gtp;
 
 import java.io.IOException;
+
+import jgogears.BoardI;
+import jgogears.GnuGoEngine;
+import jgogears.Move;
+import jgogears.Statics;
 
 import junit.framework.TestCase;
 

@@ -1,5 +1,9 @@
 package jgogears;
 
+import jgogears.gtp.GTPHandicaps;
+import jgogears.gtp.GTPInterface;
+import jgogears.gtp.GTPState;
+
 /**
  * A skeleton GTP player TODO complete this implementation TODO add tests
  * 

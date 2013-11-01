@@ -3,9 +3,9 @@ package jgogears.sgf;
 import java.io.*;
 import java.util.*;
 
-import jgogears.GTPScore;
 import jgogears.Game;
 import jgogears.Move;
+import jgogears.gtp.GTPScore;
 import jgogears.sgf.auto.ParseException;
 
 /**

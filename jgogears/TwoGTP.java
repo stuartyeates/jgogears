@@ -1,5 +1,8 @@
 package jgogears;
 
+import jgogears.gtp.GTPInterface;
+import jgogears.gtp.GTPState;
+
 /**
  * An incomplete clone of the TwoGTP program included in the GnuGo distribution.
  * It runs a go game between a pair of GTP-capiable players TODO finish this

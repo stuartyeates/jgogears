@@ -1,46 +1,58 @@
-package jgogears;
+package jgogears.gtp;
 
-import java.util.TreeSet;
+import jgogears.BoardI;
+import jgogears.Move;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Interface GTPInterfaceRaw.
+ * A GTP interface for which a computer-go player need not keep any state. All
+ * necessary state is passed to the player each time the player is called.
+ * 
+ * @author syeates
  */
-public interface GTPInterfaceRaw {
+public interface GTPInterface {
 
 	/**
 	 * Clear board.
 	 * 
-	 * @return true, if successful
+	 * @param state
+	 *            the state
 	 */
-	boolean clearBoard();
+	void clearBoard(GTPState state);
 
 	/**
 	 * Final status list.
 	 * 
 	 * @param status
 	 *            the status
-	 * @return the tree set< vertex>
+	 * @param state
+	 *            the state
+	 * @return the move[]
 	 */
-	TreeSet<Vertex> finalStatusList(String status);
+	Move[] finalStatusList(String status, GTPState state);
 
 	/**
 	 * Fixed handicap.
 	 * 
 	 * @param handicap
 	 *            the handicap
-	 * @return the tree set< vertex>
+	 * @param state
+	 *            the state
+	 * @return the move[]
 	 */
-	TreeSet<Vertex> fixedHandicap(short handicap);
+	Move[] fixedHandicap(int handicap, GTPState state);
 
 	/**
 	 * Gen move.
 	 * 
 	 * @param colour
 	 *            the colour
+	 * @param state
+	 *            the state
 	 * @return the move
 	 */
-	Move genMove(short colour);
+	Move genMove(short colour, GTPState state);
 
 	/**
 	 * get the name of the engine.
@@ -59,9 +71,11 @@ public interface GTPInterfaceRaw {
 	/**
 	 * Gets the final score.
 	 * 
+	 * @param state
+	 *            the state
 	 * @return the final score
 	 */
-	GTPScore getFinalScore();
+	GTPScore getFinalScore(GTPState state);
 
 	/**
 	 * Gets the known command.
@@ -77,7 +91,7 @@ public interface GTPInterfaceRaw {
 	 * 
 	 * @return the list commands
 	 */
-	TreeSet<String> getListCommands();
+	String[] getListCommands();
 
 	/**
 	 * get the protocol version.
@@ -93,36 +107,41 @@ public interface GTPInterfaceRaw {
 	 *            the filename
 	 * @param moveNumber
 	 *            the move number
-	 * @return true, if successful
+	 * @param state
+	 *            the state
 	 */
-	boolean loadsgf(String filename, int moveNumber);
+	void loadsgf(String filename, int moveNumber, GTPState state);
 
 	/**
 	 * Place free handicap.
 	 * 
 	 * @param handicap
 	 *            the handicap
-	 * @return the tree set< vertex>
+	 * @param state
+	 *            the state
+	 * @return the move[]
 	 */
-	TreeSet<Vertex> placeFreeHandicap(short handicap);
+	Move[] placeFreeHandicap(int handicap, GTPState state);
 
 	/**
 	 * Place free handicap.
 	 * 
 	 * @param stones
 	 *            the stones
-	 * @return true, if successful
+	 * @param state
+	 *            the state
 	 */
-	boolean placeFreeHandicap(TreeSet<Vertex> stones);
+	void placeFreeHandicap(jgogears.Move[] stones, GTPState state);
 
 	/**
 	 * Play.
 	 * 
 	 * @param move
 	 *            the move
-	 * @return true, if successful
+	 * @param state
+	 *            the state
 	 */
-	boolean play(Move move);
+	void play(Move move, GTPState state);
 
 	/**
 	 * Quit.
@@ -136,27 +155,31 @@ public interface GTPInterfaceRaw {
 	 * 
 	 * @param colour
 	 *            the colour
+	 * @param state
+	 *            the state
 	 * @return the move
 	 */
-	Move regGenMove(short colour);
+	Move regGenMove(int colour, GTPState state);
 
 	/**
 	 * Sets the board size.
 	 * 
 	 * @param size
 	 *            the size
-	 * @return true, if successful
+	 * @param state
+	 *            the state
 	 */
-	boolean setBoardSize(short size);
+	void setBoardSize(short size, GTPState state);
 
 	/**
 	 * Sets the komi.
 	 * 
 	 * @param komi
 	 *            the komi
-	 * @return true, if successful
+	 * @param state
+	 *            the state
 	 */
-	boolean setKomi(double komi);
+	void setKomi(double komi, GTPState state);
 
 	/**
 	 * Sets the time left.
@@ -167,9 +190,11 @@ public interface GTPInterfaceRaw {
 	 *            the byo yomi time
 	 * @param byoYomiStones
 	 *            the byo yomi stones
-	 * @return true, if successful
+	 * @param state
+	 *            the state
 	 */
-	boolean setTimeLeft(short colour, double byoYomiTime, double byoYomiStones);
+	void setTimeLeft(int colour, double byoYomiTime, double byoYomiStones,
+			GTPState state);
 
 	/**
 	 * Sets the time settings.
@@ -180,22 +205,28 @@ public interface GTPInterfaceRaw {
 	 *            the byo yomi time
 	 * @param byoYomiStones
 	 *            the byo yomi stones
-	 * @return true, if successful
+	 * @param state
+	 *            the state
 	 */
-	boolean setTimeSettings(double mainTime, double byoYomiTime,
-			double byoYomiStones);
+	void setTimeSettings(double mainTime, double byoYomiTime,
+			double byoYomiStones, GTPState state);
 
 	/**
 	 * Show board.
 	 * 
+	 * @param state
+	 *            the state
 	 * @return the board i
 	 */
-	BoardI showBoard();
+	BoardI showBoard(GTPState state);
 
 	/**
 	 * Undo.
 	 * 
+	 * @param state
+	 *            the state
 	 * @return true, if successful
 	 */
-	boolean undo();
+	boolean undo(GTPState state);
+
 }

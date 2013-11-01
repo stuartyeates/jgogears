@@ -1,4 +1,4 @@
-package jgogears;
+package jgogears.gtp;
 
 // TODO: Auto-generated Javadoc
 /**

@@ -1,6 +1,8 @@
-package jgogears;
+package jgogears.gtp;
 
 import java.io.*;
+
+import jgogears.RandomEngine;
 
 // TODO: Auto-generated Javadoc
 /**

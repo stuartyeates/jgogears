@@ -4,6 +4,7 @@
 package jgogears.engine;
 
 import jgogears.*;
+import jgogears.gtp.GTPState;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc

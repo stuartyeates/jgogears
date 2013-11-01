@@ -1,4 +1,6 @@
-package jgogears;
+package jgogears.gtp;
+
+import jgogears.Move;
 
 /**
  * The Class GTPHandicaps. TODO implement handicaps for all sizes of board

@@ -3,6 +3,8 @@ package jgogears;
 import java.io.*;
 import java.util.*;
 
+import jgogears.gtp.GTPScore;
+
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc

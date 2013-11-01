@@ -3,6 +3,8 @@ package jgogears;
 import java.io.IOException;
 import java.util.LinkedList;
 
+import jgogears.gtp.GTPInterfaceRaw;
+
 /**
  * An incomplete clone of the TwoGTP program included in the GnuGo distribution.
  * It runs a go game between a pair of GTP-capiable players TODO finish this

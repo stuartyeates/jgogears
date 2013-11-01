@@ -1,4 +1,4 @@
-package jgogears;
+package jgogears.gtp;
 
 import junit.framework.TestCase;
 
