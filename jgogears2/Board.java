@@ -139,7 +139,21 @@ public class Board {
 	 * @return
 	 */
 	public boolean blackToPlay() {
-		throw new Error();
+		if (Statics.VERTEX_BLACK == this.colour)
+			return true;
+		else
+			return false;
+	}
+	/**
+	 * Is black to play next?
+	 * 
+	 * @return
+	 */
+	public boolean whiteToPlay() {
+		if (Statics.VERTEX_WHITE == this.colour)
+			return true;
+		else
+			return false;
 	}
 
 	/**
