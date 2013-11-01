@@ -71,9 +71,18 @@ public class Board {
 	 * 
 	 * @param board
 	 */
-
+	protected void init(Board old) {
+		board = new short[size][size];
+	}
+	/**
+	 * 
+	 * @param board
+	 */
 	protected void init() {
 		board = new short[size][size];
+		for (short i=0;i<size;i++)
+			for (short j=0;j<size;j++)
+				board[][] = 
 	}
 
 	/**
