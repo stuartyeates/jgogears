@@ -109,6 +109,7 @@ public class Board {
 	 */
 	public Board playMove(Move move) {
 		Board board = new Board(this);
+		board.init();
 		throw new Error();
 		// return board;
 	}
