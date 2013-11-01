@@ -1,6 +1,6 @@
 package jgogears2;
 /**
- * a vertex on a goban
+ * a vertex on a goban, a row and a column
  * 
  * @author syeates@gmail.com
  *
