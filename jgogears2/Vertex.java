@@ -1,5 +1,6 @@
 package jgogears2;
 /**
+ * a vertex on a goban
  * 
  * @author syeates@gmail.com
  *
