@@ -43,7 +43,7 @@ public class GTPParserUtils {
 	 *            the s
 	 * @return the tree set< vertex>
 	 */
-	static TreeSet<Vertex> parseVertexList(String s) {
+	static public TreeSet<Vertex> parseVertexList(String s) {
 		s = stripIntro(s);
 		TreeSet<Vertex> vert = new TreeSet<Vertex>();
 		if (s != null && s.length() != 0) {
@@ -78,7 +78,7 @@ public class GTPParserUtils {
 	 *            the s
 	 * @return the string
 	 */
-	static String stripIntro(String s) {
+	static public String stripIntro(String s) {
 		if (s == null)
 			return null;
 		if (s.length() == 0)
