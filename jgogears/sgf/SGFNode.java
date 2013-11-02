@@ -3,7 +3,7 @@ package jgogears.sgf;
 import java.util.*;
 
 import jgogears.Move;
-import jgogears.Statics;
+import jgogears.gtp.Statics;
 
 /**
  * The Class SGFNode.

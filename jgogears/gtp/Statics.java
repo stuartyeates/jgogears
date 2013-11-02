@@ -1,7 +1,7 @@
 /**
  * 
  */
-package jgogears;
+package jgogears.gtp;
 
 /**
  * @author syeates@gmail.com

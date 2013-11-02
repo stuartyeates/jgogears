@@ -7,6 +7,7 @@ import java.io.*;
 import java.util.*;
 
 import jgogears.*;
+import jgogears.gtp.Statics;
 
 /**
  * @author syeates

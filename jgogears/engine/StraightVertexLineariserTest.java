@@ -4,6 +4,7 @@ import java.io.StringReader;
 import java.util.Iterator;
 
 import jgogears.*;
+import jgogears.gtp.Statics;
 import jgogears.sgf.SGFGameTree;
 import jgogears.sgf.SGFParser;
 import junit.framework.TestCase;

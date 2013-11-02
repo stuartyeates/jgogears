@@ -2,6 +2,8 @@ package jgogears;
 
 import java.util.BitSet;
 
+import jgogears.gtp.Statics;
+
 /**
  * A bit-wise board representation using a naive bit ordering.
  * 

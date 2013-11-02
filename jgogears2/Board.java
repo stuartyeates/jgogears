@@ -2,7 +2,7 @@ package jgogears2;
 
 import java.util.List;
 
-import jgogears.Statics;
+import jgogears.gtp.Statics;
 
 /**
  * A Board represents a particular state of the board at a particular point in

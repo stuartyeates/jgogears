@@ -4,7 +4,7 @@ import jgogears.BoardI;
 import jgogears.Move;
 import jgogears.SmallBoard;
 import jgogears.SmallerBoard;
-import jgogears.Statics;
+import jgogears.gtp.Statics;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc

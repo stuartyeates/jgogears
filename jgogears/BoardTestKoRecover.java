@@ -1,5 +1,6 @@
 package jgogears;
 
+import jgogears.gtp.Statics;
 import junit.framework.TestCase;
 
 public class BoardTestKoRecover extends TestCase {

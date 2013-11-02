@@ -8,6 +8,7 @@ import jgogears.gtp.GTPError;
 import jgogears.gtp.GTPInterfaceRaw;
 import jgogears.gtp.GTPParserUtils;
 import jgogears.gtp.GTPScore;
+import jgogears.gtp.Statics;
 
 // TODO: Auto-generated Javadoc
 /**

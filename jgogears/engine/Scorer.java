@@ -4,6 +4,7 @@
 package jgogears.engine;
 
 import jgogears.*;
+import jgogears.gtp.Statics;
 
 /**
  * Class to calculate scores using a model and a board.

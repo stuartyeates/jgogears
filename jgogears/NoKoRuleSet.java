@@ -5,6 +5,8 @@ package jgogears;
 
 import java.util.*;
 
+import jgogears.gtp.Statics;
+
 /**
  * Really simple and fast ruleset
  * 

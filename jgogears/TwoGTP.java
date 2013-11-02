@@ -2,6 +2,7 @@ package jgogears;
 
 import jgogears.gtp.GTPInterface;
 import jgogears.gtp.GTPState;
+import jgogears.gtp.Statics;
 
 /**
  * An incomplete clone of the TwoGTP program included in the GnuGo distribution.

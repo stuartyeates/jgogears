@@ -2,6 +2,8 @@ package jgogears;
 
 import java.util.BitSet;
 
+import jgogears.gtp.Statics;
+
 // TODO: Auto-generated Javadoc
 /**
  * A better bitset-based board implementation.

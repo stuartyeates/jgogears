@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 import jgogears.gtp.GTPInterfaceRaw;
+import jgogears.gtp.Statics;
 
 /**
  * An incomplete clone of the TwoGTP program included in the GnuGo distribution.

@@ -1,5 +1,6 @@
 package jgogears;
 
+import jgogears.gtp.Statics;
 import jgogears.sgf.auto.ParseException;
 import junit.framework.TestCase;
 

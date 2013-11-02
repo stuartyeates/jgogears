@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 import jgogears.*;
+import jgogears.gtp.Statics;
 import jgogears.sgf.SGFGameTree;
 import junit.framework.TestCase;
 

@@ -3,7 +3,7 @@ package jgogears.engine;
 import java.util.*;
 
 import jgogears.BoardI;
-import jgogears.Statics;
+import jgogears.gtp.Statics;
 
 // TODO: Auto-generated Javadoc
 /**

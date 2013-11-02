@@ -1,5 +1,7 @@
 package jgogears;
 
+import jgogears.gtp.Statics;
+
 /**
  * GoBoard represents the state of a Go board at a particular point in time. It
  * does NOT represent the number of prisoners, the number (or order) of previous

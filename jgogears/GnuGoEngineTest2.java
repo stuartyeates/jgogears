@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 import jgogears.gtp.GTPScore;
+import jgogears.gtp.Statics;
 
 import junit.framework.TestCase;
 

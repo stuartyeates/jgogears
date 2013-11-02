@@ -5,7 +5,6 @@ import java.util.*;
 import jgogears.BoardI;
 import jgogears.Move;
 import jgogears.RuleSet;
-import jgogears.Statics;
 import jgogears.Vertex;
 
 // TODO: Auto-generated Javadoc

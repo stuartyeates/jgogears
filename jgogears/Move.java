@@ -1,5 +1,7 @@
 package jgogears;
 
+import jgogears.gtp.Statics;
+
 // TODO: Auto-generated Javadoc
 /**
  * A move. A colour and either a vertex, a pass or a resign. Also used for

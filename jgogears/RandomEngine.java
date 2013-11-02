@@ -6,6 +6,7 @@ import jgogears.gtp.GTPInterface;
 import jgogears.gtp.GTPScore;
 import jgogears.gtp.GTPState;
 import jgogears.gtp.SkeletonEngine;
+import jgogears.gtp.Statics;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -40,7 +41,7 @@ public class RandomEngine extends SkeletonEngine implements GTPInterface {
 	 * @see jgogears.GTPInterface#getEngineVersion()
 	 */
 	public String getEngineVersion() {
-		return "00.001" + new Date();
+		return "00.001 " + new Date();
 	}
 
 	/*

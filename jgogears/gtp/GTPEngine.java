@@ -3,7 +3,6 @@ package jgogears.gtp;
 import java.io.*;
 
 import jgogears.Move;
-import jgogears.Statics;
 
 // TODO: Auto-generated Javadoc
 /**

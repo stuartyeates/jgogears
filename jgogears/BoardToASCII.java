@@ -1,5 +1,7 @@
 package jgogears;
 
+import jgogears.gtp.Statics;
+
 // TODO: Auto-generated Javadoc
 /**
  * Transform a board to ASCII, in the style of GnuGo.

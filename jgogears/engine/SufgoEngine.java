@@ -4,6 +4,7 @@ import jgogears.*;
 import jgogears.gtp.GTPScore;
 import jgogears.gtp.GTPState;
 import jgogears.gtp.SkeletonEngine;
+import jgogears.gtp.Statics;
 
 /**
  * @author syeates
