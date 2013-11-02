@@ -2,6 +2,8 @@ package jgogears;
 
 import java.util.*;
 
+import jgogears2.Zobrist;
+
 /**
  * Abstract interface to a board. Knows about the size of the board, which
  * stones are where, and about colours. Knows nothing of the history of the

@@ -1,6 +1,9 @@
-package jgogears;
+package jgogears2;
 
 import java.util.*;
+
+import jgogears.Random;
+import jgogears.Statics;
 
 /**
  * Class representing a Zobrist hash, a binary hash of the current board state.

@@ -3,6 +3,8 @@ package jgogears;
 import java.io.*;
 import java.util.*;
 
+import jgogears2.Zobrist;
+
 import junit.framework.TestCase;
 
 /**
