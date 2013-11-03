@@ -68,7 +68,7 @@ public class GTPParserUtils {
 		return vert;
 	}
 
-	// TODO make this mildy efficient by not creating a billion temp orary
+	// TODO make this mildy efficient by not creating a billion temporary
 	// strings.
 	// probably use a stringbuffer
 	/**
