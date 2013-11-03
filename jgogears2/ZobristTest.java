@@ -12,6 +12,7 @@ import junit.framework.TestCase;
  * tests for Zobrist.
  * 
  * @author syeates
+ * @see Zobrist
  */
 
 public class ZobristTest extends TestCase {
