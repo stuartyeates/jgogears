@@ -6,7 +6,7 @@ import jgogears.Vertex;
 
 // TODO: Auto-generated Javadoc
 /**
- * various utilities to help parsing GTP output.
+ * static string processing utilities to help parsing GTP output.
  * 
  * @author syeates
  */
@@ -68,11 +68,12 @@ public class GTPParserUtils {
 		return vert;
 	}
 
+	/**
+	 * Strip intro.
+	 * 
 	// TODO make this mildy efficient by not creating a billion temporary
 	// strings.
 	// probably use a stringbuffer
-	/**
-	 * Strip intro.
 	 * 
 	 * @param s
 	 *            the s

@@ -9,7 +9,7 @@ import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc
 /**
- * tests for Zobrist.
+ * tests for Zobrist hash
  * 
  * @author syeates
  * @see Zobrist
