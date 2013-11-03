@@ -13,6 +13,7 @@ import jgogears.gtp.Statics;
  * TODO add proper references
  * 
  * @author syeates@gmail.com
+ * @see ZorbistTest
  */
 
 public class Zobrist extends BitSet {
