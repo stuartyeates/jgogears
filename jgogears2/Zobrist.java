@@ -8,6 +8,8 @@ import jgogears.gtp.Statics;
 /**
  * Class representing a Zobrist hash, a binary hash of the current board state.
  * 
+ * all of the magic is in init() and compareTo()
+ * 
  * TODO add proper references
  * 
  * @author syeates@gmail.com
