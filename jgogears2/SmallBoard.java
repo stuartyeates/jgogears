@@ -1,7 +1,10 @@
-package jgogears;
+package jgogears2;
 
 import java.util.BitSet;
 
+import jgogears.BoardI;
+import jgogears.Move;
+import jgogears.RuleSet;
 import jgogears.gtp.Statics;
 
 /**

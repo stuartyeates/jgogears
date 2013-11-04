@@ -2,8 +2,6 @@ package jgogears2;
 
 import jgogears.BoardI;
 import jgogears.Move;
-import jgogears.SmallBoard;
-import jgogears.SmallerBoard;
 import jgogears.gtp.Statics;
 import junit.framework.TestCase;
 
