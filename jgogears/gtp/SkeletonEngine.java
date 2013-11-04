@@ -194,7 +194,6 @@ public abstract class SkeletonEngine implements GTPInterface {
 	 * @see jgogears.GTPInterface#undo(jgogears.GTPState)
 	 */
 	public boolean undo(GTPState state) {
-		// TODO Auto-generated method stub
 		GTPState newState = new GTPState();
 		newState.byoYomiStones = state.byoYomiStones;
 		newState.byoYomiTime = state.byoYomiTime;
@@ -202,8 +201,6 @@ public abstract class SkeletonEngine implements GTPInterface {
 		newState.boardsize = state.boardsize;
 		newState.mainTime = state.mainTime;
 		newState.board = BoardI.newBoard(newState.boardsize);
-
-		// TODO generate new board
 
 		return false;
 	}
