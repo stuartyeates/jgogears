@@ -20,16 +20,8 @@ public class BoardToASCIITest extends TestCase {
 	 * Test empty.
 	 */
 	public void testEmpty() {
-		Board board = Board.newBoard();
+		Board board = new Board();
 		String string = BoardToASCII.Transform(board);
-		assertNotNull(board);
-		assertNotNull(string);
-		board = new SmallBoard();
-		string = BoardToASCII.Transform(board);
-		assertNotNull(board);
-		assertNotNull(string);
-		board = new SmallerBoard();
-		string = BoardToASCII.Transform(board);
 		assertNotNull(board);
 		assertNotNull(string);
 	}
@@ -38,7 +30,7 @@ public class BoardToASCIITest extends TestCase {
 	 * Test one.
 	 */
 	public void testOne() {
-		BoardI board = BoardI.newBoard();
+		Board board = new Board();
 		board = board.newBoard(new Move("w b1"));
 		String string = BoardToASCII.Transform(board);
 		assertNotNull(board);
