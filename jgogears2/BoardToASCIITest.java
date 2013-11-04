@@ -3,6 +3,8 @@
  */
 package jgogears2;
 
+import jgogears.SmallBoard;
+import jgogears.SmallerBoard;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc

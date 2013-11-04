@@ -346,7 +346,9 @@ public abstract class BoardI {
 	 */
 	@Override
 	public String toString() {
-		return BoardToASCII.Transform(this);
+		throw new Error();
+		//return BoardToASCII.Transform(this);
+		
 	}
 
 	public boolean isOffBoard(int row, int column) {
