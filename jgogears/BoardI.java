@@ -3,6 +3,7 @@ package jgogears;
 import java.util.*;
 
 import jgogears.gtp.Statics;
+import jgogears2.BoardToASCII;
 import jgogears2.Zobrist;
 
 /**

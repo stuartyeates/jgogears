@@ -5,6 +5,7 @@ import java.util.*;
 
 import jgogears.engine.Model;
 import jgogears.gtp.Statics;
+import jgogears2.BoardToASCII;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc

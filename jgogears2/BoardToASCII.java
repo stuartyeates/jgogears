@@ -1,4 +1,4 @@
-package jgogears;
+package jgogears2;
 
 import jgogears.gtp.Statics;
 
@@ -70,7 +70,7 @@ public final class BoardToASCII {
 	 *            the board
 	 * @return the ASCII representation
 	 */
-	static String Transform(BoardI board) {
+	static String Transform(Board board) {
 		StringBuffer buf = new StringBuffer();
 		short size = board.getSize();
 		String head = headerRow(size);
