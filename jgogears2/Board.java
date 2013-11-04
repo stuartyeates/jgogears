@@ -100,6 +100,16 @@ public class Board {
 	public short getColour(short row, short column) {
 		return board[row][column];
 	}
+	/**
+	 * What colour is this vertex?
+	 * 
+	 * @param row
+	 * @param column
+	 * @return
+	 */
+	public short getColour(int row, int column) {
+		return this.getColour((short) row,(short) column);
+	}
 
 	/**
 	 * Return a new Board based on the current board and the given move
