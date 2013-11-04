@@ -3,8 +3,6 @@
  */
 package jgogears2;
 
-import jgogears.SmallBoard;
-import jgogears.SmallerBoard;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc
@@ -31,7 +29,7 @@ public class BoardToASCIITest extends TestCase {
 	 */
 	public void testOne() {
 		Board board = new Board();
-		board = board.newBoard(new Move("w b1"));
+		board = board.playMove(new Move("w b1"));
 		String string = BoardToASCII.Transform(board);
 		assertNotNull(board);
 		assertNotNull(string);
