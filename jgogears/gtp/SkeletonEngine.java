@@ -67,7 +67,7 @@ public abstract class SkeletonEngine implements GTPInterface {
 	 * @see jgogears.GTPInterface#getListCommands()
 	 */
 	public String[] getListCommands() {
-		// TODO
+		// TODO Auto-generated method stub
 		return null;
 	}
 
