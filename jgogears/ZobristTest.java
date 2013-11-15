@@ -177,10 +177,7 @@ public class ZobristTest extends TestCase {
 	 */
 	public void testWithBoardBasic() {
 		Board board = Board.newBoard();
-		if (Board.DEFAULT_ZOBRIST)
 			assertTrue(board.getZobrist() != null);
-		else
-			assertTrue(board.getZobrist() == null);
 	}
 
 	/**

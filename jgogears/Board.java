@@ -22,9 +22,6 @@ public class Board {
 	/** The default board size. */
 	public static final short DEFAULT_BOARD_SIZE = 19;
 
-	/** The Constant DEFAULT_ZOBRIST. */
-	public final static boolean DEFAULT_ZOBRIST = true;
-
 	/** Are we sanity checking moves? */
 	public final static boolean SANITY_CHECK_MOVES = true;
 
