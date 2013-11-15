@@ -6,7 +6,7 @@ import java.util.Vector;
  * A class representing a vertex on the board. There is no representation of
  * colour or the occupancy of the vertex. TODO write some tests for this
  * 
- * @author Stuart
+ * @author syeates@gmail.com
  */
 public final class Vertex extends Vector<Short> implements Comparable<Vertex> {
 	/** are we spewing out lots of debugging info? */

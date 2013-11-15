@@ -9,7 +9,7 @@ import java.util.TreeSet;
 /**
  * Really simple and fast ruleset
  * 
- * @author Stuart
+ * @author syeates@gmail.com
  */
 public class NoKoRuleSet extends RuleSet {
 

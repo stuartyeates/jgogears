@@ -6,6 +6,7 @@ import junit.framework.TestCase;
 // TODO: Auto-generated Javadoc
 /**
  * The Class MoveTest.
+ * @author syeates@gmail.com
  */
 public class MoveTest extends TestCase {
 

@@ -6,7 +6,7 @@ import java.util.BitSet;
  * Class representing a Zobrist hash, a binary hash of the current board state.
  * TODO add proper references
  * 
- * @author Stuart
+ * @author syeates@gmail.com
  */
 
 public class Zobrist extends BitSet {

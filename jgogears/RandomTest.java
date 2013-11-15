@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 /**
  * TODO
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class RandomTest extends TestCase {
 	public void testisLarger() {

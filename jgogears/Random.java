@@ -6,7 +6,7 @@ package jgogears;
 /**
  * A random number generator
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class Random {
 	/** The random number generator */

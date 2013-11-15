@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 /**
  * tests for Zobrist.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 
 public class ZobristTest extends TestCase {

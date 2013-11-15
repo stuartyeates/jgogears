@@ -5,6 +5,7 @@ import junit.framework.TestCase;
 // TODO: Auto-generated Javadoc
 /**
  * The Class RankTest.
+ * @author syeates@gmail.com
  */
 public class RankTest extends TestCase {
 
