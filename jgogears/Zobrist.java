@@ -1,6 +1,6 @@
 package jgogears;
 
-import java.util.*;
+import java.util.BitSet;
 
 /**
  * Class representing a Zobrist hash, a binary hash of the current board state.

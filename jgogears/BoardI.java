@@ -1,6 +1,5 @@
 package jgogears;
 
-import java.util.*;
 
 /**
  * Abstract interface to a board. Knows about the size of the board, which

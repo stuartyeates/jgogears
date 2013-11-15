@@ -1,7 +1,11 @@
 package jgogears;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.Stack;
+import java.util.TreeSet;
 
 import jgogears.engine.Model;
 import junit.framework.TestCase;

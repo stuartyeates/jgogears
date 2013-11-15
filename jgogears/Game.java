@@ -1,9 +1,11 @@
 package jgogears;
 
-import java.io.*;
-import java.util.*;
-import jgogears.SGF.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.LinkedList;
 
+import jgogears.SGF.SGFGameTree;
 import jgogears.gtp.GTPScore;
 
 /**

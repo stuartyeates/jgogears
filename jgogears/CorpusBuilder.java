@@ -1,8 +1,18 @@
 package jgogears;
 
-import java.io.*;
-import java.util.*;
-import java.util.zip.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.Stack;
+import java.util.TreeSet;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 import jgogears.gtp.GnuGoEngine;
 

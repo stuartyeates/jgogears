@@ -1,6 +1,9 @@
 package jgogears;
 
-import jgogears.engine.ModelTest;
+import jgogears.SGF.SGFGameTest;
+import jgogears.SGF.SGFNodeTest;
+import jgogears.SGF.SGFParserTest;
+import jgogears.SGF.SGFPropertyTest;
 import jgogears.engine.NodeIteratorTest;
 import jgogears.engine.NodeTest;
 import jgogears.engine.StraightVertexLineariserTest;
@@ -8,9 +11,13 @@ import jgogears.engine.SufogoEngineTest;
 import jgogears.engine.TrainerTest;
 import jgogears.engine.TreeIteratorTest;
 import jgogears.engine.VertexLineariserTest;
-import jgogears.gtp.*;
-import jgogears.SGF.*;
-import junit.framework.*;
+import jgogears.gtp.GTPParserUtilsTest;
+import jgogears.gtp.GTPScoreTest;
+import jgogears.gtp.GnuGoEngineTest;
+import jgogears.gtp.GnuGoEngineTest2;
+import jgogears.gtp.TwoGTPTest;
+import junit.framework.Test;
+import junit.framework.TestSuite;
 
 /**
  * Package-wide test collection.

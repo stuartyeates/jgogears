@@ -3,11 +3,10 @@
  */
 package jgogears;
 
-import java.io.*;
-import java.util.*;
+import java.util.Collection;
+import java.util.Iterator;
 
 import jgogears.gtp.GTPScore;
-
 import junit.framework.TestCase;
 
 /**

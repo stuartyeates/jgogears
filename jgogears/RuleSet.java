@@ -3,7 +3,9 @@
  */
 package jgogears;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Stack;
+import java.util.TreeSet;
 
 // TODO: Auto-generated Javadoc
 /**

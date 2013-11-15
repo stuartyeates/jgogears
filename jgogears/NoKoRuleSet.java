@@ -3,7 +3,8 @@
  */
 package jgogears;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.TreeSet;
 
 /**
  * Really simple and fast ruleset
