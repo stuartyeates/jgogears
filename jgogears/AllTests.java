@@ -41,7 +41,7 @@ public class AllTests {
 		suite.addTestSuite(ZobristTest.class);
 		//$JUnit-END$
 		
-		suite.addTestSuite(ModelTest.class);
+		//suite.addTestSuite(ModelTest.class);
 		suite.addTestSuite(NodeIteratorTest.class);
 		suite.addTestSuite(NodeTest.class);
 		suite.addTestSuite(StraightVertexLineariserTest.class);
