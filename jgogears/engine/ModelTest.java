@@ -46,7 +46,7 @@ public class ModelTest extends TestCase {
 		try {
 			FileReader reader = new FileReader(
 					"sgf/testing/2007-01-12- BamboField- tokabe.sgf");
-			jgogears.SGF.SGF parser = new jgogears.SGF.SGF(reader);
+			jgogears.SGF.auto.SGF parser = new jgogears.SGF.auto.SGF(reader);
 			SGFGameTree tree = parser.gameTree();
 			Game game = new Game(tree);
 			return game;

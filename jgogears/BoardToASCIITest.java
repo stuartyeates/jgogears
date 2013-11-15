@@ -22,14 +22,6 @@ public class BoardToASCIITest extends TestCase {
 		String string = BoardToASCII.Transform(board);
 		assertNotNull(board);
 		assertNotNull(string);
-		board = new SmallBoard();
-		string = BoardToASCII.Transform(board);
-		assertNotNull(board);
-		assertNotNull(string);
-		board = new SmallerBoard();
-		string = BoardToASCII.Transform(board);
-		assertNotNull(board);
-		assertNotNull(string);
 	}
 
 	/**

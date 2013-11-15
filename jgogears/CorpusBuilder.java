@@ -4,6 +4,8 @@ import java.io.*;
 import java.util.*;
 import java.util.zip.*;
 
+import jgogears.gtp.GnuGoEngine;
+
 /**
  * The Class CorpusBuilder. troll through a directory hierarchy containing SGF
  * files and archives of scoff files. Each file is parsed as an SGF file and

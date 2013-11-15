@@ -243,43 +243,4 @@ public class ZobristTest extends TestCase {
 		}
 
 	}
-
-	/**
-	 * Test with board.
-	 */
-	public void testWithFastBoard() {
-		BoardI board = new SmallBoard(true);
-		BoardI board2 = board.newBoard(new Move((short) 1, (short) 1,
-				BoardI.VERTEX_BLACK));
-		BoardI board3 = board.newBoard(new Move((short) 1, (short) 1,
-				BoardI.VERTEX_BLACK));
-		if (DEBUG) {
-			System.err.println(board.getZobrist());
-			System.err.println(board2.getZobrist());
-			System.err.println(board3.getZobrist());
-		}
-		assertTrue(board2.getZobrist().equals(board3.getZobrist()));
-		assertTrue(board3.getZobrist().equals(board2.getZobrist()));
-		assertFalse(board.getZobrist().equals(board2.getZobrist()));
-		assertFalse(board2.getZobrist().equals(board.getZobrist()));
-		assertFalse(board.getZobrist().equals(board3.getZobrist()));
-		assertFalse(board3.getZobrist().equals(board.getZobrist()));
-	}
-
-	/**
-	 * Test with board.
-	 */
-	public void testWithFasterBoard() {
-		BoardI board = new SmallerBoard(true);
-		BoardI board2 = board.newBoard(new Move((short) 1, (short) 1,
-				BoardI.VERTEX_BLACK));
-		BoardI board3 = board.newBoard(new Move((short) 1, (short) 1,
-				BoardI.VERTEX_BLACK));
-		assertTrue(board2.getZobrist().equals(board3.getZobrist()));
-		assertTrue(board3.getZobrist().equals(board2.getZobrist()));
-		assertFalse(board.getZobrist().equals(board2.getZobrist()));
-		assertFalse(board2.getZobrist().equals(board.getZobrist()));
-		assertFalse(board.getZobrist().equals(board3.getZobrist()));
-		assertFalse(board3.getZobrist().equals(board.getZobrist()));
-	}
 }

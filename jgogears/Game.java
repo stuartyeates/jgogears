@@ -3,6 +3,8 @@ package jgogears;
 import java.io.*;
 import java.util.*;
 
+import jgogears.gtp.GTPScore;
+
 /**
  * External representation of a game of go. This is currently very heavily
  * influenced by SGF, it needs to be generalised.
@@ -25,7 +27,7 @@ public final class Game {
 		try {
 
 			return SGFGameTree.loadFromFile(file);
-		} catch (jgogears.SGF.TokenMgrError e) {
+		} catch (jgogears.SGF.auto.TokenMgrError e) {
 			throw new java.io.IOException("Error reading \"" + file + "\" "
 					+ e.getLocalizedMessage());
 		}

@@ -6,6 +6,8 @@ package jgogears.engine;
 import java.io.IOException;
 
 import jgogears.*;
+import jgogears.gtp.GTPState;
+import jgogears.gtp.TwoGTP;
 
 /**
  * TODO

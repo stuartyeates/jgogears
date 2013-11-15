@@ -588,7 +588,7 @@ public class StraightVertexLineariserTest extends TestCase {
 			String example = examples[i];
 
 			StringReader reader = new StringReader(example);
-			jgogears.SGF.SGF parser = new jgogears.SGF.SGF(reader);
+			jgogears.SGF.auto.SGF parser = new jgogears.SGF.auto.SGF(reader);
 			SGFGameTree tree = parser.gameTree();
 
 			assertTrue(parser != null);

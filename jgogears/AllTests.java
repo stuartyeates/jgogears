@@ -1,5 +1,11 @@
 package jgogears;
 
+import jgogears.gtp.GTPParserUtilsTest;
+import jgogears.gtp.GTPScoreTest;
+import jgogears.gtp.GnuGoEngineTest;
+import jgogears.gtp.GnuGoEngineTest2;
+import jgogears.gtp.TwoGTPTest;
+import jgogears.SGF.*;
 import junit.framework.*;
 
 /**
@@ -28,7 +34,6 @@ public class AllTests {
 		suite.addTestSuite(GnuGoEngineTest2.class);
 		suite.addTestSuite(NoKoRuleSetTest.class);
 		suite.addTestSuite(CheckAllSGFFilesTest.class);
-		suite.addTestSuite(SmallBoardTest.class);
 		suite.addTestSuite(RankTest.class);
 		suite.addTestSuite(ZobristTest.class);
 		suite.addTestSuite(SGFNodeTest.class);
@@ -38,7 +43,6 @@ public class AllTests {
 		suite.addTestSuite(RandomTest.class);
 		suite.addTestSuite(SGFParserTest.class);
 		suite.addTestSuite(MoveTest.class);
-		suite.addTestSuite(SmallerBoardTest.class);
 		// $JUnit-END$
 		return suite;
 	}
