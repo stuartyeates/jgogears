@@ -5,7 +5,7 @@ package jgogears;
  * A move. A colour and either a vertex, a pass or a resign. Also used for
  * handicap stones.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 
 public final class Move {

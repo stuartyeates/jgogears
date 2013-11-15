@@ -12,7 +12,7 @@ import jgogears.gtp.GTPScore;
  * External representation of a game of go. This is currently very heavily
  * influenced by SGF, it needs to be generalised.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public final class Game {
 

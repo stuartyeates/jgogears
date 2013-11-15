@@ -6,7 +6,7 @@ package jgogears;
 /**
  * TODO
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class KoRuleSet extends NoKoRuleSet {
 

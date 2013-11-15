@@ -12,7 +12,7 @@ import junit.framework.TestCase;
 /**
  * TODO
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class GameTest extends TestCase {
 	/** are we being verbose ? */

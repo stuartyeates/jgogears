@@ -8,7 +8,7 @@ import junit.framework.TestSuite;
  * Manually created test suite of all useful tests in the project, across all
  * packages. The default test suite for the project.
  * 
- * @author Stuart
+ * @author syeates@gmail.com
  */
 
 public class GlobalTests {
