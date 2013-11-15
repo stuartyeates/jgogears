@@ -236,8 +236,8 @@ public class ZobristTest extends TestCase {
 	 */
 	public void testWithBoardSizes() {
 		for (int i = 0; i < Zobrist.MAX_BOARD_SIZE; i++) {
-			Board board = Board.newBoard(19, true);
-			Board board2 = Board.newBoard(i, true);
+			Board board = Board.newBoard(19);
+			Board board2 = Board.newBoard(i);
 			assertNotNull(board);
 			assertNotNull(board2);
 		}
