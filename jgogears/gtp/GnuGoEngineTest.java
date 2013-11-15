@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 /**
  * The Class GnuGoEngineTest.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  * @see GnuGoEngine
  * @see junit.framework.TestCase
  */

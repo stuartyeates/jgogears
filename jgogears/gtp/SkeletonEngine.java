@@ -6,7 +6,7 @@ import jgogears.Move;
 /**
  * A skeleton GTP player TODO complete this implementation TODO add tests
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public abstract class SkeletonEngine implements GTPInterface {
 

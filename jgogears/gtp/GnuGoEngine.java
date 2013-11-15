@@ -11,7 +11,7 @@ import jgogears.Vertex;
 /**
  * An engine wrapping an instance of the GnuGo computer-go player.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public final class GnuGoEngine implements GTPInterfaceRaw {
 

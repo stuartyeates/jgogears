@@ -9,7 +9,7 @@ import jgogears.RuleSet;
  * It runs a go game between a pair of GTP-capiable players TODO finish this
  * implementation
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 
 public class TwoGTP {

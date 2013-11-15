@@ -5,7 +5,7 @@ package jgogears.gtp;
  * A class of errors representing errors that have been recieved over the GTP
  * command interface.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class GTPError extends Error {
 

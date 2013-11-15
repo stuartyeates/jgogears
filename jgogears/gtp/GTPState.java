@@ -11,7 +11,7 @@ import jgogears.Vertex;
 /**
  * Class representing the state of a GTP game.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class GTPState {
 

@@ -22,7 +22,7 @@ import junit.framework.TestSuite;
 /**
  * Package-wide test collection.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class AllTests {
 
@@ -30,7 +30,7 @@ public class AllTests {
 	 * Package-wide test collection.
 	 * 
 	 * @return the test
-	 * @author syeates
+	 * @author syeates@gmail.com
 	 */
 
 	public static Test suite() {

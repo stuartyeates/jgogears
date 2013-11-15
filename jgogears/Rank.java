@@ -6,7 +6,7 @@ package jgogears;
  * are represented internally as a double. Rank parsing and formatting are only
  * supported for whole numbers.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 
 public final class Rank {

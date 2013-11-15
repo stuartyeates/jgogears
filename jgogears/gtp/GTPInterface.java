@@ -9,7 +9,7 @@ import jgogears.Move;
  * A GTP interface for which a computer-go player need not keep any state. All
  * necessary state is passed to the player each time the player is called.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public interface GTPInterface {
 

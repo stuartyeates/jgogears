@@ -11,7 +11,7 @@ package jgogears.gtp;
  * gap in skill between the two players, since a player who is loosing even
  * slightly may make increasingly risky moves in an attempt to force an error.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 
 public final class GTPScore {

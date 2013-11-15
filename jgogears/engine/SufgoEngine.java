@@ -6,7 +6,7 @@ import jgogears.gtp.GTPState;
 import jgogears.gtp.SkeletonEngine;
 
 /**
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class SufgoEngine extends SkeletonEngine {
 

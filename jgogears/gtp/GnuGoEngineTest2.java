@@ -14,7 +14,7 @@ import junit.framework.TestCase;
 /**
  * The Class GnuGoEngineTest2.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class GnuGoEngineTest2 extends TestCase {
 

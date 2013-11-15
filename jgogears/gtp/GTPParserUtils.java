@@ -8,7 +8,7 @@ import jgogears.Vertex;
 /**
  * various utilities to help parsing GTP output.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class GTPParserUtils {
 

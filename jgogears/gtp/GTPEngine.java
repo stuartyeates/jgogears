@@ -10,7 +10,7 @@ import jgogears.Move;
  * The engine side of a GTP connection. Uses a GTPInterface to talk to the
  * engine that actually does the work.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class GTPEngine implements Runnable {
 

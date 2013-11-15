@@ -10,7 +10,7 @@ import jgogears.Move;
  * It runs a go game between a pair of GTP-capiable players TODO finish this
  * implementation
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 
 public class TwoGTPRaw {
