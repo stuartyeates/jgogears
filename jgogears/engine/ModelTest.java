@@ -10,6 +10,7 @@ import junit.framework.TestCase;
 // TODO: Auto-generated Javadoc
 /**
  * The Class ModelTest.
+ * @author syeates@gmail.com
  */
 public class ModelTest extends TestCase {
 

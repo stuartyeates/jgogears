@@ -10,7 +10,7 @@ import jgogears.Board;
 /**
  * Class to hold a single node in the tree.
  * 
- * @author stuart
+ * @author syeates@gmail.com
  */
 public final class Node implements Comparable<Node> {
 

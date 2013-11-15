@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 /**
  * Test class Node
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class NodeTest extends TestCase {
 

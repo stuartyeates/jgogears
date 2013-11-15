@@ -9,7 +9,7 @@ import junit.framework.TestCase;
 /**
  * Tests for NodeIterator.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class NodeIteratorTest extends TestCase {
 

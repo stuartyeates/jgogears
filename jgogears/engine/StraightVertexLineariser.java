@@ -6,6 +6,7 @@ import jgogears.Board;
 
 /**
  * The Class Straight Vertex Lineariser.
+ * @author syeates@gmail.com
  */
 final public class StraightVertexLineariser implements Iterator<Short> {
 

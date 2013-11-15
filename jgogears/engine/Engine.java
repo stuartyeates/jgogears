@@ -12,7 +12,7 @@ import jgogears.gtp.TwoGTP;
 /**
  * TODO
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class Engine {
 

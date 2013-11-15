@@ -8,7 +8,7 @@ import java.util.Iterator;
 /**
  * An iterator for nodes.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 
 public class NodeIterator implements Iterator<Node> {

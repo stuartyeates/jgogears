@@ -8,7 +8,7 @@ import jgogears.*;
 /**
  * Class to calculate scores using a model and a board.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class Scorer {
 	/** are we being verbose? */
