@@ -2,6 +2,7 @@ package jgogears;
 
 import java.io.*;
 import java.util.*;
+import jgogears.SGF.*;
 
 import jgogears.gtp.GTPScore;
 

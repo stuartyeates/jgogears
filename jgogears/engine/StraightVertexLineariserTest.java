@@ -2,6 +2,7 @@ package jgogears.engine;
 
 import java.io.StringReader;
 import java.util.Iterator;
+import jgogears.SGF.*;
 
 import jgogears.*;
 import junit.framework.TestCase;

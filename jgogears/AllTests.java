@@ -1,10 +1,14 @@
 package jgogears;
 
-import jgogears.gtp.GTPParserUtilsTest;
-import jgogears.gtp.GTPScoreTest;
-import jgogears.gtp.GnuGoEngineTest;
-import jgogears.gtp.GnuGoEngineTest2;
-import jgogears.gtp.TwoGTPTest;
+import jgogears.engine.ModelTest;
+import jgogears.engine.NodeIteratorTest;
+import jgogears.engine.NodeTest;
+import jgogears.engine.StraightVertexLineariserTest;
+import jgogears.engine.SufogoEngineTest;
+import jgogears.engine.TrainerTest;
+import jgogears.engine.TreeIteratorTest;
+import jgogears.engine.VertexLineariserTest;
+import jgogears.gtp.*;
 import jgogears.SGF.*;
 import junit.framework.*;
 
@@ -24,26 +28,39 @@ public class AllTests {
 
 	public static Test suite() {
 		TestSuite suite = new TestSuite("Test for jgogears");
-		// $JUnit-BEGIN$
-		suite.addTestSuite(GameTest.class);
-		suite.addTestSuite(GTPParserUtilsTest.class);
-		suite.addTestSuite(GTPScoreTest.class);
-		suite.addTestSuite(GnuGoEngineTest.class);
-		suite.addTestSuite(SGFGameTest.class);
-		suite.addTestSuite(TwoGTPTest.class);
-		suite.addTestSuite(GnuGoEngineTest2.class);
-		suite.addTestSuite(NoKoRuleSetTest.class);
-		suite.addTestSuite(CheckAllSGFFilesTest.class);
-		suite.addTestSuite(RankTest.class);
-		suite.addTestSuite(ZobristTest.class);
-		suite.addTestSuite(SGFNodeTest.class);
-		suite.addTestSuite(SGFPropertyTest.class);
+		//$JUnit-BEGIN$
 		suite.addTestSuite(BoardTest.class);
 		suite.addTestSuite(BoardToASCIITest.class);
-		suite.addTestSuite(RandomTest.class);
-		suite.addTestSuite(SGFParserTest.class);
+		suite.addTestSuite(CheckAllSGFFilesTest.class);
+		suite.addTestSuite(GameTest.class);
+		suite.addTest(GlobalTests.suite());
 		suite.addTestSuite(MoveTest.class);
-		// $JUnit-END$
+		suite.addTestSuite(NoKoRuleSetTest.class);
+		suite.addTestSuite(RandomTest.class);
+		suite.addTestSuite(RankTest.class);
+		suite.addTestSuite(ZobristTest.class);
+		//$JUnit-END$
+		
+		suite.addTestSuite(ModelTest.class);
+		suite.addTestSuite(NodeIteratorTest.class);
+		suite.addTestSuite(NodeTest.class);
+		suite.addTestSuite(StraightVertexLineariserTest.class);
+		suite.addTestSuite(SufogoEngineTest.class);
+		suite.addTestSuite(TrainerTest.class);
+		suite.addTestSuite(TreeIteratorTest.class);
+		suite.addTestSuite(VertexLineariserTest.class);
+		
+		suite.addTestSuite(GnuGoEngineTest.class);
+		suite.addTestSuite(GnuGoEngineTest2.class);
+		suite.addTestSuite(GTPParserUtilsTest.class);
+		suite.addTestSuite(GTPScoreTest.class);
+		suite.addTestSuite(TwoGTPTest.class);
+		
+		suite.addTestSuite(SGFGameTest.class);
+		suite.addTestSuite(SGFNodeTest.class);
+		suite.addTestSuite(SGFParserTest.class);
+		suite.addTestSuite(SGFPropertyTest.class);
+
 		return suite;
 	}
 
