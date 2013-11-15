@@ -75,7 +75,7 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
-						+ BoardI.colourString(BoardI.VERTEX_BLACK));
+						+ Board.colourString(Board.VERTEX_BLACK));
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -87,7 +87,7 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
-						+ BoardI.colourString(BoardI.VERTEX_WHITE));
+						+ Board.colourString(Board.VERTEX_WHITE));
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -99,7 +99,7 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
-						+ BoardI.colourString(BoardI.VERTEX_EMPTY));
+						+ Board.colourString(Board.VERTEX_EMPTY));
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -111,7 +111,7 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
-						+ BoardI.colourString(BoardI.VERTEX_OFF_BOARD));
+						+ Board.colourString(Board.VERTEX_OFF_BOARD));
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -127,7 +127,7 @@ public class ModelTest extends TestCase {
 	public void testEmptyModelEmptyBoard() throws IOException {
 		Model model = new Model(); // yes, this overrides an instance variable
 		assertNotNull(model);
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		double[][] r = new Scorer().getScores(model, board, false);
 		assertNotNull(r);
 		assertTrue(r.length == r[0].length);
@@ -164,7 +164,7 @@ public class ModelTest extends TestCase {
 	 */
 	public void testLoadAllSGFFiles() throws IOException {
 
-		BoardI board = BoardI.newBoard(19);
+		Board board = Board.newBoard(19);
 		board = board.newBoard(new Move("black a1"));
 		board = board.newBoard(new Move("white b2"));
 		board = board.newBoard(new Move("black b4"));
@@ -193,11 +193,11 @@ public class ModelTest extends TestCase {
 			for (int j = 0; j < r[i].length; j++) {
 				if (maxScore <= r[i][j]) {
 					maxScore = r[i][j];
-					maxMove = new Move(i, j, BoardI.VERTEX_BLACK);
+					maxMove = new Move(i, j, Board.VERTEX_BLACK);
 				}
 				if (minScore >= r[i][j]) {
 					minScore = r[i][j];
-					minMove = new Move(i, j, BoardI.VERTEX_BLACK);
+					minMove = new Move(i, j, Board.VERTEX_BLACK);
 				}
 			}
 		if (DEBUG) {
@@ -239,7 +239,7 @@ public class ModelTest extends TestCase {
 		if (DEBUG)
 			System.err.println("ModelTest::testTrainedModel() model size =  "
 					+ model.getRoot().size());
-		BoardI board = BoardI.newBoard(19);
+		Board board = Board.newBoard(19);
 		board = board.newBoard(new Move("white b2"));
 		board = board.newBoard(new Move("black k4"));
 		board = board.newBoard(new Move("white c3"));
@@ -281,7 +281,7 @@ public class ModelTest extends TestCase {
 			System.err
 					.println("ModeTest::testTrainedModelEmptyBoard() model size =  "
 							+ model.getRoot().size());
-		BoardI board = BoardI.newBoard(19);
+		Board board = Board.newBoard(19);
 		double[][] r = new Scorer().getScores(model, board, false);
 		assertNotNull(r);
 		assertTrue(r.length == r[0].length);

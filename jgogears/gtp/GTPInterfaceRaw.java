@@ -2,7 +2,7 @@ package jgogears.gtp;
 
 import java.util.TreeSet;
 
-import jgogears.BoardI;
+import jgogears.Board;
 import jgogears.Move;
 import jgogears.Vertex;
 
@@ -194,7 +194,7 @@ public interface GTPInterfaceRaw {
 	 * 
 	 * @return the board i
 	 */
-	BoardI showBoard();
+	Board showBoard();
 
 	/**
 	 * Undo.

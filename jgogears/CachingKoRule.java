@@ -26,11 +26,11 @@ public class CachingKoRule extends RuleSet {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see jgogears.RuleSet#captures(jgogears.Game, jgogears.BoardI,
+	 * @see jgogears.RuleSet#captures(jgogears.Game, jgogears.Board,
 	 * jgogears.Move)
 	 */
 	@Override
-	public TreeSet<Vertex> captures(Game game, BoardI Board, Move move) {
+	public TreeSet<Vertex> captures(Game game, Board Board, Move move) {
 		return this.rule.captures(game, Board, move);
 	}
 
@@ -47,10 +47,10 @@ public class CachingKoRule extends RuleSet {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see jgogears.RuleSet#getLiberties(short, short, jgogears.BoardI)
+	 * @see jgogears.RuleSet#getLiberties(short, short, jgogears.Board)
 	 */
 	@Override
-	public TreeSet<Vertex> getLiberties(short rowb, short columnb, BoardI board) {
+	public TreeSet<Vertex> getLiberties(short rowb, short columnb, Board board) {
 		return this.rule.getLiberties(rowb, columnb, board);
 	}
 
@@ -67,32 +67,32 @@ public class CachingKoRule extends RuleSet {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see jgogears.RuleSet#getString(short, short, jgogears.BoardI)
+	 * @see jgogears.RuleSet#getString(short, short, jgogears.Board)
 	 */
 	@Override
-	public TreeSet<Vertex> getString(short row, short column, BoardI board) {
+	public TreeSet<Vertex> getString(short row, short column, Board board) {
 		return this.rule.getString(row, column, board);
 	}
 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see jgogears.RuleSet#leavesKo(jgogears.Game, jgogears.BoardI,
+	 * @see jgogears.RuleSet#leavesKo(jgogears.Game, jgogears.Board,
 	 * jgogears.Move)
 	 */
 	@Override
-	public TreeSet<Vertex> leavesKo(Game game, BoardI Board, Move move) {
+	public TreeSet<Vertex> leavesKo(Game game, Board Board, Move move) {
 		return this.rule.leavesKo(game, Board, move);
 	}
 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see jgogears.RuleSet#moveIsLegal(jgogears.Game, jgogears.BoardI,
+	 * @see jgogears.RuleSet#moveIsLegal(jgogears.Game, jgogears.Board,
 	 * jgogears.Move)
 	 */
 	@Override
-	public boolean moveIsLegal(Game game, BoardI Board, Move move) {
+	public boolean moveIsLegal(Game game, Board Board, Move move) {
 		return this.rule.moveIsLegal(game, Board, move);
 	}
 

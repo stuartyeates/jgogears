@@ -2,7 +2,7 @@ package jgogears.gtp;
 
 import java.io.IOException;
 
-import jgogears.BoardI;
+import jgogears.Board;
 import jgogears.Move;
 
 /**
@@ -38,7 +38,7 @@ public class TwoGTPRaw {
 	/** The white player. */
 	private GTPInterfaceRaw white = null;
 
-	private BoardI currentBoard = BoardI.newBoard();
+	private Board currentBoard = Board.newBoard();
 
 	/**
 	 * get the black
@@ -54,7 +54,7 @@ public class TwoGTPRaw {
 	 * 
 	 * @return the currentBoard
 	 */
-	public final BoardI getCurrentBoard() {
+	public final Board getCurrentBoard() {
 		return this.currentBoard;
 	}
 
@@ -82,7 +82,7 @@ public class TwoGTPRaw {
 		while (passes < 4) {
 			Move move = null;
 			if (blackNext) {
-				move = this.black.genMove(BoardI.VERTEX_BLACK);
+				move = this.black.genMove(Board.VERTEX_BLACK);
 				assert move != null;
 				this.white.play(move);
 				if (move.getPass())
@@ -91,7 +91,7 @@ public class TwoGTPRaw {
 					passes = 0;
 				blackNext = false;
 			} else {
-				move = this.white.genMove(BoardI.VERTEX_WHITE);
+				move = this.white.genMove(Board.VERTEX_WHITE);
 				assert move != null;
 				this.black.play(move);
 				if (move.getPass())

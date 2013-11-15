@@ -4,7 +4,7 @@ TODO
 Short Term
 ==========
 * trace lack of symmetry in testTrainedModelEmptyBoard
-* work on ASCIIToBoard -> BoardI round triping
+* work on ASCIIToBoard -> Board round triping
 * update javacc generated files in svn (eclipse javacc plugin is preventing this happening via eclipse)
 * commandline program to play jgogears against gnugo
 * commandline program to guess moves from real games

@@ -2,7 +2,7 @@ package jgogears.gtp;
 
 import java.util.*;
 
-import jgogears.BoardI;
+import jgogears.Board;
 import jgogears.Move;
 import jgogears.Random;
 
@@ -64,7 +64,7 @@ public class RandomEngine extends SkeletonEngine implements GTPInterface {
 		do {
 			row = (short) Random.nextInt(state.boardsize);
 			column = (short) Random.nextInt(state.boardsize);
-		} while (state.board.getColour(row, column) == BoardI.VERTEX_EMPTY);
+		} while (state.board.getColour(row, column) == Board.VERTEX_EMPTY);
 		return new Move(row, column, colour);
 	}
 

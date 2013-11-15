@@ -42,7 +42,7 @@ public class CheckAllSGFFilesTest extends TestCase {
 					if (game.getSize() == 19) {
 						Iterator<Move> i = game.getMoves();
 						Move move = null;
-						BoardI board = new Board(game.getSize());
+						Board board = new Board(game.getSize());
 						// System.err.println("board size is: \"" +
 						// goGame.getSize()
 						// + "\"");

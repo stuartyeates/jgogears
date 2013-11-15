@@ -1,6 +1,6 @@
 package jgogears.gtp;
 
-import jgogears.BoardI;
+import jgogears.Board;
 import jgogears.Move;
 
 /**
@@ -184,7 +184,7 @@ public abstract class SkeletonEngine implements GTPInterface {
 	 * 
 	 * @see jgogears.GTPInterface#showBoard(jgogears.GTPState)
 	 */
-	public BoardI showBoard(GTPState state) {
+	public Board showBoard(GTPState state) {
 		return state.getBoard();
 	}
 
@@ -201,7 +201,7 @@ public abstract class SkeletonEngine implements GTPInterface {
 		newState.komi = state.komi;
 		newState.boardsize = state.boardsize;
 		newState.mainTime = state.mainTime;
-		newState.board = BoardI.newBoard(newState.boardsize);
+		newState.board = Board.newBoard(newState.boardsize);
 
 		// TODO generate new board
 

@@ -28,7 +28,7 @@ public class Scorer {
 	 * @param model
 	 * @return the vertex to play
 	 */
-	Vertex getBestScore(Model model, BoardI board, boolean white) {
+	Vertex getBestScore(Model model, Board board, boolean white) {
 		if (DEBUG)
 			System.err.println("In getBestScore");
 		double[][] result = this.getScores(model, board, white);
@@ -39,7 +39,7 @@ public class Scorer {
 			for (j = 0; j < board.getSize(); j++) {
 				if (!Random.isLarger(result[i][j], best)) {
 					if (RuleSet.DEFAULT.moveIsLegal(null, board, new Move(i, j,
-							white ? BoardI.VERTEX_WHITE : BoardI.VERTEX_BLACK))) {
+							white ? Board.VERTEX_WHITE : Board.VERTEX_BLACK))) {
 						best = result[i][j];
 						I = i;
 						J = j;
@@ -63,7 +63,7 @@ public class Scorer {
 	 * @param model
 	 * @return the array of scores
 	 */
-	public double[][] getScores(Model model, BoardI board, boolean white) {
+	public double[][] getScores(Model model, Board board, boolean white) {
 		short size = board.getSize();
 		double[][] result = new double[size][size];
 		for (short row = 0; row < size; row++) {
@@ -84,17 +84,17 @@ public class Scorer {
 						Node child = null;
 
 						switch (colour) {
-						case BoardI.VERTEX_BLACK:
+						case Board.VERTEX_BLACK:
 							child = node.getBlack();
 							break;
-						case BoardI.VERTEX_WHITE:
+						case Board.VERTEX_WHITE:
 							child = node.getWhite();
 							break;
-						case BoardI.VERTEX_OFF_BOARD:
+						case Board.VERTEX_OFF_BOARD:
 							child = node.getOff();
 							break;
-						case BoardI.VERTEX_KO:
-						case BoardI.VERTEX_EMPTY:
+						case Board.VERTEX_KO:
+						case Board.VERTEX_EMPTY:
 							child = node.getEmpty();
 							break;
 						default:
@@ -112,7 +112,7 @@ public class Scorer {
 						}
 						if (DEBUG_BRANCH)
 							System.err.println("Model::getScores following a "
-									+ BoardI.colourString(colour)
+									+ Board.colourString(colour)
 									+ " branch, estimate = " + estimate
 									+ ", childP = " + childP + ", childNP = "
 									+ childNP + ", combination = " + childP

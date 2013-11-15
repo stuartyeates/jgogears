@@ -7,7 +7,7 @@ package jgogears;
  * 
  * @author stuart
  */
-public class Board extends BoardI {
+public class Board extends {
 
 	/** verbose debugging */
 	static boolean DEBUG = false;

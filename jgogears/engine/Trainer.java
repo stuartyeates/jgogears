@@ -206,7 +206,7 @@ public class Trainer {
 			throw new Error("Bad score" + game.getScore());
 
 		short size = game.getSize();
-		Iterator<BoardI> boards = game.getBoards();
+		Iterator<Board> boards = game.getBoards();
 		if (boards == null)
 			throw new Error();
 		Iterator<Move> moves = game.getMoves();
@@ -216,7 +216,7 @@ public class Trainer {
 
 		while (boards.hasNext() && moves.hasNext()) {
 			model.setBoardsTrained(model.getBoardsTrained() + 1);
-			BoardI board = boards.next();
+			Board board = boards.next();
 			if (board == null)
 				throw new Error();
 			Move move = moves.next();
@@ -227,7 +227,7 @@ public class Trainer {
 			if (DEBUG)
 				System.err.println("Model::train about to train on: " + move);
 			int colour = move.getColour();
-			boolean isBlack = colour == BoardI.VERTEX_BLACK;
+			boolean isBlack = colour == Board.VERTEX_BLACK;
 			// float str = (float) (isBlack ? strengthB : strengthW);
 
 			if (isBlack == playingBlack) {
@@ -289,7 +289,7 @@ public class Trainer {
 			boolean expandMore = !onlyOneNewNodePerSymmetry;
 
 			switch (colour) {
-			case BoardI.VERTEX_BLACK:
+			case Board.VERTEX_BLACK:
 				freeRideUsed = true;
 				if (root.getBlack() == null)
 					if (expand) {
@@ -301,7 +301,7 @@ public class Trainer {
 				else
 					root = root.getBlack();
 				break;
-			case BoardI.VERTEX_WHITE:
+			case Board.VERTEX_WHITE:
 				freeRideUsed = true;
 				if (root.getWhite() == null)
 					if (expand) {
@@ -313,8 +313,8 @@ public class Trainer {
 				else
 					root = root.getWhite();
 				break;
-			case BoardI.VERTEX_KO:
-			case BoardI.VERTEX_EMPTY:
+			case Board.VERTEX_KO:
+			case Board.VERTEX_EMPTY:
 				if (root.getEmpty() == null)
 					if (expand || (!freeRideUsed && freeRideForEmpty)) {
 						root.setEmpty(new Node());
@@ -325,7 +325,7 @@ public class Trainer {
 				else
 					root = root.getEmpty();
 				break;
-			case BoardI.VERTEX_OFF_BOARD:
+			case Board.VERTEX_OFF_BOARD:
 				if (root.getOff() == null)
 					if (expand || (!freeRideUsed && freeRideForEmpty)) {
 						root.setOff(new Node());

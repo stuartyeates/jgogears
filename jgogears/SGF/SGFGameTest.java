@@ -35,7 +35,7 @@ public class SGFGameTest extends TestCase {
 			iterator.next();
 			// System.out.println(iterator.next());
 		}
-		Iterator<BoardI> iterator2 = game.getBoards();
+		Iterator<Board> iterator2 = game.getBoards();
 		while (iterator.hasNext()) {
 			iterator2.next();
 			// System.out.println(iterator.next());

@@ -2,7 +2,7 @@ package jgogears.gtp;
 
 import java.io.IOException;
 
-import jgogears.BoardI;
+import jgogears.Board;
 import jgogears.Move;
 
 import junit.framework.TestCase;
@@ -51,9 +51,9 @@ public class GTPParserUtilsTest extends TestCase {
 			this.engine.initialise();
 			Boolean b = this.engine.loadsgf("sgf/testing/seki.sgf", 20);
 			assertTrue(b);
-			Move move = this.engine.genMove(BoardI.VERTEX_BLACK);
+			Move move = this.engine.genMove(Board.VERTEX_BLACK);
 			assertNotNull(move);
-			// BoardI board = this.engine.showBoard();
+			// Board board = this.engine.showBoard();
 			// System.err.println("testLoadsgf:: the following board should have moves on it:");
 			assertNotNull(this.engine);
 			// System.err.println(board);
@@ -113,13 +113,13 @@ public class GTPParserUtilsTest extends TestCase {
 	/**
 	 * * TODO
 	 * This is currently failing because I don't have good code to parse the
-	 * ASCII board back into a BoardI.
+	 * ASCII board back into a Board.
 	 */
 	/**
 	public final void testShowBoard() {
 		try {
 			this.engine.initialise();
-			BoardI board = this.engine.showBoard();
+			Board board = this.engine.showBoard();
 			assertNotNull(board);
 			// TODO actually test the generated board here...
 			this.engine.quit();

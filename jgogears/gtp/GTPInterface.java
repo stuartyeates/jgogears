@@ -1,6 +1,6 @@
 package jgogears.gtp;
 
-import jgogears.BoardI;
+import jgogears.Board;
 import jgogears.Move;
 
 // TODO: Auto-generated Javadoc
@@ -218,7 +218,7 @@ public interface GTPInterface {
 	 *            the state
 	 * @return the board i
 	 */
-	BoardI showBoard(GTPState state);
+	Board showBoard(GTPState state);
 
 	/**
 	 * Undo.

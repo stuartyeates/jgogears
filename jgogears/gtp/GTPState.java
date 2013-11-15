@@ -2,7 +2,7 @@ package jgogears.gtp;
 
 import java.util.*;
 
-import jgogears.BoardI;
+import jgogears.Board;
 import jgogears.Move;
 import jgogears.RuleSet;
 import jgogears.Vertex;
@@ -16,10 +16,10 @@ import jgogears.Vertex;
 public class GTPState {
 
 	/** The boardsize. */
-	protected short boardsize = BoardI.DEFAULT_BOARD_SIZE;
+	protected short boardsize = Board.DEFAULT_BOARD_SIZE;
 
 	/** The board. */
-	protected BoardI board = null;
+	protected Board board = null;
 
 	/** The white captured count. */
 	protected int whiteCapturedCount = Integer.MIN_VALUE;
@@ -46,7 +46,7 @@ public class GTPState {
 	 * Create a new GTPState
 	 */
 	public GTPState() {
-		this.board = BoardI.newBoard(this.boardsize);
+		this.board = Board.newBoard(this.boardsize);
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class GTPState {
 		// TODO is this sufficient?
 		this.whiteCapturedCount = 0;
 		this.blackCapturedCount = 0;
-		this.board = BoardI.newBoard((short) this.getBoardsize());
+		this.board = Board.newBoard((short) this.getBoardsize());
 		this.playedMoves = new java.util.Vector<Move>();
 	}
 
@@ -98,7 +98,7 @@ public class GTPState {
 	 * 
 	 * @return the board
 	 */
-	public BoardI getBoard() {
+	public Board getBoard() {
 		return this.board;
 	}
 
@@ -184,10 +184,10 @@ public class GTPState {
 		while (each.hasNext()) {
 			Vertex vert = each.next();
 			switch (this.board.getColour(vert)) {
-			case BoardI.VERTEX_BLACK:
+			case Board.VERTEX_BLACK:
 				this.whiteCapturedCount++;
 				break;
-			case BoardI.VERTEX_WHITE:
+			case Board.VERTEX_WHITE:
 				this.blackCapturedCount++;
 				break;
 			default:
@@ -214,7 +214,7 @@ public class GTPState {
 	 * @param board
 	 *            the new board
 	 */
-	public void setBoard(BoardI board) {
+	public void setBoard(Board board) {
 		this.board = board;
 	}
 
@@ -226,7 +226,7 @@ public class GTPState {
 	 */
 	public void setBoardsize(short boardsize) {
 		this.boardsize = boardsize;
-		this.board = BoardI.newBoard(boardsize);
+		this.board = Board.newBoard(boardsize);
 	}
 
 	/**

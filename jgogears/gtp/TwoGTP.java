@@ -1,6 +1,6 @@
 package jgogears.gtp;
 
-import jgogears.BoardI;
+import jgogears.Board;
 import jgogears.Move;
 import jgogears.RuleSet;
 
@@ -42,7 +42,7 @@ public class TwoGTP {
 	 * 
 	 * @return the currentBoard
 	 */
-	public final BoardI getCurrentBoard() {
+	public final Board getCurrentBoard() {
 		return this.state.getBoard();
 	}
 
@@ -66,11 +66,11 @@ public class TwoGTP {
 		if (this.white == null)
 			throw new Error();
 		Move move = null;
-		BoardI oldBoard = this.state.getBoard();
+		Board oldBoard = this.state.getBoard();
 		if (this.blackNext) {
-			move = this.black.genMove(BoardI.VERTEX_BLACK, this.state);
+			move = this.black.genMove(Board.VERTEX_BLACK, this.state);
 		} else {
-			move = this.white.genMove(BoardI.VERTEX_WHITE, this.state);
+			move = this.white.genMove(Board.VERTEX_WHITE, this.state);
 		}
 		if (!RuleSet.DEFAULT.moveIsLegal(null, oldBoard, move))
 			throw new Error(move + "\n" + oldBoard);

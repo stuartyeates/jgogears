@@ -31,7 +31,7 @@ public class VertexLineariserTest extends TestCase {
 	 *            the columnb
 	 * @return true, if successful
 	 */
-	boolean identicalLinearisation(BoardI board, short rowa, short columna,
+	boolean identicalLinearisation(Board board, short rowa, short columna,
 			short rowb, short columnb) {
 		for (short j = 0; j < 8; j++) {
 			boolean matchFound = false;
@@ -71,7 +71,7 @@ public class VertexLineariserTest extends TestCase {
 	 * make sure that all the linearisations are different.
 	 */
 	public void testAllDifferent() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 		board = board.newBoard(new Move("white b2"));
 		board = board.newBoard(new Move("black k4"));
@@ -128,7 +128,7 @@ public class VertexLineariserTest extends TestCase {
 	 * make sure that all the linearisations are different.
 	 */
 	public void testAllDifferentII() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 		board = board.newBoard(new Move("white b1"));
 
@@ -163,7 +163,7 @@ public class VertexLineariserTest extends TestCase {
 	 * make sure that all the linearisations are different.
 	 */
 	public void testBoardFalseSymmetryI() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 		board = board.newBoard(new Move("white l10"));
 		board = board.newBoard(new Move("black a1"));
@@ -211,7 +211,7 @@ public class VertexLineariserTest extends TestCase {
 	 * make sure that all the linearisations are different.
 	 */
 	public void testBoardFalseSymmetryII() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 		board = board.newBoard(new Move("white l10"));
 		board = board.newBoard(new Move("black a1"));
@@ -236,7 +236,7 @@ public class VertexLineariserTest extends TestCase {
 	 * make sure that all the linearisations are different.
 	 */
 	public void testBoardSymmetryI() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 		board = board.newBoard(new Move("white k10"));
 		if (DEBUG)
@@ -256,7 +256,7 @@ public class VertexLineariserTest extends TestCase {
 	 * make sure that all the linearisations are different.
 	 */
 	public void testBoardSymmetryII() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 		board = board.newBoard(new Move("white k10"));
 		if (DEBUG)
@@ -281,11 +281,11 @@ public class VertexLineariserTest extends TestCase {
 	 */
 	public void testDifferenetSizes13() throws Exception {
 		try {
-			BoardI board = BoardI.newBoard();
+			Board board = Board.newBoard();
 			VertexLineariser lineariser = new VertexLineariser(board,
 					(short) 2, (short) 2, (short) 0, false);
 			assertNotNull(lineariser);
-			board = BoardI.newBoard(13);
+			board = Board.newBoard(13);
 			lineariser = new VertexLineariser(board, (short) 2, (short) 2,
 					(short) 0, false);
 			fail("shouldn't be able to linearise different sizes of board");
@@ -302,11 +302,11 @@ public class VertexLineariserTest extends TestCase {
 	 */
 	public void testDifferenetSizes25() throws Exception {
 		try {
-			BoardI board = BoardI.newBoard();
+			Board board = Board.newBoard();
 			VertexLineariser lineariser = new VertexLineariser(board,
 					(short) 2, (short) 2, (short) 0, false);
 			assertNotNull(lineariser);
-			board = BoardI.newBoard(25);
+			board = Board.newBoard(25);
 			lineariser = new VertexLineariser(board, (short) 2, (short) 2,
 					(short) 0, false);
 			fail("shouldn't be able to linearise different sizes of board");
@@ -323,11 +323,11 @@ public class VertexLineariserTest extends TestCase {
 	 */
 	public void testDifferenetSizes5() throws Exception {
 		try {
-			BoardI board = BoardI.newBoard(19);
+			Board board = Board.newBoard(19);
 			VertexLineariser lineariser = new VertexLineariser(board,
 					(short) 2, (short) 2, (short) 0, false);
 			assertNotNull(lineariser);
-			board = BoardI.newBoard(9);
+			board = Board.newBoard(9);
 			lineariser = new VertexLineariser(board, (short) 2, (short) 2,
 					(short) 0, false);
 			fail("shouldn't be able to linearise different sizes of board");
@@ -344,11 +344,11 @@ public class VertexLineariserTest extends TestCase {
 	 */
 	public void testDifferenetSizes9() throws Exception {
 		try {
-			BoardI board = BoardI.newBoard(19);
+			Board board = Board.newBoard(19);
 			VertexLineariser lineariser = new VertexLineariser(board,
 					(short) 2, (short) 2, (short) 0, false);
 			assertNotNull(lineariser);
-			board = BoardI.newBoard(9);
+			board = Board.newBoard(9);
 			lineariser = new VertexLineariser(board, (short) 2, (short) 2,
 					(short) 0, false);
 			fail("shouldn't be able to linearise different sizes of board");
@@ -361,7 +361,7 @@ public class VertexLineariserTest extends TestCase {
 	 * make sure that all the linearisations are different.
 	 */
 	public void testEmptyBoardSymmetryI() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 
 		for (short row = 0; row < board.getSize(); row++)
@@ -408,7 +408,7 @@ public class VertexLineariserTest extends TestCase {
 	 * make sure that all the linearisations are different.
 	 */
 	public void testEmptyBoardSymmetryII() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 
 		for (short row = 0; row < board.getSize(); row++)
@@ -424,7 +424,7 @@ public class VertexLineariserTest extends TestCase {
 	 * make sure that all the linearisations are different.
 	 */
 	public void testEmptyBoardSymmetryReimplematation() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		short size = board.getSize();
 		boolean matches[][][] = new boolean[3][8][8];
 
@@ -536,11 +536,11 @@ public class VertexLineariserTest extends TestCase {
 			Game game = new Game(tree);
 			assertTrue(game != null);
 
-			Iterator<BoardI> iterator = game.getBoards();
+			Iterator<Board> iterator = game.getBoards();
 			assertTrue(iterator != null);
 			if (iterator == null)
 				throw new Error();
-			BoardI board = null;
+			Board board = null;
 			while (iterator.hasNext()) {
 				board = iterator.next();
 				assertTrue(board != null);
@@ -565,7 +565,7 @@ public class VertexLineariserTest extends TestCase {
 	 * make sure that all the linearisations are different.
 	 */
 	public void testFirst() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 		board = board.newBoard(new Move("white b2"));
 
@@ -573,13 +573,13 @@ public class VertexLineariserTest extends TestCase {
 
 		if (DEBUG)
 			System.err.print("VertexLineariserTest::testFirst() Black = "
-					+ BoardI.parseColour("black"));
+					+ Board.parseColour("black"));
 		if (DEBUG)
-			System.err.print(" White = " + BoardI.parseColour("white"));
+			System.err.print(" White = " + Board.parseColour("white"));
 		if (DEBUG)
-			System.err.print(" Empty = " + BoardI.VERTEX_EMPTY);
+			System.err.print(" Empty = " + Board.VERTEX_EMPTY);
 		if (DEBUG)
-			System.err.print(" Off = " + BoardI.VERTEX_OFF_BOARD);
+			System.err.print(" Off = " + Board.VERTEX_OFF_BOARD);
 		if (DEBUG)
 			System.err.println("");
 		for (short j = 0; j < 8; j++) {
@@ -606,8 +606,8 @@ public class VertexLineariserTest extends TestCase {
 			assertTrue(a != null);
 			if (a == null)
 				throw new Error();
-			assertTrue(a + " " + BoardI.VERTEX_WHITE + "\n" + board,
-					a.equals(new Short(BoardI.VERTEX_WHITE)));
+			assertTrue(a + " " + Board.VERTEX_WHITE + "\n" + board,
+					a.equals(new Short(Board.VERTEX_WHITE)));
 		}
 	}
 
@@ -615,7 +615,7 @@ public class VertexLineariserTest extends TestCase {
 	 * Test first all.
 	 */
 	public void testFirstAll() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 		board = board.newBoard(new Move("white b2"));
 
@@ -623,13 +623,13 @@ public class VertexLineariserTest extends TestCase {
 
 		if (DEBUG)
 			System.err.print("VertexLineariserTest::testFirst() Black = "
-					+ BoardI.parseColour("black"));
+					+ Board.parseColour("black"));
 		if (DEBUG)
-			System.err.print(" White = " + BoardI.parseColour("white"));
+			System.err.print(" White = " + Board.parseColour("white"));
 		if (DEBUG)
-			System.err.print(" Empty = " + BoardI.VERTEX_EMPTY);
+			System.err.print(" Empty = " + Board.VERTEX_EMPTY);
 		if (DEBUG)
-			System.err.print(" Off = " + BoardI.VERTEX_OFF_BOARD);
+			System.err.print(" Off = " + Board.VERTEX_OFF_BOARD);
 		if (DEBUG)
 			System.err.println("");
 		for (short row = 0; row < board.getSize(); row++)
@@ -656,7 +656,7 @@ public class VertexLineariserTest extends TestCase {
 	 * Test trained model.
 	 */
 	public void testSize() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 		int count = 0;
 		Iterator<Short> linear = new VertexLineariser(board, (short) 2,
@@ -675,7 +675,7 @@ public class VertexLineariserTest extends TestCase {
 	 * Test trained model.
 	 */
 	public void testVerbose() {
-		BoardI board = BoardI.newBoard();
+		Board board = Board.newBoard();
 		assertNotNull(board);
 		board = board.newBoard(new Move("white b2"));
 		board = board.newBoard(new Move("black k4"));
@@ -689,13 +689,13 @@ public class VertexLineariserTest extends TestCase {
 		if (DEBUG)
 			System.err
 					.print("VertexLineariserTest::testVertexLineariser() Black = "
-							+ BoardI.parseColour("black"));
+							+ Board.parseColour("black"));
 		if (DEBUG)
-			System.err.print(" White = " + BoardI.parseColour("white"));
+			System.err.print(" White = " + Board.parseColour("white"));
 		if (DEBUG)
-			System.err.print(" Empty = " + BoardI.VERTEX_EMPTY);
+			System.err.print(" Empty = " + Board.VERTEX_EMPTY);
 		if (DEBUG)
-			System.err.print(" Off = " + BoardI.VERTEX_OFF_BOARD);
+			System.err.print(" Off = " + Board.VERTEX_OFF_BOARD);
 		if (DEBUG)
 			System.err.println("");
 		for (short j = 0; j < 8; j++) {

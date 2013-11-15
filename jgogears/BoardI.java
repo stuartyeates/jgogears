@@ -9,7 +9,7 @@ import java.util.*;
  * 
  * @author Stuart
  */
-public abstract class BoardI {
+public abstract class Board {
 
 	/** The default board size. */
 	public static final short DEFAULT_BOARD_SIZE = 19;
@@ -52,19 +52,19 @@ public abstract class BoardI {
 		// find the colour of the move
 		String colourS = "";
 		switch (colour) {
-		case BoardI.VERTEX_WHITE:
+		case Board.VERTEX_WHITE:
 			colourS = "white";
 			break;
-		case BoardI.VERTEX_BLACK:
+		case Board.VERTEX_BLACK:
 			colourS = "black";
 			break;
-		case BoardI.VERTEX_KO:
+		case Board.VERTEX_KO:
 			colourS = "ko";
 			break;
-		case BoardI.VERTEX_EMPTY:
+		case Board.VERTEX_EMPTY:
 			colourS = "empty";
 			break;
-		case BoardI.VERTEX_OFF_BOARD:
+		case Board.VERTEX_OFF_BOARD:
 			colourS = "off board";
 			break;
 		default:
@@ -78,7 +78,7 @@ public abstract class BoardI {
 	 * 
 	 * @return the new empty board
 	 */
-	public static BoardI newBoard() {
+	public static Board newBoard() {
 		return new Board(DEFAULT_BOARD_SIZE);
 	}
 
@@ -89,7 +89,7 @@ public abstract class BoardI {
 	 *            are we using a zobrist hash?
 	 * @return the new empty board
 	 */
-	public static BoardI newBoard(boolean zobrist) {
+	public static Board newBoard(boolean zobrist) {
 		return new Board(zobrist);
 	}
 
@@ -100,7 +100,7 @@ public abstract class BoardI {
 	 *            the size of the board
 	 * @return the new empty board
 	 */
-	public static BoardI newBoard(int size) {
+	public static Board newBoard(int size) {
 		return new Board((short) size);
 	}
 
@@ -113,7 +113,7 @@ public abstract class BoardI {
 	 *            are we using a zobrist hash?
 	 * @return the new empty board
 	 */
-	public static BoardI newBoard(int size, boolean zobrist) {
+	public static Board newBoard(int size, boolean zobrist) {
 		return new Board((short) size, zobrist);
 	}
 
@@ -126,7 +126,7 @@ public abstract class BoardI {
 	 *            the ruleset to use
 	 * @return the new empty board
 	 */
-	public static BoardI newBoard(int size, RuleSet rule) {
+	public static Board newBoard(int size, RuleSet rule) {
 		return new Board((short) size, rule);
 	}
 
@@ -141,7 +141,7 @@ public abstract class BoardI {
 	 *            are we using a zobrist hash?
 	 * @return the new empty board
 	 */
-	public static BoardI newBoard(int size, RuleSet rule, boolean zobrist) {
+	public static Board newBoard(int size, RuleSet rule, boolean zobrist) {
 		return new Board((short) size, rule, zobrist);
 	}
 
@@ -155,13 +155,13 @@ public abstract class BoardI {
 	public static short parseColour(String colourString) {
 
 		if (colourString.compareTo("w") == 0) {
-			return BoardI.VERTEX_WHITE;
+			return Board.VERTEX_WHITE;
 		} else if (colourString.compareTo("white") == 0) {
-			return BoardI.VERTEX_WHITE;
+			return Board.VERTEX_WHITE;
 		} else if (colourString.compareTo("b") == 0) {
-			return BoardI.VERTEX_BLACK;
+			return Board.VERTEX_BLACK;
 		} else if (colourString.compareTo("black") == 0) {
-			return BoardI.VERTEX_BLACK;
+			return Board.VERTEX_BLACK;
 		} else {
 			throw new IllegalArgumentException("trying to parse (1) \""
 					+ colourString + "\" as a colour");
@@ -180,7 +180,7 @@ public abstract class BoardI {
 	/**
 	 * Instantiates a new board
 	 */
-	public BoardI() {
+	public Board() {
 		if (DEFAULT_ZOBRIST)
 			this.zobrist = new Zobrist();
 	}
@@ -191,7 +191,7 @@ public abstract class BoardI {
 	 * @param zobrist
 	 *            the zobrist
 	 */
-	public BoardI(boolean zobrist) {
+	public Board(boolean zobrist) {
 		if (zobrist)
 			this.zobrist = new Zobrist();
 	}
@@ -204,7 +204,7 @@ public abstract class BoardI {
 	 * @param old
 	 *            the old board we're coping data from
 	 */
-	protected void copydata(BoardI old, Move move) {
+	protected void copydata(Board old, Move move) {
 		this.size = old.getSize();
 		if (this.size < 3 || this.size > 25)
 			throw new Error();
@@ -258,7 +258,7 @@ public abstract class BoardI {
 			this.setColour(move.getRow(), move.getColumn(), move.getColour());
 			if (this.zobrist != null)
 				this.setZobrist(new Zobrist(this.zobrist, move.getRow(), move
-						.getColumn(), BoardI.VERTEX_EMPTY));
+						.getColumn(), Board.VERTEX_EMPTY));
 
 			// take the captures
 			TreeSet<Vertex> captures = old.getRuleSet().captures(null, old,
@@ -270,11 +270,11 @@ public abstract class BoardI {
 					Vertex v = i.next();
 					// System.err.println("captured" + v);
 					this.setColour(v.getRow(), v.getColumn(),
-							BoardI.VERTEX_EMPTY);
+							Board.VERTEX_EMPTY);
 
 					if (this.zobrist != null)
 						this.setZobrist(new Zobrist(this.getZobrist(), v
-								.getRow(), v.getColumn(), BoardI.VERTEX_EMPTY));
+								.getRow(), v.getColumn(), Board.VERTEX_EMPTY));
 				}
 			}
 			// mark the kos
@@ -285,7 +285,7 @@ public abstract class BoardI {
 				while (i.hasNext()) {
 					Vertex v = i.next();
 					// System.err.println("captured" + v);
-					this.setColour(v.getRow(), v.getColumn(), BoardI.VERTEX_KO);
+					this.setColour(v.getRow(), v.getColumn(), Board.VERTEX_KO);
 
 				}
 			}
@@ -296,9 +296,9 @@ public abstract class BoardI {
 	public boolean equals(Object obj) {
 		if (obj == this)
 			return true;
-		BoardI other = null;
+		Board other = null;
 		try {
-			other = (BoardI) obj;
+			other = (Board) obj;
 		} catch (Throwable t) {
 			return super.equals(obj);
 		}
@@ -398,7 +398,7 @@ public abstract class BoardI {
 	 *            the move
 	 * @return the new board
 	 */
-	abstract public BoardI newBoard(Move move);
+	abstract public Board newBoard(Move move);
 
 	/**
 	 * set the colour of a vertex.
@@ -428,7 +428,7 @@ public abstract class BoardI {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see jgogears.BoardInterface#toString()
+	 * @see jgogears.Boardnterface#toString()
 	 */
 	@Override
 	public String toString() {

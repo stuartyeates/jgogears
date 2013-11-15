@@ -36,11 +36,11 @@ public class KoRuleSet extends NoKoRuleSet {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see jgogears.NoKoRuleSet#moveIsLegal(jgogears.Game, jgogears.BoardI,
+	 * @see jgogears.NoKoRuleSet#moveIsLegal(jgogears.Game, jgogears.Board,
 	 * jgogears.Move)
 	 */
 	@Override
-	public boolean moveIsLegal(Game game, BoardI board, Move move) {
+	public boolean moveIsLegal(Game game, Board board, Move move) {
 		// TODO Auto-generated method stub
 		throw new Error();
 	}

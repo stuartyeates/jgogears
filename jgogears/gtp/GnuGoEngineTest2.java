@@ -3,7 +3,7 @@ package jgogears.gtp;
 import java.io.*;
 import java.util.*;
 
-import jgogears.BoardI;
+import jgogears.Board;
 import jgogears.Game;
 import jgogears.Move;
 import jgogears.Vertex;
@@ -125,7 +125,7 @@ public class GnuGoEngineTest2 extends TestCase {
 			this.engine.initialise();
 			this.engine.setBoardSize((short) 19);
 			this.engine.clearBoard();
-			Move move = this.engine.genMove(BoardI.VERTEX_BLACK);
+			Move move = this.engine.genMove(Board.VERTEX_BLACK);
 			if (this.DEBUG)
 				System.err.println(move);
 			this.engine.quit();
@@ -265,9 +265,9 @@ public class GnuGoEngineTest2 extends TestCase {
 			this.engine.initialise();
 			Boolean b = this.engine.loadsgf("sgf/testing/seki.sgf", 20);
 			assertTrue(b);
-			Move move = this.engine.genMove(BoardI.VERTEX_BLACK);
+			Move move = this.engine.genMove(Board.VERTEX_BLACK);
 			assertNotNull(move);
-			BoardI board = this.engine.showBoard();
+			Board board = this.engine.showBoard();
 			if (DEBUG)
 				System.err
 						.println("testLoadsgf:: the following board should have moves on it:");
@@ -403,7 +403,7 @@ public class GnuGoEngineTest2 extends TestCase {
 	public final void testRegGenMove() {
 		try {
 			this.engine.initialise();
-			Move move = this.engine.regGenMove(BoardI.VERTEX_BLACK);
+			Move move = this.engine.regGenMove(Board.VERTEX_BLACK);
 			if (DEBUG)
 				System.err.println(move);
 			this.engine.quit();
@@ -459,7 +459,7 @@ public class GnuGoEngineTest2 extends TestCase {
 	public final void testSetTimeLeft() {
 		try {
 			this.engine.initialise();
-			this.engine.setTimeLeft(BoardI.VERTEX_BLACK, 1.0, 1.0);
+			this.engine.setTimeLeft(Board.VERTEX_BLACK, 1.0, 1.0);
 			this.engine.quit();
 		} catch (Throwable t) {
 			if (DEBUG)
@@ -490,13 +490,13 @@ public class GnuGoEngineTest2 extends TestCase {
 	/**
 	 * * TODO
 	 * This is currently failing because I don't have good code to parse the
-	 * ASCII board back into a BoardI.
+	 * ASCII board back into a Board.
 	 */
 	/**
 	public final void testShowBoard() {
 		try {
 			this.engine.initialise();
-			BoardI board = this.engine.showBoard();
+			Board board = this.engine.showBoard();
 			assertNotNull(board);
 			// TODO
 			this.engine.quit();

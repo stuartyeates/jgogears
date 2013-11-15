@@ -5,7 +5,7 @@ package jgogears.engine;
 
 import java.util.Iterator;
 
-import jgogears.BoardI;
+import jgogears.Board;
 
 /**
  * Class to hold a single node in the tree.
@@ -97,12 +97,12 @@ public final class Node implements Comparable<Node> {
 	// * @param node
 	// * @return the leaf node
 	// */
-	// static public Node getLeaf(BoardI board, short colour, short row, short
+	// static public Node getLeaf(Board board, short colour, short row, short
 	// column, short sym, Node node) {
 	// if (board == null)
 	// throw new Error();
 	// VertexLineariser linear = null;
-	// boolean invert = colour == BoardI.VERTEX_WHITE;
+	// boolean invert = colour == Board.VERTEX_WHITE;
 	//
 	// linear = new VertexLineariser(board, row, column, sym, invert);
 	// if (!linear.hasNext())
@@ -125,17 +125,17 @@ public final class Node implements Comparable<Node> {
 	// Node child = null;
 	// Short colour = linear.next();
 	// switch (colour) {
-	// case BoardI.VERTEX_BLACK:
+	// case Board.VERTEX_BLACK:
 	// child = node.black;
 	// break;
-	// case BoardI.VERTEX_WHITE:
+	// case Board.VERTEX_WHITE:
 	// child = node.white;
 	// break;
-	// case BoardI.VERTEX_OFF_BOARD:
+	// case Board.VERTEX_OFF_BOARD:
 	// child = node.off;
 	// break;
-	// case BoardI.VERTEX_KO:
-	// case BoardI.VERTEX_EMPTY:
+	// case Board.VERTEX_KO:
+	// case Board.VERTEX_EMPTY:
 	// child = node.empty;
 	// break;
 	// default:

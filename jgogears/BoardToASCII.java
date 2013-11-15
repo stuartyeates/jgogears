@@ -68,7 +68,7 @@ public final class BoardToASCII {
 	 *            the board
 	 * @return the ASCII representation
 	 */
-	static String Transform(BoardI board) {
+	static String Transform(Board board) {
 		StringBuffer buf = new StringBuffer();
 		int size = board.getSize();
 		String head = headerRow(board.getSize());
@@ -80,16 +80,16 @@ public final class BoardToASCII {
 			buf.append(" ").append(size - i).append(" ");
 			for (short j = 0; j < size; j++) {
 				switch (board.getColour(j, size - 1 - i)) {
-				case BoardI.VERTEX_KO:
+				case Board.VERTEX_KO:
 					buf.append("!");
 					break;
-				case BoardI.VERTEX_BLACK:
+				case Board.VERTEX_BLACK:
 					buf.append("X");
 					break;
-				case BoardI.VERTEX_WHITE:
+				case Board.VERTEX_WHITE:
 					buf.append("O");
 					break;
-				case BoardI.VERTEX_EMPTY:
+				case Board.VERTEX_EMPTY:
 					if (isEyeVertex(i, j, (short) size))
 						buf.append("+");
 					else

@@ -2,7 +2,7 @@ package jgogears.gtp;
 
 import java.io.*;
 
-import jgogears.BoardI;
+import jgogears.Board;
 import jgogears.Move;
 
 // TODO: Auto-generated Javadoc
@@ -106,7 +106,7 @@ public class GTPEngine implements Runnable {
 			this.engine.play(move, this.state);
 			return true;
 		} else if (this.compare(command, GTPConstants.GENMOVE)) {
-			short colour = BoardI.parseColour(command
+			short colour = Board.parseColour(command
 					.substring(GTPConstants.PLAY.length() + 1));
 			Move move = this.engine.genMove(colour, this.state);
 			this.writer.write(move.toVertexString());
@@ -124,7 +124,7 @@ public class GTPEngine implements Runnable {
 			System.err.println("clearing board");
 			throw new Error("don't know how to handle the command:" + command);
 		} else if (this.compare(command, GTPConstants.REGGENMOVE)) {
-			short colour = BoardI.parseColour(command
+			short colour = Board.parseColour(command
 					.substring(GTPConstants.PLAY.length() + 1));
 			Move move = this.engine.regGenMove(colour, this.state);
 			this.writer.write(move.toVertexString());

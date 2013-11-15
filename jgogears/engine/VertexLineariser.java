@@ -2,7 +2,7 @@ package jgogears.engine;
 
 import java.util.*;
 
-import jgogears.BoardI;
+import jgogears.Board;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -30,7 +30,7 @@ final public class VertexLineariser implements Iterator<Short> {
 	protected int offset = 0;
 
 	/** The board. */
-	protected BoardI board = null;
+	protected Board board = null;
 
 	/** The row. */
 	short row = -2;
@@ -61,7 +61,7 @@ final public class VertexLineariser implements Iterator<Short> {
 	 * @param invert
 	 *            are we inverting the colour?
 	 */
-	public VertexLineariser(BoardI board, short row, short column, short sym,
+	public VertexLineariser(Board board, short row, short column, short sym,
 			boolean invert) {
 		this.board = board;
 		this.row = (short) (row + 1);
@@ -220,10 +220,10 @@ final public class VertexLineariser implements Iterator<Short> {
 	 */
 	public Short invert(Short colour) {
 		switch (colour.shortValue()) {
-		case BoardI.VERTEX_BLACK:
-			return BoardI.VERTEX_WHITE;
-		case BoardI.VERTEX_WHITE:
-			return BoardI.VERTEX_BLACK;
+		case Board.VERTEX_BLACK:
+			return Board.VERTEX_WHITE;
+		case Board.VERTEX_WHITE:
+			return Board.VERTEX_BLACK;
 		default:
 			return colour;
 

@@ -97,7 +97,7 @@ public final class Game {
 	private LinkedList<Move> movelist = new LinkedList<Move>();
 
 	/** The boardlist. */
-	private LinkedList<BoardI> boardlist = null;
+	private LinkedList<Board> boardlist = null;
 
 	/**
 	 * default constractor.
@@ -174,7 +174,7 @@ public final class Game {
 	 * 
 	 * @return the boardlist
 	 */
-	public final LinkedList<BoardI> getBoardlist() {
+	public final LinkedList<Board> getBoardlist() {
 		if (this.boardlist == null)
 			getBoards();
 		return this.boardlist;
@@ -185,12 +185,12 @@ public final class Game {
 	 * 
 	 * @return an iterator
 	 */
-	public Iterator<BoardI> getBoards() {
+	public Iterator<Board> getBoards() {
 		if (this.boardlist == null) {
 
 			Iterator<Move> moves = this.getMoves();
-			this.boardlist = new LinkedList<BoardI>();
-			BoardI board = BoardI.newBoard(this.size);
+			this.boardlist = new LinkedList<Board>();
+			Board board = Board.newBoard(this.size);
 			this.boardlist.add(board);
 			while (moves.hasNext()) {
 				Move move = moves.next();
@@ -362,7 +362,7 @@ public final class Game {
 	 * @param boardlist
 	 *            the boardlist to set
 	 */
-	public final void setBoardlist(LinkedList<BoardI> boardlist) {
+	public final void setBoardlist(LinkedList<Board> boardlist) {
 		this.boardlist = boardlist;
 	}
 

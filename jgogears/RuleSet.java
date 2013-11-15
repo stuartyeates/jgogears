@@ -28,7 +28,7 @@ public abstract class RuleSet {
 	 *            the board
 	 * @return the tree set< vertex>
 	 */
-	public abstract TreeSet<Vertex> captures(Game game, BoardI board, Move move);
+	public abstract TreeSet<Vertex> captures(Game game, Board board, Move move);
 
 	/**
 	 * Count liberties.
@@ -41,7 +41,7 @@ public abstract class RuleSet {
 	 *            the board
 	 * @return the short
 	 */
-	public short countLiberties(int rowb, int columnb, BoardI board) {
+	public short countLiberties(int rowb, int columnb, Board board) {
 		return this.countLiberties((short) rowb, (short) columnb, board);
 	}
 
@@ -56,7 +56,7 @@ public abstract class RuleSet {
 	 *            the board
 	 * @return the short
 	 */
-	public short countLiberties(short rowb, short columnb, BoardI board) {
+	public short countLiberties(short rowb, short columnb, Board board) {
 		return (short) this.getLiberties(rowb, columnb, board).size();
 	}
 
@@ -72,7 +72,7 @@ public abstract class RuleSet {
 	 * @return the collection of moves
 	 */
 
-	public Collection<Move> getAllLegalMoves(Game game, BoardI board,
+	public Collection<Move> getAllLegalMoves(Game game, Board board,
 			short colour) {
 		Stack<Move> moves = new Stack<Move>();
 		for (int i = 0; i < board.getSize(); i++)
@@ -95,7 +95,7 @@ public abstract class RuleSet {
 	 *            the colour being played
 	 * @return the collection of vertexes
 	 */
-	public Collection<Vertex> getAllLegalVertexes(Game game, BoardI board,
+	public Collection<Vertex> getAllLegalVertexes(Game game, Board board,
 			short colour) {
 		Stack<Vertex> moves = new Stack<Vertex>();
 		for (int i = 0; i < board.getSize(); i++)
@@ -123,7 +123,7 @@ public abstract class RuleSet {
 	 *            the board
 	 * @return the liberties
 	 */
-	public TreeSet<Vertex> getLiberties(int rowb, int columnb, BoardI board) {
+	public TreeSet<Vertex> getLiberties(int rowb, int columnb, Board board) {
 		return this.getLiberties((short) rowb, (short) columnb, board);
 	}
 
@@ -139,7 +139,7 @@ public abstract class RuleSet {
 	 * @return the liberties
 	 */
 	abstract public TreeSet<Vertex> getLiberties(short rowb, short columnb,
-			BoardI board);
+			Board board);
 
 	/**
 	 * Get the name of this Ko rule.
@@ -159,7 +159,7 @@ public abstract class RuleSet {
 	 *            the board
 	 * @return the string
 	 */
-	TreeSet<Vertex> getString(int row, int column, BoardI board) {
+	TreeSet<Vertex> getString(int row, int column, Board board) {
 		return this.getString((short) row, (short) column, board);
 	}
 
@@ -175,7 +175,7 @@ public abstract class RuleSet {
 	 * @return the string
 	 */
 	abstract public TreeSet<Vertex> getString(short row, short column,
-			BoardI board);
+			Board board);
 
 	/**
 	 * Leaves ko.
@@ -188,7 +188,7 @@ public abstract class RuleSet {
 	 *            the board
 	 * @return the tree set< vertex>
 	 */
-	public abstract TreeSet<Vertex> leavesKo(Game game, BoardI board, Move move);
+	public abstract TreeSet<Vertex> leavesKo(Game game, Board board, Move move);
 
 	/**
 	 * Is this move legal, given this board in this game?.
@@ -201,6 +201,6 @@ public abstract class RuleSet {
 	 *            the board
 	 * @return true, if move is legal
 	 */
-	public abstract boolean moveIsLegal(Game game, BoardI board, Move move);
+	public abstract boolean moveIsLegal(Game game, Board board, Move move);
 
 }
