@@ -8,7 +8,7 @@ import junit.framework.*;
 /**
  * TODO
  * 
- * @author syeates
+ * @author syeates@gmail.com
  * 
  */
 public class AllTests {

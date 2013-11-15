@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * A probability model of Go
+ * @author syeates@gmail.com
  */
 public final class Model {
 
