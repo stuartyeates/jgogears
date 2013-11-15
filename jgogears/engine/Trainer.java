@@ -9,7 +9,7 @@ import java.util.*;
 import jgogears.*;
 
 /**
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class Trainer {
 	/** arbitrarily large integer for use in counting variables */

@@ -12,7 +12,7 @@ import junit.framework.TestCase;
 /**
  * test TwoGTP with a pair of GnuGo Players.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class SufogoEngineTest extends TestCase {
 

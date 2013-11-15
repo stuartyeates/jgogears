@@ -7,6 +7,7 @@ import jgogears.Board;
 // TODO: Auto-generated Javadoc
 /**
  * The Class VertexLineariser.
+ * @author syeates@gmail.com
  */
 final public class VertexLineariser implements Iterator<Short> {
 	// Table of sequences

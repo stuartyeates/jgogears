@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * An iterator for all decendents of a node
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 
 public class TreeIterator implements Iterator<Node> {

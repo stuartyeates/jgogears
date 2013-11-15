@@ -10,7 +10,7 @@ import java.io.*;
 /**
  * Test the trainer
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class TrainerTest extends TestCase {
 

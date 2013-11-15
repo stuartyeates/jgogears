@@ -10,6 +10,7 @@ import junit.framework.TestCase;
 // TODO: Auto-generated Javadoc
 /**
  * The Class VertexLineariserTest.
+ * @author syeates@gmail.com
  */
 public class StraightVertexLineariserTest extends TestCase {
 
