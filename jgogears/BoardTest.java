@@ -10,7 +10,7 @@ import junit.framework.TestCase;
 /**
  * The Class BoardTest.
  * 
- * @author Stuart
+ * @author syeates@gmail.com
  */
 public class BoardTest extends TestCase {
 	/** are we being verbose ? */

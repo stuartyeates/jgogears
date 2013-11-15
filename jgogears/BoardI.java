@@ -6,7 +6,7 @@ package jgogears;
  * stones are where, and about colours. Knows nothing of the history of the
  * board or whose turn it is to play.
  * 
- * @author Stuart
+ * @author syeates@gmail.com
  */
 public abstract class BoardI {
 

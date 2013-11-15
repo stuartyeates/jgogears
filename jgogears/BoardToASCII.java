@@ -4,7 +4,7 @@ package jgogears;
 /**
  * Transform a board to ASCII, in the style of GnuGo.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public final class BoardToASCII {
 

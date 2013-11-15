@@ -13,7 +13,7 @@ import junit.framework.TestCase;
 /**
  * Class to check that all the sgf files are valid and well behaving.
  * 
- * @author syeates
+ * @author syeates@gmail.com
  */
 public class CheckAllSGFFilesTest extends TestCase {
 

@@ -8,6 +8,7 @@ import junit.framework.TestCase;
 // TODO: Auto-generated Javadoc
 /**
  * The Class BoardToASCIITest.
+ * @author syeates@gmail.com
  */
 public class BoardToASCIITest extends TestCase {
 
