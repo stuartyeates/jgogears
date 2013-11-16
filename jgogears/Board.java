@@ -202,12 +202,10 @@ public class Board {
 	 *            the old board we're coping data from
 	 */
 	protected void copydata(Board old, Move move) {
-		this.size = old.getSize();
 		if (this.size < 3 || this.size > 25)
 			throw new Error();
 
 		this.zobrist = old.getZobrist();
-		this.ruleSet = old.getRuleSet();
 
 		for (short i = 0; i < this.size; i++)
 			for (short j = 0; j < this.size; j++) {
@@ -386,13 +384,8 @@ public class Board {
 		return this.zobrist;
 	}
 
-	/**
-	 * Gets the zobrist.
-	 * 
-	 * @return the zobrist
-	 */
 	public void setZobrist(Zobrist zobrist) {
-		return this.zobrist = sobrist;
+		 this.zobrist = zobrist;
 	}
 
 
