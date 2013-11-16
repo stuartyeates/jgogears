@@ -309,11 +309,11 @@ public class StraightVertexLineariserTest extends TestCase {
 	 *             the exception
 	 */
 	public void testDifferenetSizes9() throws Exception {
-		Board board = Board.newBoard();
+		Board board = new Board();
 		StraightVertexLineariser linear = new StraightVertexLineariser(board,
 				(short) 2, (short) 2, (short) 0, false);
 		assertNotNull(linear);
-		board = Board.newBoard(9);
+		board = new Board((short)9);
 		linear = new StraightVertexLineariser(board, (short) 2, (short) 2,
 				(short) 0, false);
 		int count = 0;
@@ -334,11 +334,11 @@ public class StraightVertexLineariserTest extends TestCase {
 	 *             the exception
 	 */
 	public void testDifferenetSizes11() throws Exception {
-		Board board = Board.newBoard();
+		Board board = new Board();
 		StraightVertexLineariser linear = new StraightVertexLineariser(board,
 				(short) 2, (short) 2, (short) 0, false);
 		assertNotNull(linear);
-		board = Board.newBoard(11);
+		board = new Board((short)11);
 		linear = new StraightVertexLineariser(board, (short) 2, (short) 2,
 				(short) 0, false);
 		int count = 0;
@@ -359,11 +359,11 @@ public class StraightVertexLineariserTest extends TestCase {
 	 *             the exception
 	 */
 	public void testDifferenetSizes10() throws Exception {
-		Board board = Board.newBoard();
+		Board board = new Board();
 		StraightVertexLineariser linear = new StraightVertexLineariser(board,
 				(short) 2, (short) 2, (short) 0, false);
 		assertNotNull(linear);
-		board = Board.newBoard(10);
+		board = new Board((short)10);
 		linear = new StraightVertexLineariser(board, (short) 2, (short) 2,
 				(short) 0, false);
 		int count = 0;
@@ -384,11 +384,11 @@ public class StraightVertexLineariserTest extends TestCase {
 	 *             the exception
 	 */
 	public void testDifferenetSizes21() throws Exception {
-		Board board = Board.newBoard();
+		Board board = new Board();
 		StraightVertexLineariser linear = new StraightVertexLineariser(board,
 				(short) 2, (short) 2, (short) 0, false);
 		assertNotNull(linear);
-		board = Board.newBoard(21);
+		board = new Board((short)21);
 		linear = new StraightVertexLineariser(board, (short) 2, (short) 2,
 				(short) 0, false);
 		int count = 0;
