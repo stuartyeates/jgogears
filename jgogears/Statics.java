@@ -10,6 +10,11 @@ public class Statics {
 
 	/** The default board size. */
 	public static final short DEFAULT_BOARD_SIZE = 19;
+	/** The min board size. */
+	public static final short MIN_BOARD_SIZE = 3;
+	
+	/** The max board size. */
+	public static final short MAX_BOARD_SIZE = 27;
 
 	/** Are we sanity checking moves? */
 	public final static boolean SANITY_CHECK_MOVES = true;
