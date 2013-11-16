@@ -169,7 +169,12 @@ public class Board {
 	 */
 	public Board(RuleSet rule) {
 		this.ruleSet = rule;
-		this.init();
+		this.size = Statics.DEFAULT_BOARD_SIZE;
+		this.board = new short[this.size][this.size];
+		for (int i = 0; i < this.size; i++)
+			for (int j = 0; j < this.size; j++)
+				this.board[i][j] = Statics.VERTEX_EMPTY;
+		this.zobrist = new Zobrist();
 	}
 
 	/**
@@ -180,6 +185,7 @@ public class Board {
 	 */
 	public Board(short size) {
 		this.size = size;
+		this.ruleSet = new NoKoRuleSet();
 		this.board = new short[this.size][this.size];
 		for (int i = 0; i < this.size; i++)
 			for (int j = 0; j < this.size; j++)
