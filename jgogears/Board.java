@@ -251,9 +251,8 @@ public class Board {
 			if (move.getColumn() >= this.size || move.getRow() >= this.size)
 				throw new Error(move + "");
 			this.setColour(move.getRow(), move.getColumn(), move.getColour());
-			if (this.zobrist != null)
 				this.setZobrist(new Zobrist(this.zobrist, move.getRow(), move
-						.getColumn(), move.getColour()));
+						.getColumn(), Statics.VERTEX_EMPTY));
 
 			// take the captures
 			TreeSet<Vertex> captures = old.getRuleSet().captures(null, old,
@@ -267,7 +266,6 @@ public class Board {
 					this.setColour(v.getRow(), v.getColumn(),
 							Statics.VERTEX_EMPTY);
 
-					if (this.zobrist != null)
 						this.setZobrist(new Zobrist(this.getZobrist(), v
 								.getRow(), v.getColumn(), Statics.VERTEX_EMPTY));
 				}
