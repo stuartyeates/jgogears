@@ -113,23 +113,21 @@ public class Board {
 	}
 
 	/** The actual board, of size size. */
-	private short[][] board = null;
+	private final short[][] board;
 
 	/** the ruleset. */
-	protected RuleSet ruleSet = new NoKoRuleSet();
+	protected final RuleSet ruleSet;
 
 	/** the size of the board. */
-	protected short size = 19;
+	protected final short size;
 
 	/** The zobrist. */
-	protected Zobrist zobrist = null;
+	protected final Zobrist zobrist;
 
 	/**
 	 * Default constructor.
 	 */
 	public Board() {
-		this.zobrist = new Zobrist();
-
 		this.init();
 	}
 
@@ -149,27 +147,13 @@ public class Board {
 	}
 
 	/**
-	 * Default constructor.
-	 * 
-	 * @param zobrist
-	 *            the zobrist
-	 */
-	public Board(boolean zobrist) {
-		if (zobrist)
-			this.zobrist = new Zobrist();
-		this.init();
-	}
-
-
-	/**
 	 * constructor of specially sized boards.
 	 * 
 	 * @param size
 	 *            the size
 	 */
 	public Board(int size) {
-		this.size = (short) size;
-		this.init();
+		Board((short) size);
 	}
 
 
