@@ -279,7 +279,7 @@ public class Board {
 			this.setColour(move.getRow(), move.getColumn(), move.getColour());
 			if (this.zobrist != null)
 				this.setZobrist(new Zobrist(this.zobrist, move.getRow(), move
-						.getColumn(), move.getColour));
+						.getColumn(), move.getColour()));
 
 			// take the captures
 			TreeSet<Vertex> captures = old.getRuleSet().captures(null, old,
