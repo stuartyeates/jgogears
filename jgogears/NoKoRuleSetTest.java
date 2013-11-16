@@ -64,7 +64,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = null;
 
@@ -106,7 +106,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = null;
 
@@ -206,7 +206,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = null;
 
@@ -230,7 +230,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = null;
 
@@ -254,7 +254,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = null;
 
@@ -278,7 +278,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 		Move move = new Move(0, 1, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
 		move = new Move(1, 0, Statics.VERTEX_BLACK);
@@ -301,7 +301,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 		Move move = new Move(1, 2, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
 		move = new Move(2, 1, Statics.VERTEX_BLACK);
@@ -324,7 +324,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 		Move move = new Move(0, 1, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
 		move = new Move(1, 0, Statics.VERTEX_BLACK);
@@ -361,7 +361,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = new Move(3, 3, Statics.VERTEX_BLACK);
 		assertTrue(rule.moveIsLegal(null, board, move));
@@ -410,7 +410,7 @@ public class NoKoRuleSetTest extends TestCase {
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
 		Game game = new Game(19);
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 		Move move = new Move(0, 1, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
 		move = new Move(1, 1, Statics.VERTEX_BLACK);
@@ -467,7 +467,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 19;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = null;
 
@@ -497,7 +497,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 19;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = null;
 
@@ -539,7 +539,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		for (short k = 0; k < size; k++)
 			for (short l = 0; l < size; l++) {
-				Board board = Board.newBoard(size);
+				Board board = new Board(size);
 				assertNotNull(board);
 				Move move = new Move(k, l, Statics.VERTEX_BLACK);
 				assertNotNull(move);
@@ -580,7 +580,7 @@ public class NoKoRuleSetTest extends TestCase {
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
 
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 		assertNotNull(board);
 		Move move = new Move(3, 1, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
@@ -614,7 +614,7 @@ public class NoKoRuleSetTest extends TestCase {
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
 
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 		assertNotNull(board);
 		Move move = new Move(1, 0, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
@@ -665,7 +665,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 					Game game = Game.loadFromFile(file);
 					if (game.getSize() == 19) {
-						Board board = Board.newBoard(game.getSize());
+						Board board = new Board(game.getSize());
 						if (DEBUG)
 							System.err.println(filename);
 
@@ -698,7 +698,7 @@ public class NoKoRuleSetTest extends TestCase {
 	public void testNoCenterPlay() {
 
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = null;
 
@@ -725,7 +725,7 @@ public class NoKoRuleSetTest extends TestCase {
 			for (short j = 0; j < size; j++)
 				for (short k = 0; k < size; k++)
 					for (short l = 0; l < size; l++) {
-						Board board = Board.newBoard(size);
+						Board board = new Board(size);
 						assertNotNull(board);
 						Move move = new Move(k, l, Statics.VERTEX_BLACK);
 						assertNotNull(move);
@@ -759,7 +759,7 @@ public class NoKoRuleSetTest extends TestCase {
 	public void testStringEmptyBoard() {
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		for (short i = 0; i < size; i++)
 			for (short j = 0; j < size; j++) {
@@ -777,7 +777,7 @@ public class NoKoRuleSetTest extends TestCase {
 	public void testStringOffBoard() {
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		TreeSet<Vertex> string = rule.getString((short) -1, (short) -1, board);
 		assertNotNull(string);
@@ -801,7 +801,7 @@ public class NoKoRuleSetTest extends TestCase {
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
 
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 		assertNotNull(board);
 		Move move = new Move(1, 1, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
@@ -824,7 +824,7 @@ public class NoKoRuleSetTest extends TestCase {
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
 
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 		assertNotNull(board);
 		Move move = new Move(1, 1, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
@@ -847,7 +847,7 @@ public class NoKoRuleSetTest extends TestCase {
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
 
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 		assertNotNull(board);
 		Move move = new Move(1, 1, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
@@ -870,7 +870,7 @@ public class NoKoRuleSetTest extends TestCase {
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
 
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 		assertNotNull(board);
 		Move move = new Move(1, 0, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
