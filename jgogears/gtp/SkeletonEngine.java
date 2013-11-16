@@ -201,7 +201,7 @@ public abstract class SkeletonEngine implements GTPInterface {
 		newState.komi = state.komi;
 		newState.boardsize = state.boardsize;
 		newState.mainTime = state.mainTime;
-		newState.board = Board.newBoard(newState.boardsize);
+		newState.board = new Board(newState.boardsize);
 
 		// TODO generate new board
 
