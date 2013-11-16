@@ -192,7 +192,7 @@ public final class Game {
 
 			Iterator<Move> moves = this.getMoves();
 			this.boardlist = new LinkedList<Board>();
-			Board board = Board.newBoard(this.size);
+			Board board = new Board(this.size);
 			this.boardlist.add(board);
 			while (moves.hasNext()) {
 				Move move = moves.next();

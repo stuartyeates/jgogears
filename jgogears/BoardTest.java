@@ -20,24 +20,24 @@ public class BoardTest extends TestCase {
 	 * Test all sizes.
 	 */
 	public void testAllSizes() {
-		this.testAllVertexesN(3);
-		this.testAllVertexesN(6);
-		this.testAllVertexesN(7);
-		this.testAllVertexesN(8);
-		this.testAllVertexesN(9);
-		this.testAllVertexesN(10);
-		this.testAllVertexesN(11);
-		this.testAllVertexesN(12);
-		this.testAllVertexesN(13);
-		this.testAllVertexesN(14);
-		this.testAllVertexesN(15);
-		this.testAllVertexesN(16);
-		this.testAllVertexesN(17);
-		this.testAllVertexesN(18);
-		this.testAllVertexesN(19);
-		this.testAllVertexesN(20);
-		this.testAllVertexesN(21);
-		this.testAllVertexesN(22);
+		this.testAllVertexesN((short)3);
+		this.testAllVertexesN((short)6);
+		this.testAllVertexesN((short)7);
+		this.testAllVertexesN((short)8);
+		this.testAllVertexesN((short)9);
+		this.testAllVertexesN((short)10);
+		this.testAllVertexesN((short)11);
+		this.testAllVertexesN((short)12);
+		this.testAllVertexesN((short)13);
+		this.testAllVertexesN((short)14);
+		this.testAllVertexesN((short)15);
+		this.testAllVertexesN((short)16);
+		this.testAllVertexesN((short)17);
+		this.testAllVertexesN((short)18);
+		this.testAllVertexesN((short)19);
+		this.testAllVertexesN((short)20);
+		this.testAllVertexesN((short)21);
+		this.testAllVertexesN((short)22);
 	}
 
 	/**
@@ -46,8 +46,8 @@ public class BoardTest extends TestCase {
 	 * @param size
 	 *            the size
 	 */
-	public void testAllVertexesN(int size) {
-		Board board = Board.newBoard(size);
+	public void testAllVertexesN(short size) {
+		Board board = new Board(size);
 
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
@@ -181,7 +181,7 @@ public class BoardTest extends TestCase {
 			for (int j = 0; j < Zobrist.MAX_BOARD_SIZE; j++)
 				for (int k = 0; k < Zobrist.MAX_COLOUR; k++) {
 
-					Board board1 = new Board(true);
+					Board board1 = new Board();
 					Board board2 = board1.newBoard(new Move((short) 1,
 							(short) 1, Statics.VERTEX_BLACK));
 					Board board3 = board1.newBoard(new Move((short) 1,
@@ -214,7 +214,7 @@ public class BoardTest extends TestCase {
 			for (int j = 0; j < Zobrist.MAX_BOARD_SIZE; j++)
 				for (int k = 0; k < Zobrist.MAX_COLOUR; k++) {
 
-					Board board1 = new Board(false);
+					Board board1 = new Board();
 					Board board2 = board1.newBoard(new Move((short) 1,
 							(short) 1, Statics.VERTEX_BLACK));
 					Board board3 = board1.newBoard(new Move((short) 1,
