@@ -409,11 +409,11 @@ public class StraightVertexLineariserTest extends TestCase {
 	 *             the exception
 	 */
 	public void testDifferenetSizes17() throws Exception {
-		Board board = Board.newBoard();
+		Board board = new Board();
 		StraightVertexLineariser linear = new StraightVertexLineariser(board,
 				(short) 2, (short) 2, (short) 0, false);
 		assertNotNull(linear);
-		board = Board.newBoard(17);
+		board = new Board((short)17);
 		linear = new StraightVertexLineariser(board, (short) 2, (short) 2,
 				(short) 0, false);
 		int count = 0;

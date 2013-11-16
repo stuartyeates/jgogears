@@ -46,7 +46,7 @@ public class GTPState {
 	 * Create a new GTPState
 	 */
 	public GTPState() {
-		this.board = Board.newBoard(this.boardsize);
+		this.board = new Board(this.boardsize);
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class GTPState {
 		// TODO is this sufficient?
 		this.whiteCapturedCount = 0;
 		this.blackCapturedCount = 0;
-		this.board = Board.newBoard((short) this.getBoardsize());
+		this.board = new Board((short) this.getBoardsize());
 		this.playedMoves = new java.util.Vector<Move>();
 	}
 
@@ -226,7 +226,7 @@ public class GTPState {
 	 */
 	public void setBoardsize(short boardsize) {
 		this.boardsize = boardsize;
-		this.board = Board.newBoard(boardsize);
+		this.board = new Board(boardsize);
 	}
 
 	/**
