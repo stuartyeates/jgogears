@@ -2,7 +2,7 @@ package jgogears.engine;
 
 import java.util.*;
 
-import jgogears.Board;
+import jgogears.*;
 
 // TODO: Auto-generated Javadoc
 /**

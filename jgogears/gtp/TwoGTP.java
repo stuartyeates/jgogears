@@ -1,6 +1,6 @@
 package jgogears.gtp;
 
-import jgogears.Board;
+import jgogears.*;
 import jgogears.Move;
 import jgogears.RuleSet;
 
