@@ -54,16 +54,6 @@ public class Board {
 		return new Board(Statics.DEFAULT_BOARD_SIZE);
 	}
 
-	/**
-	 * create an empty board of the default class
-	 * 
-	 * @param zobrist
-	 *            are we using a zobrist hash?
-	 * @return the new empty board
-	 */
-	public static Board newBoard(boolean zobrist) {
-		return new Board(zobrist);
-	}
 
 	/**
 	 * create an empty board of the default class
@@ -289,7 +279,7 @@ public class Board {
 			this.setColour(move.getRow(), move.getColumn(), move.getColour());
 			if (this.zobrist != null)
 				this.setZobrist(new Zobrist(this.zobrist, move.getRow(), move
-						.getColumn(), Statics.VERTEX_EMPTY));
+						.getColumn(), move.getColour));
 
 			// take the captures
 			TreeSet<Vertex> captures = old.getRuleSet().captures(null, old,
