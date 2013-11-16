@@ -26,7 +26,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = null;
 
@@ -179,7 +179,7 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
-		Board board = Board.newBoard(size);
+		Board board = new Board(size);
 
 		Move move = null;
 
