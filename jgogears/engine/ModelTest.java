@@ -165,7 +165,7 @@ public class ModelTest extends TestCase {
 	 */
 	public void testLoadAllSGFFiles() throws IOException {
 
-		Board board = Board.newBoard(19);
+		Board board = new Board((short)19);
 		board = board.newBoard(new Move("black a1"));
 		board = board.newBoard(new Move("white b2"));
 		board = board.newBoard(new Move("black b4"));
@@ -240,7 +240,7 @@ public class ModelTest extends TestCase {
 		if (DEBUG)
 			System.err.println("ModelTest::testTrainedModel() model size =  "
 					+ model.getRoot().size());
-		Board board = Board.newBoard(19);
+		Board board = new Board((short)19);
 		board = board.newBoard(new Move("white b2"));
 		board = board.newBoard(new Move("black k4"));
 		board = board.newBoard(new Move("white c3"));
@@ -282,7 +282,7 @@ public class ModelTest extends TestCase {
 			System.err
 					.println("ModeTest::testTrainedModelEmptyBoard() model size =  "
 							+ model.getRoot().size());
-		Board board = Board.newBoard(19);
+		Board board = new Board((short)19);
 		double[][] r = new Scorer().getScores(model, board, false);
 		assertNotNull(r);
 		assertTrue(r.length == r[0].length);
