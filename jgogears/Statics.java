@@ -10,6 +10,7 @@ public class Statics {
 
 	/** The default board size. */
 	public static final short DEFAULT_BOARD_SIZE = 19;
+	
 	/** The min board size. */
 	public static final short MIN_BOARD_SIZE = 3;
 	
