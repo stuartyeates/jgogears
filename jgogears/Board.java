@@ -51,33 +51,9 @@ public class Board {
 	 * @return the new empty board
 	 */
 	public static Board newBoard() {
-		return new Board(Statics.DEFAULT_BOARD_SIZE);
+		return new Board();
 	}
 
-
-	/**
-	 * create an empty board of the default class
-	 * 
-	 * @param size
-	 *            the size of the board
-	 * @return the new empty board
-	 */
-	public static Board newBoard(int size) {
-		return new Board((short) size);
-	}
-
-	/**
-	 * create an empty board of the default class
-	 * 
-	 * @param size
-	 *            the size of the board
-	 * @param rule
-	 *            the ruleset to use
-	 * @return the new empty board
-	 */
-	public static Board newBoard(int size, RuleSet rule) {
-		return new Board((short) size, rule);
-	}
 
 	/**
 	 * parse the colour of a move.
@@ -112,7 +88,7 @@ public class Board {
 	protected final short size;
 
 	/** The zobrist. */
-	protected final Zobrist zobrist;
+	protected Zobrist zobrist;
 
 	/**
 	 * Default constructor.
@@ -408,6 +384,15 @@ public class Board {
 	 */
 	public Zobrist getZobrist() {
 		return this.zobrist;
+	}
+
+	/**
+	 * Gets the zobrist.
+	 * 
+	 * @return the zobrist
+	 */
+	public void setZobrist(Zobrist zobrist) {
+		return this.zobrist = sobrist;
 	}
 
 
