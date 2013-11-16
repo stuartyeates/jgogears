@@ -216,10 +216,10 @@ final public class StraightVertexLineariser implements Iterator<Short> {
 	 */
 	public Short invert(Short colour) {
 		switch (colour.shortValue()) {
-		case Board.VERTEX_BLACK:
-			return Board.VERTEX_WHITE;
-		case Board.VERTEX_WHITE:
-			return Board.VERTEX_BLACK;
+		case Statics.VERTEX_BLACK:
+			return Statics.VERTEX_WHITE;
+		case Statics.VERTEX_WHITE:
+			return Statics.VERTEX_BLACK;
 		default:
 			return colour;
 

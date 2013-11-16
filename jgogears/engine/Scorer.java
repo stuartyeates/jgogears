@@ -39,7 +39,7 @@ public class Scorer {
 			for (j = 0; j < board.getSize(); j++) {
 				if (!Random.isLarger(result[i][j], best)) {
 					if (RuleSet.DEFAULT.moveIsLegal(null, board, new Move(i, j,
-							white ? Board.VERTEX_WHITE : Board.VERTEX_BLACK))) {
+							white ? Statics.VERTEX_WHITE : Statics.VERTEX_BLACK))) {
 						best = result[i][j];
 						I = i;
 						J = j;
@@ -84,17 +84,17 @@ public class Scorer {
 						Node child = null;
 
 						switch (colour) {
-						case Board.VERTEX_BLACK:
+						case Statics.VERTEX_BLACK:
 							child = node.getBlack();
 							break;
-						case Board.VERTEX_WHITE:
+						case Statics.VERTEX_WHITE:
 							child = node.getWhite();
 							break;
-						case Board.VERTEX_OFF_BOARD:
+						case Statics.VERTEX_OFF_BOARD:
 							child = node.getOff();
 							break;
-						case Board.VERTEX_KO:
-						case Board.VERTEX_EMPTY:
+						case Statics.VERTEX_KO:
+						case Statics.VERTEX_EMPTY:
 							child = node.getEmpty();
 							break;
 						default:

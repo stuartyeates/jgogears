@@ -76,7 +76,7 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
-						+ Board.colourString(Board.VERTEX_BLACK));
+						+ Board.colourString(Statics.VERTEX_BLACK));
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -88,7 +88,7 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
-						+ Board.colourString(Board.VERTEX_WHITE));
+						+ Board.colourString(Statics.VERTEX_WHITE));
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -100,7 +100,7 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
-						+ Board.colourString(Board.VERTEX_EMPTY));
+						+ Board.colourString(Statics.VERTEX_EMPTY));
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -112,7 +112,7 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
-						+ Board.colourString(Board.VERTEX_OFF_BOARD));
+						+ Board.colourString(Statics.VERTEX_OFF_BOARD));
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -194,11 +194,11 @@ public class ModelTest extends TestCase {
 			for (int j = 0; j < r[i].length; j++) {
 				if (maxScore <= r[i][j]) {
 					maxScore = r[i][j];
-					maxMove = new Move(i, j, Board.VERTEX_BLACK);
+					maxMove = new Move(i, j, Statics.VERTEX_BLACK);
 				}
 				if (minScore >= r[i][j]) {
 					minScore = r[i][j];
-					minMove = new Move(i, j, Board.VERTEX_BLACK);
+					minMove = new Move(i, j, Statics.VERTEX_BLACK);
 				}
 			}
 		if (DEBUG) {

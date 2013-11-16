@@ -19,7 +19,7 @@ public final class Move {
 	 */
 	public static Move createHandicapStone(String s) {
 		Vertex v = new Vertex(s);
-		Move result = new Move(v.getRow(), v.getColumn(), Board.VERTEX_BLACK);
+		Move result = new Move(v.getRow(), v.getColumn(), Statics.VERTEX_BLACK);
 		return result;
 	}
 
@@ -36,7 +36,7 @@ public final class Move {
 	private boolean resign = false;
 
 	/** The colour. */
-	private short colour = Board.VERTEX_KO;
+	private short colour = Statics.VERTEX_KO;
 
 	/**
 	 * create an empty GoMove.

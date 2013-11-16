@@ -102,7 +102,7 @@ public final class Node implements Comparable<Node> {
 	// if (board == null)
 	// throw new Error();
 	// VertexLineariser linear = null;
-	// boolean invert = colour == Board.VERTEX_WHITE;
+	// boolean invert = colour == Statics.VERTEX_WHITE;
 	//
 	// linear = new VertexLineariser(board, row, column, sym, invert);
 	// if (!linear.hasNext())
@@ -125,17 +125,17 @@ public final class Node implements Comparable<Node> {
 	// Node child = null;
 	// Short colour = linear.next();
 	// switch (colour) {
-	// case Board.VERTEX_BLACK:
+	// case Statics.VERTEX_BLACK:
 	// child = node.black;
 	// break;
-	// case Board.VERTEX_WHITE:
+	// case Statics.VERTEX_WHITE:
 	// child = node.white;
 	// break;
-	// case Board.VERTEX_OFF_BOARD:
+	// case Statics.VERTEX_OFF_BOARD:
 	// child = node.off;
 	// break;
-	// case Board.VERTEX_KO:
-	// case Board.VERTEX_EMPTY:
+	// case Statics.VERTEX_KO:
+	// case Statics.VERTEX_EMPTY:
 	// child = node.empty;
 	// break;
 	// default:

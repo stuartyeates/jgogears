@@ -578,9 +578,9 @@ public class VertexLineariserTest extends TestCase {
 		if (DEBUG)
 			System.err.print(" White = " + Board.parseColour("white"));
 		if (DEBUG)
-			System.err.print(" Empty = " + Board.VERTEX_EMPTY);
+			System.err.print(" Empty = " + Statics.VERTEX_EMPTY);
 		if (DEBUG)
-			System.err.print(" Off = " + Board.VERTEX_OFF_BOARD);
+			System.err.print(" Off = " + Statics.VERTEX_OFF_BOARD);
 		if (DEBUG)
 			System.err.println("");
 		for (short j = 0; j < 8; j++) {
@@ -607,8 +607,8 @@ public class VertexLineariserTest extends TestCase {
 			assertTrue(a != null);
 			if (a == null)
 				throw new Error();
-			assertTrue(a + " " + Board.VERTEX_WHITE + "\n" + board,
-					a.equals(new Short(Board.VERTEX_WHITE)));
+			assertTrue(a + " " + Statics.VERTEX_WHITE + "\n" + board,
+					a.equals(new Short(Statics.VERTEX_WHITE)));
 		}
 	}
 
@@ -628,9 +628,9 @@ public class VertexLineariserTest extends TestCase {
 		if (DEBUG)
 			System.err.print(" White = " + Board.parseColour("white"));
 		if (DEBUG)
-			System.err.print(" Empty = " + Board.VERTEX_EMPTY);
+			System.err.print(" Empty = " + Statics.VERTEX_EMPTY);
 		if (DEBUG)
-			System.err.print(" Off = " + Board.VERTEX_OFF_BOARD);
+			System.err.print(" Off = " + Statics.VERTEX_OFF_BOARD);
 		if (DEBUG)
 			System.err.println("");
 		for (short row = 0; row < board.getSize(); row++)
@@ -694,9 +694,9 @@ public class VertexLineariserTest extends TestCase {
 		if (DEBUG)
 			System.err.print(" White = " + Board.parseColour("white"));
 		if (DEBUG)
-			System.err.print(" Empty = " + Board.VERTEX_EMPTY);
+			System.err.print(" Empty = " + Statics.VERTEX_EMPTY);
 		if (DEBUG)
-			System.err.print(" Off = " + Board.VERTEX_OFF_BOARD);
+			System.err.print(" Off = " + Statics.VERTEX_OFF_BOARD);
 		if (DEBUG)
 			System.err.println("");
 		for (short j = 0; j < 8; j++) {

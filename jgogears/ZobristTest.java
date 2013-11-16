@@ -98,11 +98,11 @@ public class ZobristTest extends TestCase {
 
 					Board board1 = Board.newBoard(true);
 					Board board2 = board1.newBoard(new Move((short) 1,
-							(short) 1, Board.VERTEX_BLACK));
+							(short) 1, Statics.VERTEX_BLACK));
 					Board board3 = board1.newBoard(new Move((short) 1,
-							(short) 1, Board.VERTEX_BLACK));
+							(short) 1, Statics.VERTEX_BLACK));
 					// Board board4 = board2.newBoard(new Move((short) 1,
-					// (short) 1, Board.VERTEX_BLACK));
+					// (short) 1, Statics.VERTEX_BLACK));
 					// make sure the hashes are the same
 					assertFalse(board1.getZobrist().equals(board2.getZobrist()));
 					assertFalse(board1.getZobrist().equals(board3.getZobrist()));
@@ -118,13 +118,13 @@ public class ZobristTest extends TestCase {
 	public void testEquality() {
 		Board board = Board.newBoard(true);
 		Board board2 = board.newBoard(new Move((short) 1, (short) 1,
-				Board.VERTEX_BLACK));
+				Statics.VERTEX_BLACK));
 		Board board3 = board2.newBoard(new Move((short) 2, (short) 2,
-				Board.VERTEX_WHITE));
+				Statics.VERTEX_WHITE));
 		Board board4 = Board.newBoard(true).newBoard(
-				new Move((short) 2, (short) 2, Board.VERTEX_WHITE));
+				new Move((short) 2, (short) 2, Statics.VERTEX_WHITE));
 		Board board5 = board4.newBoard(new Move((short) 1, (short) 1,
-				Board.VERTEX_BLACK));
+				Statics.VERTEX_BLACK));
 		assertTrue(board.getZobrist()
 				.equals(Board.newBoard(true).getZobrist()));
 		assertTrue(board3.getZobrist().equals(board5.getZobrist()));
@@ -161,9 +161,9 @@ public class ZobristTest extends TestCase {
 	public void testWithBoard() {
 		Board board = Board.newBoard(true);
 		Board board2 = board.newBoard(new Move((short) 1, (short) 1,
-				Board.VERTEX_BLACK));
+				Statics.VERTEX_BLACK));
 		Board board3 = board.newBoard(new Move((short) 1, (short) 1,
-				Board.VERTEX_BLACK));
+				Statics.VERTEX_BLACK));
 		assertTrue(board2.getZobrist().equals(board3.getZobrist()));
 		assertTrue(board3.getZobrist().equals(board2.getZobrist()));
 		assertFalse(board.getZobrist().equals(board2.getZobrist()));
@@ -186,20 +186,20 @@ public class ZobristTest extends TestCase {
 	public void testWithBoardOrder() {
 		Board board = Board.newBoard(true);
 		Board board2 = board.newBoard(new Move((short) 1, (short) 1,
-				Board.VERTEX_BLACK));
+				Statics.VERTEX_BLACK));
 		Board board3 = board2.newBoard(new Move((short) 2, (short) 2,
-				Board.VERTEX_WHITE));
+				Statics.VERTEX_WHITE));
 		Board board4 = board.newBoard(new Move((short) 2, (short) 2,
-				Board.VERTEX_WHITE));
+				Statics.VERTEX_WHITE));
 		Board board5 = board4.newBoard(new Move((short) 1, (short) 1,
-				Board.VERTEX_BLACK));
+				Statics.VERTEX_BLACK));
 		assertTrue(board3.getZobrist().equals(board5.getZobrist()));
 		assertFalse(board2.getZobrist().equals(board4.getZobrist()));
 
 		Board board6 = board.newBoard(new Move((short) 2, (short) 2,
-				Board.VERTEX_BLACK));
+				Statics.VERTEX_BLACK));
 		Board board7 = board6.newBoard(new Move((short) 1, (short) 1,
-				Board.VERTEX_WHITE));
+				Statics.VERTEX_WHITE));
 		if (DEBUG) {
 			System.err.println(board5.getZobrist());
 			System.err.println(board7.getZobrist());
@@ -207,7 +207,7 @@ public class ZobristTest extends TestCase {
 		assertTrue(board5.getZobrist().equals(board7.getZobrist()));
 
 		Board board8 = board.newBoard(new Move((short) 1, (short) 1,
-				Board.VERTEX_WHITE));
+				Statics.VERTEX_WHITE));
 		assertTrue(board8.getZobrist().equals(board2.getZobrist()));
 	}
 
@@ -217,9 +217,9 @@ public class ZobristTest extends TestCase {
 	public void testWithBoardRemove() {
 		Board board = Board.newBoard(true);
 		Board board2 = board.newBoard(new Move((short) 1, (short) 1,
-				Board.VERTEX_BLACK));
+				Statics.VERTEX_BLACK));
 		Board board3 = board2.newBoard(new Move((short) 1, (short) 1,
-				Board.VERTEX_EMPTY));
+				Statics.VERTEX_EMPTY));
 		assertFalse(board2.getZobrist().equals(board3.getZobrist()));
 		assertFalse(board3.getZobrist().equals(board2.getZobrist()));
 		assertFalse(board2.getZobrist().equals(board.getZobrist()));

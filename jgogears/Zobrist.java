@@ -68,7 +68,7 @@ public class Zobrist extends BitSet {
 			throw new Error("" + row);
 		if (column >= MAX_BOARD_SIZE || column < 0)
 			throw new Error("" + column);
-		if (colour >= Board.VERTEX_MAX || colour < Board.VERTEX_MIN)
+		if (colour >= Statics.VERTEX_MAX || colour < Statics.VERTEX_MIN)
 			throw new Error("" + colour);
 		this.clear();
 		this.xor(old);

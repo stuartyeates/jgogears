@@ -24,19 +24,19 @@ public class Board {
 		// find the colour of the move
 		String colourS = "";
 		switch (colour) {
-		case Board.VERTEX_WHITE:
+		case Statics.VERTEX_WHITE:
 			colourS = "white";
 			break;
-		case Board.VERTEX_BLACK:
+		case Statics.VERTEX_BLACK:
 			colourS = "black";
 			break;
-		case Board.VERTEX_KO:
+		case Statics.VERTEX_KO:
 			colourS = "ko";
 			break;
-		case Board.VERTEX_EMPTY:
+		case Statics.VERTEX_EMPTY:
 			colourS = "empty";
 			break;
-		case Board.VERTEX_OFF_BOARD:
+		case Statics.VERTEX_OFF_BOARD:
 			colourS = "off board";
 			break;
 		default:
@@ -51,7 +51,7 @@ public class Board {
 	 * @return the new empty board
 	 */
 	public static Board newBoard() {
-		return new Board(DEFAULT_BOARD_SIZE);
+		return new Board(Statics.DEFAULT_BOARD_SIZE);
 	}
 
 	/**
@@ -99,13 +99,13 @@ public class Board {
 	public static short parseColour(String colourString) {
 
 		if (colourString.compareTo("w") == 0) {
-			return Board.VERTEX_WHITE;
+			return Statics.VERTEX_WHITE;
 		} else if (colourString.compareTo("white") == 0) {
-			return Board.VERTEX_WHITE;
+			return Statics.VERTEX_WHITE;
 		} else if (colourString.compareTo("b") == 0) {
-			return Board.VERTEX_BLACK;
+			return Statics.VERTEX_BLACK;
 		} else if (colourString.compareTo("black") == 0) {
-			return Board.VERTEX_BLACK;
+			return Statics.VERTEX_BLACK;
 		} else {
 			throw new IllegalArgumentException("trying to parse (1) \""
 					+ colourString + "\" as a colour");
@@ -243,8 +243,8 @@ public class Board {
 		for (short i = 0; i < this.size; i++)
 			for (short j = 0; j < this.size; j++) {
 				short colour = old.getColour(i, j);
-				if (colour == VERTEX_KO)
-					this.setColour(i, j, VERTEX_EMPTY);
+				if (colour == Statics.VERTEX_KO)
+					this.setColour(i, j, Statics.VERTEX_EMPTY);
 				else
 					this.setColour(i, j, colour);
 			}
@@ -256,23 +256,23 @@ public class Board {
 			// do nothing, since GoBoard doesn't know whose turn it is
 		} else {
 			// check the sanity of moves
-			if (SANITY_CHECK_MOVES) {
+			if (Statics.SANITY_CHECK_MOVES) {
 				short oldColour = old
 						.getColour(move.getRow(), move.getColumn());
 				switch (oldColour) {
-				case VERTEX_KO:
-				case VERTEX_EMPTY:
+				case Statics.VERTEX_KO:
+				case Statics.VERTEX_EMPTY:
 					break;
-				case VERTEX_WHITE:
-				case VERTEX_BLACK:
-					if (move.getColour() == VERTEX_KO
-							|| move.getColour() == VERTEX_EMPTY) {
+				case Statics.VERTEX_WHITE:
+				case Statics.VERTEX_BLACK:
+					if (move.getColour() == Statics.VERTEX_KO
+							|| move.getColour() == Statics.VERTEX_EMPTY) {
 						break;
 					} else {
 						throw new Error(move + "\n " + old);
 					}
-				case VERTEX_OFF_BOARD:
-					if (move.getColour() != VERTEX_OFF_BOARD) {
+				case Statics.VERTEX_OFF_BOARD:
+					if (move.getColour() != Statics.VERTEX_OFF_BOARD) {
 						throw new Error(move + "");
 					} else {
 						break;
@@ -286,7 +286,7 @@ public class Board {
 			this.setColour(move.getRow(), move.getColumn(), move.getColour());
 			if (this.zobrist != null)
 				this.setZobrist(new Zobrist(this.zobrist, move.getRow(), move
-						.getColumn(), Board.VERTEX_EMPTY));
+						.getColumn(), Statics.VERTEX_EMPTY));
 
 			// take the captures
 			TreeSet<Vertex> captures = old.getRuleSet().captures(null, old,
@@ -298,11 +298,11 @@ public class Board {
 					Vertex v = i.next();
 					// System.err.println("captured" + v);
 					this.setColour(v.getRow(), v.getColumn(),
-							Board.VERTEX_EMPTY);
+							Statics.VERTEX_EMPTY);
 
 					if (this.zobrist != null)
 						this.setZobrist(new Zobrist(this.getZobrist(), v
-								.getRow(), v.getColumn(), Board.VERTEX_EMPTY));
+								.getRow(), v.getColumn(), Statics.VERTEX_EMPTY));
 				}
 			}
 			// mark the kos
@@ -313,7 +313,7 @@ public class Board {
 				while (i.hasNext()) {
 					Vertex v = i.next();
 					// System.err.println("captured" + v);
-					this.setColour(v.getRow(), v.getColumn(), Board.VERTEX_KO);
+					this.setColour(v.getRow(), v.getColumn(), Statics.VERTEX_KO);
 
 				}
 			}
@@ -375,7 +375,7 @@ public class Board {
 		// System.err.println("getColour() " + " " + row + " " + column + " " +
 		// size);
 		if (row < 0 || column < 0 || row >= this.size || column >= this.size)
-			return VERTEX_OFF_BOARD;
+			return Statics.VERTEX_OFF_BOARD;
 		return this.board[row][column];
 	}
 
@@ -424,7 +424,7 @@ public class Board {
 		this.board = new short[this.size][this.size];
 		for (int i = 0; i < this.size; i++)
 			for (int j = 0; j < this.size; j++)
-				this.board[i][j] = VERTEX_EMPTY;
+				this.board[i][j] = Statics.VERTEX_EMPTY;
 	}
 
 	public boolean isOffBoard(int row, int column) {

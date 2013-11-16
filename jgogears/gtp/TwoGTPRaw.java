@@ -82,7 +82,7 @@ public class TwoGTPRaw {
 		while (passes < 4) {
 			Move move = null;
 			if (blackNext) {
-				move = this.black.genMove(Board.VERTEX_BLACK);
+				move = this.black.genMove(Statics.VERTEX_BLACK);
 				assert move != null;
 				this.white.play(move);
 				if (move.getPass())
@@ -91,7 +91,7 @@ public class TwoGTPRaw {
 					passes = 0;
 				blackNext = false;
 			} else {
-				move = this.white.genMove(Board.VERTEX_WHITE);
+				move = this.white.genMove(Statics.VERTEX_WHITE);
 				assert move != null;
 				this.black.play(move);
 				if (move.getPass())

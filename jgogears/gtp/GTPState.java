@@ -184,10 +184,10 @@ public class GTPState {
 		while (each.hasNext()) {
 			Vertex vert = each.next();
 			switch (this.board.getColour(vert)) {
-			case Board.VERTEX_BLACK:
+			case Statics.VERTEX_BLACK:
 				this.whiteCapturedCount++;
 				break;
-			case Board.VERTEX_WHITE:
+			case Statics.VERTEX_WHITE:
 				this.blackCapturedCount++;
 				break;
 			default:

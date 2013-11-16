@@ -51,7 +51,7 @@ public class GTPParserUtilsTest extends TestCase {
 			this.engine.initialise();
 			Boolean b = this.engine.loadsgf("sgf/testing/seki.sgf", 20);
 			assertTrue(b);
-			Move move = this.engine.genMove(Board.VERTEX_BLACK);
+			Move move = this.engine.genMove(Statics.VERTEX_BLACK);
 			assertNotNull(move);
 			// Board board = this.engine.showBoard();
 			// System.err.println("testLoadsgf:: the following board should have moves on it:");

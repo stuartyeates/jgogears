@@ -86,7 +86,7 @@ public class SufgoEngine extends SkeletonEngine {
 		Board board = state.getBoard();
 		Scorer scorer = new Scorer();
 		Vertex vertex = scorer.getBestScore(this.model, board,
-				colour == Board.VERTEX_WHITE);
+				colour == Statics.VERTEX_WHITE);
 		Move move = new Move(vertex.getRow(), vertex.getColumn(), colour);
 		return move;
 	}
