@@ -151,17 +151,6 @@ public class Board {
 	 * 
 	 * @param size
 	 *            the size
-	 */
-	public Board(int size) {
-		Board((short) size);
-	}
-
-
-	/**
-	 * constructor of specially sized boards.
-	 * 
-	 * @param size
-	 *            the size
 	 * @param rule
 	 *            the rule
 	 */
@@ -205,7 +194,11 @@ public class Board {
 	public Board(short size, RuleSet rule) {
 		this.size = size;
 		this.ruleSet = rule;
-		this.init();
+		this.board = new short[this.size][this.size];
+		for (int i = 0; i < this.size; i++)
+			for (int j = 0; j < this.size; j++)
+				this.board[i][j] = Statics.VERTEX_EMPTY;
+		this.zobrist = new Zobrist();
 	}
 
 	/**
@@ -401,15 +394,6 @@ public class Board {
 		return this.zobrist;
 	}
 
-	/**
-	 * initialise the board, creating it and setting it empty.
-	 */
-	protected void init() {
-		this.board = new short[this.size][this.size];
-		for (int i = 0; i < this.size; i++)
-			for (int j = 0; j < this.size; j++)
-				this.board[i][j] = Statics.VERTEX_EMPTY;
-	}
 
 	public boolean isOffBoard(int row, int column) {
 		if (row < 0)
@@ -471,15 +455,6 @@ public class Board {
 		this.board[row][column] = (short) colour;
 	}
 
-	/**
-	 * Sets the zobrist.
-	 * 
-	 * @param zobrist
-	 *            the zobrist
-	 */
-	protected void setZobrist(Zobrist zobrist) {
-		this.zobrist = zobrist;
-	}
 
 	/*
 	 * (non-Javadoc)
