@@ -286,7 +286,7 @@ public class VertexLineariserTest extends TestCase {
 			VertexLineariser lineariser = new VertexLineariser(board,
 					(short) 2, (short) 2, (short) 0, false);
 			assertNotNull(lineariser);
-			board = Board.newBoard(13);
+			board = new Board((short)13);
 			lineariser = new VertexLineariser(board, (short) 2, (short) 2,
 					(short) 0, false);
 			fail("shouldn't be able to linearise different sizes of board");
@@ -307,7 +307,7 @@ public class VertexLineariserTest extends TestCase {
 			VertexLineariser lineariser = new VertexLineariser(board,
 					(short) 2, (short) 2, (short) 0, false);
 			assertNotNull(lineariser);
-			board = Board.newBoard(25);
+			board = new Board((short)25);
 			lineariser = new VertexLineariser(board, (short) 2, (short) 2,
 					(short) 0, false);
 			fail("shouldn't be able to linearise different sizes of board");
@@ -324,11 +324,11 @@ public class VertexLineariserTest extends TestCase {
 	 */
 	public void testDifferenetSizes5() throws Exception {
 		try {
-			Board board = Board.newBoard(19);
+			Board board = new Board((short)19);
 			VertexLineariser lineariser = new VertexLineariser(board,
 					(short) 2, (short) 2, (short) 0, false);
 			assertNotNull(lineariser);
-			board = Board.newBoard(9);
+			board = new Board((short)9);
 			lineariser = new VertexLineariser(board, (short) 2, (short) 2,
 					(short) 0, false);
 			fail("shouldn't be able to linearise different sizes of board");
@@ -345,11 +345,11 @@ public class VertexLineariserTest extends TestCase {
 	 */
 	public void testDifferenetSizes9() throws Exception {
 		try {
-			Board board = Board.newBoard(19);
+			Board board = new Board((short)19);
 			VertexLineariser lineariser = new VertexLineariser(board,
 					(short) 2, (short) 2, (short) 0, false);
 			assertNotNull(lineariser);
-			board = Board.newBoard(9);
+			board = new Board((short)9);
 			lineariser = new VertexLineariser(board, (short) 2, (short) 2,
 					(short) 0, false);
 			fail("shouldn't be able to linearise different sizes of board");
