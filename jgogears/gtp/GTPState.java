@@ -2,7 +2,7 @@ package jgogears.gtp;
 
 import java.util.*;
 
-import jgogears.Board;
+import jgogears.*;
 import jgogears.Move;
 import jgogears.RuleSet;
 import jgogears.Vertex;
@@ -16,7 +16,7 @@ import jgogears.Vertex;
 public class GTPState {
 
 	/** The boardsize. */
-	protected short boardsize = Board.DEFAULT_BOARD_SIZE;
+	protected short boardsize = Statics.DEFAULT_BOARD_SIZE;
 
 	/** The board. */
 	protected Board board = null;

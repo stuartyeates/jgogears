@@ -2,7 +2,7 @@ package jgogears.gtp;
 
 import java.io.IOException;
 
-import jgogears.Board;
+import jgogears.*;
 import jgogears.Move;
 
 import junit.framework.TestCase;

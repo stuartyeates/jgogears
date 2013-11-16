@@ -2,7 +2,7 @@ package jgogears.gtp;
 
 import java.util.*;
 
-import jgogears.Board;
+import jgogears.*;
 import jgogears.Move;
 import jgogears.Random;
 

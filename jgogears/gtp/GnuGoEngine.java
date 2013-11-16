@@ -3,7 +3,7 @@ package jgogears.gtp;
 import java.io.*;
 import java.util.TreeSet;
 
-import jgogears.Board;
+import jgogears.*;
 import jgogears.Move;
 import jgogears.Vertex;
 

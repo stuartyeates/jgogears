@@ -3,7 +3,7 @@ package jgogears.gtp;
 import java.io.*;
 import java.util.*;
 
-import jgogears.Board;
+import jgogears.*;
 import jgogears.Game;
 import jgogears.Move;
 import jgogears.Vertex;
