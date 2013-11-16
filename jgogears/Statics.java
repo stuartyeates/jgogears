@@ -6,7 +6,7 @@ public class Statics {
 	static boolean CHECK = true;
 
 	/** verbose debugging */
-	static boolean DEBUG = false;
+	static boolean GLOBAL_DEBUG = false;
 
 	/** The default board size. */
 	public static final short DEFAULT_BOARD_SIZE = 19;

@@ -48,7 +48,7 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	/** The DEBUG. */
 	public boolean DEBUG = false;
 
-	private short size = Board.DEFAULT_BOARD_SIZE;
+	private short size = Statics.DEFAULT_BOARD_SIZE;
 
 	/**
 	 * Instantiates a new gnu go engine.
