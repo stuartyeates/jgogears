@@ -11,23 +11,17 @@ public class BoardTest2 extends TestCase {
 					{
 					Move move = new Move(i, j, Statics.COLOUR_BLACK);
 					Move move2 = new Move(move.toString());
+					assertNotNull(move);
+					assertNotNull(move2);
+					assertTrue(move.equals(move2));
 					}
 					{
 					Move move = new Move(i, j, Statics.COLOUR_WHITE);
 					Move move2 = new Move(move.toString());
-					}
-				}
-				
-				{
-					Move move = new Move(i, j, Statics.COLOUR_BLACK);
-					String string = move.toString();
-					Move move2 = new Move(string);
+					assertNotNull(move);
 					assertNotNull(move2);
-					assertTrue(move.toString().compareTo(move2.toString()) == 0);
-					assertTrue(move.getRow() == move2.getRow());
-					assertTrue(move.getColumn() == move2.getColumn());
-					assertTrue(move.getColour() == move2.getColour());
-
+					assertTrue(move.equals(move2));
+					}
 				}
 		
 
