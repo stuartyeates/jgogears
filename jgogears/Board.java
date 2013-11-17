@@ -46,16 +46,6 @@ public class Board {
 	}
 
 	/**
-	 * create an empty board of the default class
-	 * 
-	 * @return the new empty board
-	 */
-	public static Board newBoard() {
-		return new Board();
-	}
-
-
-	/**
 	 * parse the colour of a move.
 	 * 
 	 * @param colourString
