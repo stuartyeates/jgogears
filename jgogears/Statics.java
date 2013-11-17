@@ -22,9 +22,13 @@ public class Statics {
 
 	/** A vertex with a black stone. */
 	public static final short VERTEX_BLACK = 2;
+	/** A vertex with a black stone. */
+	public static final short COLOUR_BLACK = 2;
 
 	/** A vertex without a stone (and not in KO. */
 	public static final short VERTEX_EMPTY = 0;
+	/** A vertex without a stone (and not in KO. */
+	public static final short COLOUR_EMPTY = 0;
 
 	/** A vertex in ko. */
 	public static final short VERTEX_KO = 3;
