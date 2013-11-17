@@ -3,7 +3,7 @@ package jgogears;
 public class Statics {
 
 	/** bounds checking */
-	static boolean CHECK = true;
+	static boolean BOUNDS_CHECK = true;
 
 	/** verbose debugging */
 	static boolean GLOBAL_DEBUG = false;
