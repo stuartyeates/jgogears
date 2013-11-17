@@ -37,6 +37,7 @@ public class AllTests {
 		TestSuite suite = new TestSuite("Test for jgogears");
 		//$JUnit-BEGIN$
 		suite.addTestSuite(BoardTest.class);
+		suite.addTestSuite(BoardTest2.class);
 		suite.addTestSuite(BoardToASCIITest.class);
 		suite.addTestSuite(CheckAllSGFFilesTest.class);
 		suite.addTestSuite(GameTest.class);
