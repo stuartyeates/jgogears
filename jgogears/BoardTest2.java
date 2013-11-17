@@ -12,17 +12,23 @@ public class BoardTest2 extends TestCase {
 	}
 
 	public final void testBoardBoardMove() {
-		Board board = new Board();
-		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++) 
+		Board board = new Board(Statics.MAX_BOARD_SIZE);
+		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++)
 			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) {
 				{
-						Move move = new Move(i,j, Statics.COLOUR_BLACK);
-						Board board2 = new Board(board, move);
-			assertTrue(board2.getColour(i, j) == Statics.COLOUR_BLACK);
+					Move move = new Move(i, j, Statics.COLOUR_BLACK);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_BLACK);
+					assertFalse(board2.equals(board));
+				}
+				{
+					Move move = new Move(i, j, Statics.COLOUR_WHITE);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_WHITE);
+					assertFalse(board2.equals(board));
 				}
 			}
 	}
-
 
 	public final void testBoardInt() {
 		fail("Not yet implemented"); // TODO
