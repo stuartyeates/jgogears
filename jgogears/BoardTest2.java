@@ -8,7 +8,14 @@ public class BoardTest2 extends TestCase {
 		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++) 
 			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) 
 				for (short k = 0; k <= Statics.DEFAULT_BOARD_SIZE; k++) {
+					{
 					Move move = new Move(i, j, Statics.COLOUR_BLACK);
+					Move move2 = new Move(move.toString());
+					}
+					{
+					Move move = new Move(i, j, Statics.COLOUR_WHITE);
+					Move move2 = new Move(move.toString());
+					}
 				}
 				
 				{
