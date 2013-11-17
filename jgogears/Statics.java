@@ -32,17 +32,25 @@ public class Statics {
 
 	/** A vertex in ko. */
 	public static final short VERTEX_KO = 3;
+	/** A vertex in ko. */
+	public static final short COLOUR_KO = 3;
 
 	/** The MAXIMUM value for a vertex colour. */
 	public static final short VERTEX_MAX = 4;
+	/** The MAXIMUM value for a vertex colour. */
+	public static final short COLOUR_MAX = 4;
 
 	/** The MINIMUM value for a vertex colour. */
 	public static final short VERTEX_MIN = 0;
+	/** The MINIMUM value for a vertex colour. */
+	public static final short COLOUR_MIN = 0;
 
 	/** A vertex in ko. */
 	public static final short VERTEX_OFF_BOARD = 4;
 
 	/** A vertex with a white stone. */
 	public static final short VERTEX_WHITE = 1;
+	/** A vertex with a white stone. */
+	public static final short COLOUR_WHITE = 1;
 
 }

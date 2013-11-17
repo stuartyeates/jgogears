@@ -5,7 +5,32 @@ import junit.framework.TestCase;
 public class BoardTest2 extends TestCase {
 
 	public final void testColourString() {
-		fail("Not yet implemented"); // TODO
+		for (short i = 0; i < Statics.DEFAULT_BOARD_SIZE; i++) {
+			for (short j = 0; j < Statics.DEFAULT_BOARD_SIZE; j++) {
+				{
+					Move move = new Move(i, j, Statics.COLOUR_WHITE);
+					String string = move.toString();
+					Move move2 = new Move(string);
+					assertNotNull(move2);
+					assertTrue(move.toString().compareTo(move2.toString()) == 0);
+					assertTrue(move.getRow() == move2.getRow());
+					assertTrue(move.getColumn() == move2.getColumn());
+					assertTrue(move.getColour() == move2.getColour());
+				}
+				{
+					Move move = new Move(i, j, Statics.COLOUR_BLACK);
+					String string = move.toString();
+					Move move2 = new Move(string);
+					assertNotNull(move2);
+					assertTrue(move.toString().compareTo(move2.toString()) == 0);
+					assertTrue(move.getRow() == move2.getRow());
+					assertTrue(move.getColumn() == move2.getColumn());
+					assertTrue(move.getColour() == move2.getColour());
+
+				}
+			}
+		}
+
 	}
 
 	public final void testNewBoard() {
