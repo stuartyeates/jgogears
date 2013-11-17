@@ -20,38 +20,129 @@ public class BoardTest2 extends TestCase {
 					Board board2 = new Board(board, move);
 					assertTrue(board2.getColour(i, j) == Statics.COLOUR_BLACK);
 					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
 				}
 				{
 					Move move = new Move(i, j, Statics.COLOUR_WHITE);
 					Board board2 = new Board(board, move);
 					assertTrue(board2.getColour(i, j) == Statics.COLOUR_WHITE);
 					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
 				}
 			}
 	}
 
 	public final void testBoardInt() {
-		fail("Not yet implemented"); // TODO
+		Board board = new Board((int)Statics.MAX_BOARD_SIZE);
+		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++)
+			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) {
+				{
+					Move move = new Move(i, j, Statics.COLOUR_BLACK);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_BLACK);
+					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
+				}
+				{
+					Move move = new Move(i, j, Statics.COLOUR_WHITE);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_WHITE);
+					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
+				}
+			}
 	}
 
 	public final void testBoardIntRuleSet() {
-		fail("Not yet implemented"); // TODO
+		Board board = new Board((int)Statics.MAX_BOARD_SIZE,NoKoRuleSet.DEFAULT);
+		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++)
+			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) {
+				{
+					Move move = new Move(i, j, Statics.COLOUR_BLACK);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_BLACK);
+					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
+					assertTrue(board2.getRuleSet() ==NoKoRuleSet.DEFAULT);
+				}
+				{
+					Move move = new Move(i, j, Statics.COLOUR_WHITE);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_WHITE);
+					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
+					assertTrue(board2.getRuleSet() ==NoKoRuleSet.DEFAULT);
+				}
+			}
 	}
 
 	public final void testBoardRuleSet() {
-		fail("Not yet implemented"); // TODO
+		Board board = new Board(NoKoRuleSet.DEFAULT);
+		for (short i = 0; i <= Statics.DEFAULT_BOARD_SIZE; i++)
+			for (short j = 0; j <= Statics.DEFAULT_BOARD_SIZE; j++) {
+				{
+					Move move = new Move(i, j, Statics.COLOUR_BLACK);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_BLACK);
+					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
+					assertTrue(board2.getRuleSet() ==NoKoRuleSet.DEFAULT);
+				}
+				{
+					Move move = new Move(i, j, Statics.COLOUR_WHITE);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_WHITE);
+					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
+					assertTrue(board2.getRuleSet() ==NoKoRuleSet.DEFAULT);
+				}
+			}
 	}
 
 	public final void testBoardShort() {
-		fail("Not yet implemented"); // TODO
+		Board board = new Board(Statics.MAX_BOARD_SIZE);
+		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++)
+			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) {
+				{
+					Move move = new Move(i, j, Statics.COLOUR_BLACK);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_BLACK);
+					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
+					assertTrue(board2.getRuleSet() ==NoKoRuleSet.DEFAULT);
+				}
+				{
+					Move move = new Move(i, j, Statics.COLOUR_WHITE);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_WHITE);
+					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
+					assertTrue(board2.getRuleSet() ==NoKoRuleSet.DEFAULT);
+				}
+			}
 	}
 
 	public final void testBoardShortRuleSet() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	public final void testCopydata() {
-		fail("Not yet implemented"); // TODO
+		Board board = new Board(Statics.MAX_BOARD_SIZE,NoKoRuleSet.DEFAULT);
+		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++)
+			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) {
+				{
+					Move move = new Move(i, j, Statics.COLOUR_BLACK);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_BLACK);
+					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
+					assertTrue(board2.getRuleSet() ==NoKoRuleSet.DEFAULT);
+				}
+				{
+					Move move = new Move(i, j, Statics.COLOUR_WHITE);
+					Board board2 = new Board(board, move);
+					assertTrue(board2.getColour(i, j) == Statics.COLOUR_WHITE);
+					assertFalse(board2.equals(board));
+					assertNotNull(board2.getRuleSet());
+					assertTrue(board2.getRuleSet() ==NoKoRuleSet.DEFAULT);
+				}
+			}
 	}
 
 	public final void testEqualsObject() {
