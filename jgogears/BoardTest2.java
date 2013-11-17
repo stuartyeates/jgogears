@@ -9,16 +9,20 @@ public class BoardTest2 extends TestCase {
 		Board board2 = new Board();
 		assertTrue(board2.equals(board));
 		assertFalse(board2.equals(this));
-		
 	}
 
 	public final void testBoardBoardMove() {
-		fail("Not yet implemented"); // TODO
+		Board board = new Board();
+		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++) 
+			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) {
+				{
+						Move move = new Move(i,j, Statics.COLOUR_BLACK);
+						Board board2 = new Board(board, move);
+			assertTrue(board2.getColour(i, j) == Statics.COLOUR_BLACK);
+				}
+			}
 	}
 
-	public final void testBoardBoolean() {
-		fail("Not yet implemented"); // TODO
-	}
 
 	public final void testBoardInt() {
 		fail("Not yet implemented"); // TODO
