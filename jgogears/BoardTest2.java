@@ -5,18 +5,12 @@ import junit.framework.TestCase;
 public class BoardTest2 extends TestCase {
 
 	public final void testColourString() {
-		for (short i = 0; i < Statics.DEFAULT_BOARD_SIZE; i++) {
-			for (short j = 0; j < Statics.DEFAULT_BOARD_SIZE; j++) {
-				{
-					Move move = new Move(i, j, Statics.COLOUR_WHITE);
-					String string = move.toString();
-					Move move2 = new Move(string);
-					assertNotNull(move2);
-					assertTrue(move.toString().compareTo(move2.toString()) == 0);
-					assertTrue(move.getRow() == move2.getRow());
-					assertTrue(move.getColumn() == move2.getColumn());
-					assertTrue(move.getColour() == move2.getColour());
+		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++) 
+			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) 
+				for (short k = 0; k <= Statics.DEFAULT_BOARD_SIZE; k++) {
+					Move move = new Move(i, j, Statics.COLOUR_BLACK);
 				}
+				
 				{
 					Move move = new Move(i, j, Statics.COLOUR_BLACK);
 					String string = move.toString();
@@ -28,8 +22,7 @@ public class BoardTest2 extends TestCase {
 					assertTrue(move.getColour() == move2.getColour());
 
 				}
-			}
-		}
+		
 
 	}
 
