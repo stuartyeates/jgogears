@@ -208,7 +208,7 @@ public class Board {
 	 *            the old board we're coping data from
 	 */
 	protected void copydata(Board old, Move move) {
-		if (this.size < 3 || this.size > 25)
+		if (this.size < Statics.MIN_BOARD_SIZE || this.size > Statics.MIN_BOARD_SIZE)
 			throw new Error();
 
 		this.zobrist = old.getZobrist();
