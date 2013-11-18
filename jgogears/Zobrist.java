@@ -64,11 +64,11 @@ public class Zobrist extends BitSet {
 	 */
 	public Zobrist(Zobrist old, int row, int column, int colour) {
 		init();
-		if (row >= MAX_BOARD_SIZE || row < 0)
+		if (row > MAX_BOARD_SIZE || row < 0)
 			throw new Error("" + row);
-		if (column >= MAX_BOARD_SIZE || column < 0)
+		if (column > MAX_BOARD_SIZE || column < 0)
 			throw new Error("" + column);
-		if (colour >= Statics.VERTEX_MAX || colour < Statics.VERTEX_MIN)
+		if (colour > Statics.VERTEX_MAX || colour < Statics.VERTEX_MIN)
 			throw new Error("" + colour);
 		this.clear();
 		this.xor(old);
