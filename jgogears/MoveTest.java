@@ -11,8 +11,8 @@ import junit.framework.TestCase;
 public class MoveTest extends TestCase {
 
 	public final void testColourString() {
-		for (short i = 0; i <= 24; i++) 
-			for (short j = 0; j <= 24; j++) 
+		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++) 
+			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) 
 				for (short k = 0; k <= Statics.DEFAULT_BOARD_SIZE; k++) {
 					{
 					Move move = new Move(i, j, Statics.COLOUR_BLACK);

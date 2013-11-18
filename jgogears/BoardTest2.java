@@ -34,8 +34,8 @@ public class BoardTest2 extends TestCase {
 
 	public final void testBoardInt() {
 		Board board = new Board((int)Statics.MAX_BOARD_SIZE);
-		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++)
-			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) {
+		for (short i = 0; i < Statics.MAX_BOARD_SIZE; i++)
+			for (short j = 0; j < Statics.MAX_BOARD_SIZE; j++) {
 				{
 					Move move = new Move(i, j, Statics.COLOUR_BLACK);
 					Board board2 = new Board(board, move);
@@ -55,8 +55,8 @@ public class BoardTest2 extends TestCase {
 
 	public final void testBoardIntRuleSet() {
 		Board board = new Board((int)Statics.MAX_BOARD_SIZE,NoKoRuleSet.DEFAULT);
-		for (short i = 0; i <= Statics.MAX_BOARD_SIZE; i++)
-			for (short j = 0; j <= Statics.MAX_BOARD_SIZE; j++) {
+		for (short i = 0; i < Statics.MAX_BOARD_SIZE; i++)
+			for (short j = 0; j < Statics.MAX_BOARD_SIZE; j++) {
 				{
 					Move move = new Move(i, j, Statics.COLOUR_BLACK);
 					Board board2 = new Board(board, move);
