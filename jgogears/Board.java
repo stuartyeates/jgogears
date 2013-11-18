@@ -420,6 +420,15 @@ public class Board {
 	/**
 	 * create a new board based on the current board plus a move.
 	 * 
+	 * @return the new board
+	 */
+	public static final Board newBoard() {
+		return new Board();
+	}
+
+	/**
+	 * create a new board based on the current board plus a move.
+	 * 
 	 * @param move
 	 *            the move
 	 * @return the new board
