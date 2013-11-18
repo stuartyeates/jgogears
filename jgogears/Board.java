@@ -85,7 +85,7 @@ public class Board {
 	 */
 	public Board() {
 		this.size = Statics.DEFAULT_BOARD_SIZE;
-		this.ruleSet = new NoKoRuleSet();
+		this.ruleSet = NoKoRuleSet.DEFAULT;
 		this.board = new short[this.size][this.size];
 		for (int i = 0; i < this.size; i++)
 			for (int j = 0; j < this.size; j++)
@@ -157,7 +157,7 @@ public class Board {
 	 */
 	public Board(short size) {
 		this.size = size;
-		this.ruleSet = new NoKoRuleSet();
+		this.ruleSet = NoKoRuleSet.DEFAULT;
 		this.board = new short[this.size][this.size];
 		for (int i = 0; i < this.size; i++)
 			for (int j = 0; j < this.size; j++)
@@ -173,7 +173,7 @@ public class Board {
 	 */
 	public Board(int size) {
 		this.size = (short)size;
-		this.ruleSet = new NoKoRuleSet();
+		this.ruleSet = NoKoRuleSet.DEFAULT;
 		this.board = new short[this.size][this.size];
 		for (int i = 0; i < this.size; i++)
 			for (int j = 0; j < this.size; j++)
