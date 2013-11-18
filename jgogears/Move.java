@@ -414,4 +414,20 @@ public final class Move {
 		return this.numberToCharacter(this.row) + ("" + (this.column + 1));
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (obj.getClass() == this.getClass()){
+			Move other = (Move) obj;
+			if (this.getColour() == other.getColour() &&
+					this.getRow() == other.getRow() &&
+					this.getColumn() == other.getColumn() 
+					)
+				return true;
+			} 
+			return super.equals(obj);
+	}
+
 }
