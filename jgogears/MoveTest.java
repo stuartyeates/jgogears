@@ -19,7 +19,7 @@ public class MoveTest extends TestCase {
 					Move move2 = new Move(move.toString());
 					assertNotNull(move);
 					assertNotNull(move2);
-					assertTrue(move.equals(move2));
+					assertTrue(move.toString() + "/" +move2.toString(), move.equals(move2));
 					}
 					{
 					Move move = new Move(i, j, Statics.COLOUR_WHITE);
