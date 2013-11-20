@@ -1,5 +1,5 @@
 package jgogears;
-
+/*
 import jgogears.SGF.SGFGameTest;
 import jgogears.SGF.SGFNodeTest;
 import jgogears.SGF.SGFParserTest;
@@ -16,6 +16,7 @@ import jgogears.gtp.GTPScoreTest;
 import jgogears.gtp.GnuGoEngineTest;
 import jgogears.gtp.GnuGoEngineTest2;
 import jgogears.gtp.TwoGTPTest;
+*/
 import junit.framework.Test;
 import junit.framework.TestSuite;
 
