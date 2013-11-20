@@ -2,7 +2,11 @@ package jgogears.gtp;
 
 import java.util.*;
 
+<<<<<<< HEAD:jgogears/gtp/GTPState.java
 import jgogears.*;
+=======
+import jgogears.BoardI;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/gtp/GTPState.java
 import jgogears.Move;
 import jgogears.RuleSet;
 import jgogears.Vertex;

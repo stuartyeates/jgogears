@@ -1,5 +1,7 @@
 package jgogears;
 
+import jgogears.gtp.Statics;
+
 // TODO: Auto-generated Javadoc
 /**
  * A move. A colour and either a vertex, a pass or a resign. Also used for
@@ -111,7 +113,11 @@ public final class Move {
 			throw new IllegalArgumentException("Bad argument to GoMove(" + move
 					+ ")");
 		String colourString = move.substring(0, space);
+<<<<<<< HEAD
 		this.colour = Board.parseColour(colourString);
+=======
+		this.colour = Statics.parseColour(colourString);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		String vertexString = move.substring(space + 1, move.length());
 		if (vertexString.contains("resign")) {
 			this.resign = true;
@@ -390,7 +396,11 @@ public final class Move {
 	public String toStringGTP() {
 
 		// find the colour of the move
+<<<<<<< HEAD
 		String colourS = Board.colourString(this.colour);
+=======
+		String colourS = Statics.colourString(this.colour);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 
 		// calculate the position
 		String vertexS = this.toVertexString();

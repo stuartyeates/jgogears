@@ -4,7 +4,12 @@ import java.io.*;
 import java.util.*;
 
 import jgogears.*;
+<<<<<<< HEAD
 import jgogears.SGF.*;
+=======
+import jgogears.gtp.Statics;
+import jgogears.sgf.SGFGameTree;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc
@@ -48,7 +53,11 @@ public class ModelTest extends TestCase {
 		try {
 			FileReader reader = new FileReader(
 					"sgf/testing/2007-01-12- BamboField- tokabe.sgf");
+<<<<<<< HEAD
 			jgogears.SGF.auto.SGF parser = new jgogears.SGF.auto.SGF(reader);
+=======
+			jgogears.sgf.auto.SGF parser = new jgogears.sgf.auto.SGF(reader);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 			SGFGameTree tree = parser.gameTree();
 			Game game = new Game(tree);
 			return game;
@@ -76,7 +85,11 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
+<<<<<<< HEAD
 						+ Board.colourString(Statics.VERTEX_BLACK));
+=======
+						+ Statics.colourString(Statics.VERTEX_BLACK));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -88,7 +101,11 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
+<<<<<<< HEAD
 						+ Board.colourString(Statics.VERTEX_WHITE));
+=======
+						+ Statics.colourString(Statics.VERTEX_WHITE));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -100,7 +117,11 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
+<<<<<<< HEAD
 						+ Board.colourString(Statics.VERTEX_EMPTY));
+=======
+						+ Statics.colourString(Statics.VERTEX_EMPTY));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 			this.showTreeHelper(indent + 1, child);
 
 		}
@@ -112,7 +133,11 @@ public class ModelTest extends TestCase {
 			if (DEBUG)
 				System.err.println(buf + " " + child.getPlayed() + "/"
 						+ child.getNotPlayed() + "/"
+<<<<<<< HEAD
 						+ Board.colourString(Statics.VERTEX_OFF_BOARD));
+=======
+						+ Statics.colourString(Statics.VERTEX_OFF_BOARD));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 			this.showTreeHelper(indent + 1, child);
 
 		}

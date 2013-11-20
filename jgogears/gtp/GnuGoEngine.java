@@ -3,9 +3,18 @@ package jgogears.gtp;
 import java.io.*;
 import java.util.TreeSet;
 
+<<<<<<< HEAD:jgogears/gtp/GnuGoEngine.java
 import jgogears.*;
 import jgogears.Move;
 import jgogears.Vertex;
+=======
+import jgogears.gtp.GTPConstants;
+import jgogears.gtp.GTPError;
+import jgogears.gtp.GTPInterfaceRaw;
+import jgogears.gtp.GTPParserUtils;
+import jgogears.gtp.GTPScore;
+import jgogears.gtp.Statics;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/GnuGoEngine.java
 
 // TODO: Auto-generated Javadoc
 /**
@@ -82,7 +91,7 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public GnuGoEngine(short size) throws IOException {
-		this.size = size;
+		this.size = size; 
 		this.initialise();
 	}
 
@@ -157,7 +166,11 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	 * @see jgogears.GTPInterfaceRaw#genMove(short)
 	 */
 	public Move genMove(short colour) {
+<<<<<<< HEAD:jgogears/gtp/GnuGoEngine.java
 		this.write(GTPConstants.GENMOVE + " " + Board.colourString(colour)
+=======
+		this.write(GTPConstants.GENMOVE + " " + Statics.colourString(colour)
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/GnuGoEngine.java
 				+ "\n\n");
 		String s = this.read();
 		// GoMove move = GoMove.createVertex(s.substring(2));
@@ -212,9 +225,19 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	 */
 	public GTPScore getFinalScore() {
 		this.write(GTPConstants.FINALSCORE + "\n\n");
-		String result = this.read();
-		result = GTPParserUtils.stripIntro(result);
-		return new GTPScore(result);
+		GTPScore score = null;
+		String result = null;
+		String result2 = null;
+		try {
+			result = this.read();	
+			result2 = GTPParserUtils.stripIntro(result);
+			score = new GTPScore(result2);
+		} catch (Throwable t) {
+			throw new Error ("GnuGoEngine::getFinalScore() couldn't convert \"" + result +
+						"\" / \"" + result2 +
+						"\" into a GTPScore");
+		}
+		return score;
 	}
 
 	/*
@@ -599,7 +622,11 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	 */
 	public boolean setTimeLeft(short colour, double byoYomiTime,
 			double byoYomiStones) {
+<<<<<<< HEAD:jgogears/gtp/GnuGoEngine.java
 		this.write(GTPConstants.TIMELEFT + " " + Board.colourString(colour)
+=======
+		this.write(GTPConstants.TIMELEFT + " " + Statics.colourString(colour)
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/GnuGoEngine.java
 				+ " " + (int) byoYomiTime + " " + (int) byoYomiStones + "\n\n");
 		String s = this.read();
 		Error e = GTPParserUtils.getError(s);
@@ -662,7 +689,8 @@ public final class GnuGoEngine implements GTPInterfaceRaw {
 	public boolean undo() {
 		try {
 			this.write(GTPConstants.UNDO + "\n\n");
-			String s = this.read();
+			//TODO do I need to do anything with what I read?
+			this.read();
 			return true;
 		} catch (GTPError e) {
 			if (e.getMessage().contains(GTPConstants.CANNOTUNDO)) {

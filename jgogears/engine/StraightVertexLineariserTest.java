@@ -5,6 +5,9 @@ import java.util.Iterator;
 import jgogears.SGF.*;
 
 import jgogears.*;
+import jgogears.gtp.Statics;
+import jgogears.sgf.SGFGameTree;
+import jgogears.sgf.SGFParser;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc
@@ -590,7 +593,11 @@ public class StraightVertexLineariserTest extends TestCase {
 			String example = examples[i];
 
 			StringReader reader = new StringReader(example);
+<<<<<<< HEAD
 			jgogears.SGF.auto.SGF parser = new jgogears.SGF.auto.SGF(reader);
+=======
+			jgogears.sgf.auto.SGF parser = new jgogears.sgf.auto.SGF(reader);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 			SGFGameTree tree = parser.gameTree();
 
 			assertTrue(parser != null);
@@ -643,9 +650,15 @@ public class StraightVertexLineariserTest extends TestCase {
 
 		if (DEBUG)
 			System.err.print("VertexLineariserTest::testFirst() Black = "
+<<<<<<< HEAD
 					+ Board.parseColour("black"));
 		if (DEBUG)
 			System.err.print(" White = " + Board.parseColour("white"));
+=======
+					+ Statics.parseColour("black"));
+		if (DEBUG)
+			System.err.print(" White = " + Statics.parseColour("white"));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		if (DEBUG)
 			System.err.print(" Empty = " + Statics.VERTEX_EMPTY);
 		if (DEBUG)
@@ -695,9 +708,15 @@ public class StraightVertexLineariserTest extends TestCase {
 
 		if (DEBUG)
 			System.err.print("VertexLineariserTest::testFirst() Black = "
+<<<<<<< HEAD
 					+ Board.parseColour("black"));
 		if (DEBUG)
 			System.err.print(" White = " + Board.parseColour("white"));
+=======
+					+ Statics.parseColour("black"));
+		if (DEBUG)
+			System.err.print(" White = " + Statics.parseColour("white"));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		if (DEBUG)
 			System.err.print(" Empty = " + Statics.VERTEX_EMPTY);
 		if (DEBUG)
@@ -762,9 +781,15 @@ public class StraightVertexLineariserTest extends TestCase {
 		if (DEBUG)
 			System.err
 					.print("StraightVertexLineariserTest::testVertexLineariser() Black = "
+<<<<<<< HEAD
 							+ Board.parseColour("black"));
 		if (DEBUG)
 			System.err.print(" White = " + Board.parseColour("white"));
+=======
+							+ Statics.parseColour("black"));
+		if (DEBUG)
+			System.err.print(" White = " + Statics.parseColour("white"));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		if (DEBUG)
 			System.err.print(" Empty = " + Statics.VERTEX_EMPTY);
 		if (DEBUG)

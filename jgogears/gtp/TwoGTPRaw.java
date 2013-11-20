@@ -1,6 +1,10 @@
 package jgogears.gtp;
 
 import java.io.IOException;
+import java.util.LinkedList;
+
+import jgogears.gtp.GTPInterfaceRaw;
+import jgogears.gtp.Statics;
 
 import jgogears.*;
 import jgogears.Move;
@@ -77,6 +81,7 @@ public class TwoGTPRaw {
 	public boolean playOutGame() {
 		int passes = 0;
 		boolean blackNext = true;
+		LinkedList<Move> moves = new LinkedList<Move>(); 
 		// TODO check the black and white players have been set up
 
 		while (passes < 4) {
@@ -100,12 +105,17 @@ public class TwoGTPRaw {
 					passes = 0;
 				blackNext = true;
 			}
+			try {
 			this.currentBoard = this.currentBoard.newBoard(move);
+			} catch (Throwable t){
+				System.err.println(t);
+				System.err.println(moves);
+				
+			}
+			moves.addLast(move);
 		}
 		System.err.println(this.black.getFinalScore());
 		System.err.println(this.white.getFinalScore());
-		System.err.println(this.black.showBoard());
-		System.err.println(this.white.showBoard());
 
 		return true;
 	}

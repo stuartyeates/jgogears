@@ -3,10 +3,15 @@ package jgogears.gtp;
 import java.io.*;
 import java.util.*;
 
+<<<<<<< HEAD:jgogears/gtp/GnuGoEngineTest2.java
 import jgogears.*;
 import jgogears.Game;
 import jgogears.Move;
 import jgogears.Vertex;
+=======
+import jgogears.gtp.GTPScore;
+import jgogears.gtp.Statics;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/GnuGoEngineTest2.java
 
 import junit.framework.TestCase;
 
@@ -126,7 +131,11 @@ public class GnuGoEngineTest2 extends TestCase {
 			this.engine.setBoardSize((short) 19);
 			this.engine.clearBoard();
 			Move move = this.engine.genMove(Statics.VERTEX_BLACK);
+<<<<<<< HEAD:jgogears/gtp/GnuGoEngineTest2.java
 			if (this.DEBUG)
+=======
+			if (DEBUG)
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/GnuGoEngineTest2.java
 				System.err.println(move);
 			this.engine.quit();
 		} catch (Throwable t) {
@@ -146,7 +155,7 @@ public class GnuGoEngineTest2 extends TestCase {
 		try {
 			this.engine.initialise();
 			String s = this.engine.getEngineName();
-			if (this.DEBUG)
+			if (DEBUG)
 				System.err.println(s);
 			this.engine.quit();
 		} catch (Throwable t) {

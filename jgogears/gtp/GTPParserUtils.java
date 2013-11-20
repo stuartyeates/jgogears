@@ -6,7 +6,7 @@ import jgogears.Vertex;
 
 // TODO: Auto-generated Javadoc
 /**
- * various utilities to help parsing GTP output.
+ * static string processing utilities to help parsing GTP output.
  * 
  * @author syeates@gmail.com
  */
@@ -43,7 +43,7 @@ public class GTPParserUtils {
 	 *            the s
 	 * @return the tree set< vertex>
 	 */
-	static TreeSet<Vertex> parseVertexList(String s) {
+	static public TreeSet<Vertex> parseVertexList(String s) {
 		s = stripIntro(s);
 		TreeSet<Vertex> vert = new TreeSet<Vertex>();
 		if (s != null && s.length() != 0) {
@@ -68,17 +68,18 @@ public class GTPParserUtils {
 		return vert;
 	}
 
-	// TODO make this mildy efficient by not creating a billion temp orary
-	// strings.
-	// probably use a stringbuffer
 	/**
 	 * Strip intro.
+	 * 
+	// TODO make this mildy efficient by not creating a billion temporary
+	// strings.
+	// probably use a stringbuffer
 	 * 
 	 * @param s
 	 *            the s
 	 * @return the string
 	 */
-	static String stripIntro(String s) {
+	static public String stripIntro(String s) {
 		if (s == null)
 			return null;
 		if (s.length() == 0)

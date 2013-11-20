@@ -6,7 +6,7 @@ import jgogears.Move;
  * The Class GTPHandicaps. TODO implement handicaps for all sizes of board
  * between 5 and 25
  */
-class GTPHandicaps {
+public class GTPHandicaps {
 
 	/** The Constant ALL. */
 	final static public Move[] ALL = { new Move("B d4"), new Move("B q16"),

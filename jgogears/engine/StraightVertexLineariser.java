@@ -2,7 +2,12 @@ package jgogears.engine;
 
 import java.util.*;
 
+<<<<<<< HEAD
 import jgogears.*;
+=======
+import jgogears.BoardI;
+import jgogears.gtp.Statics;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 
 /**
  * The Class Straight Vertex Lineariser.

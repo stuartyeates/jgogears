@@ -8,6 +8,8 @@ import java.util.Stack;
 import java.util.TreeSet;
 
 import jgogears.engine.Model;
+import jgogears.gtp.Statics;
+import jgogears2.BoardToASCII;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc
@@ -278,7 +280,11 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
+<<<<<<< HEAD
 		Board board = new Board(size);
+=======
+		BoardI board = BoardI.newBoard(size);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		Move move = new Move(0, 1, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
 		move = new Move(1, 0, Statics.VERTEX_BLACK);
@@ -301,7 +307,11 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
+<<<<<<< HEAD
 		Board board = new Board(size);
+=======
+		BoardI board = BoardI.newBoard(size);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		Move move = new Move(1, 2, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
 		move = new Move(2, 1, Statics.VERTEX_BLACK);
@@ -324,7 +334,11 @@ public class NoKoRuleSetTest extends TestCase {
 
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
+<<<<<<< HEAD
 		Board board = new Board(size);
+=======
+		BoardI board = BoardI.newBoard(size);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		Move move = new Move(0, 1, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
 		move = new Move(1, 0, Statics.VERTEX_BLACK);
@@ -410,7 +424,11 @@ public class NoKoRuleSetTest extends TestCase {
 		NoKoRuleSet rule = new NoKoRuleSet();
 		short size = 7;
 		Game game = new Game(19);
+<<<<<<< HEAD
 		Board board = new Board(size);
+=======
+		BoardI board = BoardI.newBoard(size);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		Move move = new Move(0, 1, Statics.VERTEX_BLACK);
 		board = board.newBoard(move);
 		move = new Move(1, 1, Statics.VERTEX_BLACK);

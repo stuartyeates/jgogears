@@ -10,6 +10,11 @@ package jgogears.gtp;
 public class GTPError extends Error {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5438803403859424911L;
+
+	/**
 	 * Instantiates a new gTP error.
 	 */
 	public GTPError() {

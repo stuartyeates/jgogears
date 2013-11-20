@@ -4,6 +4,10 @@ import jgogears.*;
 import jgogears.Move;
 import jgogears.RuleSet;
 
+import jgogears.gtp.GTPInterface;
+import jgogears.gtp.GTPState;
+import jgogears.gtp.Statics;
+
 /**
  * An incomplete clone of the TwoGTP program included in the GnuGo distribution.
  * It runs a go game between a pair of GTP-capiable players TODO finish this

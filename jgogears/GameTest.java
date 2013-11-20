@@ -3,10 +3,17 @@
  */
 package jgogears;
 
+<<<<<<< HEAD
 import java.util.Collection;
 import java.util.Iterator;
 
 import jgogears.gtp.GTPScore;
+=======
+import java.util.*;
+
+import jgogears.gtp.GTPScore;
+
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 import junit.framework.TestCase;
 
 /**
@@ -20,7 +27,8 @@ public class GameTest extends TestCase {
 
 	public void testOneSGFFile() throws Exception {
 
-		Collection<String> filenames = jgogears.engine.Trainer.loadAllSGFfiles();
+		Collection<String> filenames = jgogears.engine.Trainer
+				.loadAllSGFfiles();
 		assertNotNull(filenames);
 		String filename = filenames.iterator().next();
 		assertNotNull(filename);
@@ -28,21 +36,21 @@ public class GameTest extends TestCase {
 		GTPScore score = game.getScore();
 		if (score.getBlackWin()) {
 			if (DEBUG) {
-			System.err.println(score + "  black win");
+				System.err.println(score + "  black win");
 			}
 		} else if (score.getWhiteWin()) {
 			if (DEBUG) {
-			System.err.println(score + "  black win");
+				System.err.println(score + "  black win");
 			}
-		} else
-			if (DEBUG) {
+		} else if (DEBUG) {
 			System.err.println(score + "  neither win");
-			}
+		}
 	}
 
 	public void testManySGFFile() throws Exception {
 
-		Collection<String> filenames = jgogears.engine.Trainer.loadAllSGFfiles();
+		Collection<String> filenames = jgogears.engine.Trainer
+				.loadAllSGFfiles();
 		assertNotNull(filenames);
 		Iterator<String> iterator = filenames.iterator();
 		while (iterator.hasNext()) {
@@ -68,4 +76,4 @@ public class GameTest extends TestCase {
 			}
 		}
 	}
-}	
+}

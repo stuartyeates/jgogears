@@ -2,9 +2,17 @@ package jgogears.gtp;
 
 import java.util.*;
 
+<<<<<<< HEAD:jgogears/gtp/RandomEngine.java
 import jgogears.*;
 import jgogears.Move;
 import jgogears.Random;
+=======
+import jgogears.gtp.GTPInterface;
+import jgogears.gtp.GTPScore;
+import jgogears.gtp.GTPState;
+import jgogears.gtp.SkeletonEngine;
+import jgogears.gtp.Statics;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/RandomEngine.java
 
 // TODO: Auto-generated Javadoc
 /**
@@ -39,7 +47,7 @@ public class RandomEngine extends SkeletonEngine implements GTPInterface {
 	 * @see jgogears.GTPInterface#getEngineVersion()
 	 */
 	public String getEngineVersion() {
-		return "00.001" + new Date();
+		return "00.001 " + new Date();
 	}
 
 	/*
@@ -62,9 +70,15 @@ public class RandomEngine extends SkeletonEngine implements GTPInterface {
 		short row;
 		short column;
 		do {
+<<<<<<< HEAD:jgogears/gtp/RandomEngine.java
 			row = (short) Random.nextInt(state.boardsize);
 			column = (short) Random.nextInt(state.boardsize);
 		} while (state.board.getColour(row, column) == Statics.VERTEX_EMPTY);
+=======
+			row = (short) Random.nextInt(state.getBoardsize());
+			column = (short) Random.nextInt(state.getBoardsize());
+		} while (state.getBoard().getColour(row, column) == Statics.VERTEX_EMPTY);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/RandomEngine.java
 		return new Move(row, column, colour);
 	}
 

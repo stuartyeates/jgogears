@@ -9,6 +9,10 @@ import java.util.Vector;
  * @author syeates@gmail.com
  */
 public final class Vertex extends Vector<Short> implements Comparable<Vertex> {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8723224142445985881L;
 	/** are we spewing out lots of debugging info? */
 	static final boolean DEBUG = false;
 

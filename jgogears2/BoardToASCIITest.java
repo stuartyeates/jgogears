@@ -1,7 +1,7 @@
 /**
  * 
  */
-package jgogears;
+package jgogears2;
 
 import junit.framework.TestCase;
 
@@ -19,7 +19,11 @@ public class BoardToASCIITest extends TestCase {
 	 * Test empty.
 	 */
 	public void testEmpty() {
+<<<<<<< HEAD:jgogears/BoardToASCIITest.java
 		Board board = Board.newBoard();
+=======
+		Board board = new Board();
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/BoardToASCIITest.java
 		String string = BoardToASCII.Transform(board);
 		assertNotNull(board);
 		assertNotNull(string);
@@ -29,8 +33,13 @@ public class BoardToASCIITest extends TestCase {
 	 * Test one.
 	 */
 	public void testOne() {
+<<<<<<< HEAD:jgogears/BoardToASCIITest.java
 		Board board = Board.newBoard();
 		board = board.newBoard(new Move("w b1"));
+=======
+		Board board = new Board();
+		board = board.playMove(new Move("w b1"));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/BoardToASCIITest.java
 		String string = BoardToASCII.Transform(board);
 		assertNotNull(board);
 		assertNotNull(string);

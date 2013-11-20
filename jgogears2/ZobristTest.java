@@ -1,17 +1,25 @@
-package jgogears;
+package jgogears2;
 
+import jgogears.BoardI;
+import jgogears.Move;
+import jgogears.SmallBoard;
+import jgogears.SmallerBoard;
+import jgogears.gtp.Statics;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc
 /**
- * tests for Zobrist.
+ * tests for Zobrist hash
  * 
+<<<<<<< HEAD:jgogears/ZobristTest.java
  * @author syeates@gmail.com
+=======
+ * @author syeates
+ * @see Zobrist
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/ZobristTest.java
  */
 
 public class ZobristTest extends TestCase {
-	/** Are we using verbose debugging?. */
-	public static final boolean DEBUG = false;
 
 	/**
 	 * Check that all of the hashes are different.
@@ -53,12 +61,7 @@ public class ZobristTest extends TestCase {
 					assertNotNull(z3);
 					assertNotNull(z4);
 					assertNotNull(z5);
-					if (DEBUG) {
-						System.err.println(z);
-						System.err.println(z3);
-						System.err.println(z2);
-						System.err.println(zz);
-					}
+
 					assertTrue(z2.equals(zz));
 					assertFalse(z2.equals(z));
 					assertFalse(z4.equals(z));
@@ -88,14 +91,11 @@ public class ZobristTest extends TestCase {
 
 					assertNotNull(z);
 					assertNotNull(z2);
-					if (DEBUG) {
-						System.err.println(z);
-						System.err.println(z2);
-						System.err.println(z3);
-					}
+
 					assertFalse(z2.equals(z));
 					assertTrue(z2.equals(z3));
 
+<<<<<<< HEAD:jgogears/ZobristTest.java
 					Board board1 = Board.newBoard();
 					Board board2 = board1.newBoard(new Move((short) 1,
 							(short) 1, Statics.VERTEX_BLACK));
@@ -103,6 +103,15 @@ public class ZobristTest extends TestCase {
 							(short) 1, Statics.VERTEX_BLACK));
 					// Board board4 = board2.newBoard(new Move((short) 1,
 					// (short) 1, Statics.VERTEX_BLACK));
+=======
+					BoardI board1 = BoardI.newBoard(true);
+					BoardI board2 = board1.newBoard(new Move((short) 1,
+							(short) 1, Statics.VERTEX_BLACK));
+					BoardI board3 = board1.newBoard(new Move((short) 1,
+							(short) 1, Statics.VERTEX_BLACK));
+					// BoardI board4 = board2.newBoard(new Move((short) 1,
+					// (short) 1, BoardI.VERTEX_BLACK));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/ZobristTest.java
 					// make sure the hashes are the same
 					assertFalse(board1.getZobrist().equals(board2.getZobrist()));
 					assertFalse(board1.getZobrist().equals(board3.getZobrist()));
@@ -116,6 +125,7 @@ public class ZobristTest extends TestCase {
 	 * Test equality.
 	 */
 	public void testEquality() {
+<<<<<<< HEAD:jgogears/ZobristTest.java
 		Board board = Board.newBoard();
 		Board board2 = board.newBoard(new Move((short) 1, (short) 1,
 				Statics.VERTEX_BLACK));
@@ -124,6 +134,16 @@ public class ZobristTest extends TestCase {
 		Board board4 = Board.newBoard().newBoard(
 				new Move((short) 2, (short) 2, Statics.VERTEX_WHITE));
 		Board board5 = board4.newBoard(new Move((short) 1, (short) 1,
+=======
+		BoardI board = BoardI.newBoard(true);
+		BoardI board2 = board.newBoard(new Move((short) 1, (short) 1,
+				Statics.VERTEX_BLACK));
+		BoardI board3 = board2.newBoard(new Move((short) 2, (short) 2,
+				Statics.VERTEX_WHITE));
+		BoardI board4 = BoardI.newBoard(true).newBoard(
+				new Move((short) 2, (short) 2, Statics.VERTEX_WHITE));
+		BoardI board5 = board4.newBoard(new Move((short) 1, (short) 1,
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/ZobristTest.java
 				Statics.VERTEX_BLACK));
 		assertTrue(board.getZobrist()
 				.equals(Board.newBoard().getZobrist()));
@@ -159,10 +179,17 @@ public class ZobristTest extends TestCase {
 	 * Test with board.
 	 */
 	public void testWithBoard() {
+<<<<<<< HEAD:jgogears/ZobristTest.java
 		Board board = Board.newBoard();
 		Board board2 = board.newBoard(new Move((short) 1, (short) 1,
 				Statics.VERTEX_BLACK));
 		Board board3 = board.newBoard(new Move((short) 1, (short) 1,
+=======
+		BoardI board = BoardI.newBoard(true);
+		BoardI board2 = board.newBoard(new Move((short) 1, (short) 1,
+				Statics.VERTEX_BLACK));
+		BoardI board3 = board.newBoard(new Move((short) 1, (short) 1,
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/ZobristTest.java
 				Statics.VERTEX_BLACK));
 		assertTrue(board2.getZobrist().equals(board3.getZobrist()));
 		assertTrue(board3.getZobrist().equals(board2.getZobrist()));
@@ -176,7 +203,12 @@ public class ZobristTest extends TestCase {
 	 * Test with board.
 	 */
 	public void testWithBoardBasic() {
+<<<<<<< HEAD:jgogears/ZobristTest.java
 		Board board = Board.newBoard();
+=======
+		BoardI board = BoardI.newBoard();
+		if (Statics.DEFAULT_ZOBRIST)
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/ZobristTest.java
 			assertTrue(board.getZobrist() != null);
 	}
 
@@ -184,6 +216,7 @@ public class ZobristTest extends TestCase {
 	 * Test with board order.
 	 */
 	public void testWithBoardOrder() {
+<<<<<<< HEAD:jgogears/ZobristTest.java
 		Board board = Board.newBoard();
 		Board board2 = board.newBoard(new Move((short) 1, (short) 1,
 				Statics.VERTEX_BLACK));
@@ -192,10 +225,21 @@ public class ZobristTest extends TestCase {
 		Board board4 = board.newBoard(new Move((short) 2, (short) 2,
 				Statics.VERTEX_WHITE));
 		Board board5 = board4.newBoard(new Move((short) 1, (short) 1,
+=======
+		BoardI board = BoardI.newBoard(true);
+		BoardI board2 = board.newBoard(new Move((short) 1, (short) 1,
+				Statics.VERTEX_BLACK));
+		BoardI board3 = board2.newBoard(new Move((short) 2, (short) 2,
+				Statics.VERTEX_WHITE));
+		BoardI board4 = board.newBoard(new Move((short) 2, (short) 2,
+				Statics.VERTEX_WHITE));
+		BoardI board5 = board4.newBoard(new Move((short) 1, (short) 1,
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/ZobristTest.java
 				Statics.VERTEX_BLACK));
 		assertTrue(board3.getZobrist().equals(board5.getZobrist()));
 		assertFalse(board2.getZobrist().equals(board4.getZobrist()));
 
+<<<<<<< HEAD:jgogears/ZobristTest.java
 		Board board6 = board.newBoard(new Move((short) 2, (short) 2,
 				Statics.VERTEX_BLACK));
 		Board board7 = board6.newBoard(new Move((short) 1, (short) 1,
@@ -207,6 +251,16 @@ public class ZobristTest extends TestCase {
 		assertTrue(board5.getZobrist().equals(board7.getZobrist()));
 
 		Board board8 = board.newBoard(new Move((short) 1, (short) 1,
+=======
+		BoardI board6 = board.newBoard(new Move((short) 2, (short) 2,
+				Statics.VERTEX_BLACK));
+		BoardI board7 = board6.newBoard(new Move((short) 1, (short) 1,
+				Statics.VERTEX_WHITE));
+
+		assertTrue(board5.getZobrist().equals(board7.getZobrist()));
+
+		BoardI board8 = board.newBoard(new Move((short) 1, (short) 1,
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/ZobristTest.java
 				Statics.VERTEX_WHITE));
 		assertTrue(board8.getZobrist().equals(board2.getZobrist()));
 	}
@@ -215,10 +269,17 @@ public class ZobristTest extends TestCase {
 	 * Test with board remove.
 	 */
 	public void testWithBoardRemove() {
+<<<<<<< HEAD:jgogears/ZobristTest.java
 		Board board = Board.newBoard();
 		Board board2 = board.newBoard(new Move((short) 1, (short) 1,
 				Statics.VERTEX_BLACK));
 		Board board3 = board2.newBoard(new Move((short) 1, (short) 1,
+=======
+		BoardI board = BoardI.newBoard(true);
+		BoardI board2 = board.newBoard(new Move((short) 1, (short) 1,
+				Statics.VERTEX_BLACK));
+		BoardI board3 = board2.newBoard(new Move((short) 1, (short) 1,
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/ZobristTest.java
 				Statics.VERTEX_EMPTY));
 		assertFalse(board2.getZobrist().equals(board3.getZobrist()));
 		assertFalse(board3.getZobrist().equals(board2.getZobrist()));
@@ -240,4 +301,42 @@ public class ZobristTest extends TestCase {
 		}
 
 	}
+<<<<<<< HEAD:jgogears/ZobristTest.java
+=======
+
+	/**
+	 * Test with board.
+	 */
+	public void testWithFastBoard() {
+		BoardI board = new SmallBoard(true);
+		BoardI board2 = board.newBoard(new Move((short) 1, (short) 1,
+				Statics.VERTEX_BLACK));
+		BoardI board3 = board.newBoard(new Move((short) 1, (short) 1,
+				Statics.VERTEX_BLACK));
+
+		assertTrue(board2.getZobrist().equals(board3.getZobrist()));
+		assertTrue(board3.getZobrist().equals(board2.getZobrist()));
+		assertFalse(board.getZobrist().equals(board2.getZobrist()));
+		assertFalse(board2.getZobrist().equals(board.getZobrist()));
+		assertFalse(board.getZobrist().equals(board3.getZobrist()));
+		assertFalse(board3.getZobrist().equals(board.getZobrist()));
+	}
+
+	/**
+	 * Test with board.
+	 */
+	public void testWithFasterBoard() {
+		BoardI board = new SmallerBoard(true);
+		BoardI board2 = board.newBoard(new Move((short) 1, (short) 1,
+				Statics.VERTEX_BLACK));
+		BoardI board3 = board.newBoard(new Move((short) 1, (short) 1,
+				Statics.VERTEX_BLACK));
+		assertTrue(board2.getZobrist().equals(board3.getZobrist()));
+		assertTrue(board3.getZobrist().equals(board2.getZobrist()));
+		assertFalse(board.getZobrist().equals(board2.getZobrist()));
+		assertFalse(board2.getZobrist().equals(board.getZobrist()));
+		assertFalse(board.getZobrist().equals(board3.getZobrist()));
+		assertFalse(board3.getZobrist().equals(board.getZobrist()));
+	}
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/ZobristTest.java
 }

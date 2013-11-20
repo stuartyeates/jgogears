@@ -1,6 +1,10 @@
 package jgogears.gtp;
 
+<<<<<<< HEAD:jgogears/gtp/SkeletonEngine.java
 import jgogears.Board;
+=======
+import jgogears.BoardI;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/gtp/SkeletonEngine.java
 import jgogears.Move;
 
 /**
@@ -67,7 +71,7 @@ public abstract class SkeletonEngine implements GTPInterface {
 	 * @see jgogears.GTPInterface#getListCommands()
 	 */
 	public String[] getListCommands() {
-		// TODO
+		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -194,7 +198,6 @@ public abstract class SkeletonEngine implements GTPInterface {
 	 * @see jgogears.GTPInterface#undo(jgogears.GTPState)
 	 */
 	public boolean undo(GTPState state) {
-		// TODO Auto-generated method stub
 		GTPState newState = new GTPState();
 		newState.byoYomiStones = state.byoYomiStones;
 		newState.byoYomiTime = state.byoYomiTime;
@@ -202,8 +205,6 @@ public abstract class SkeletonEngine implements GTPInterface {
 		newState.boardsize = state.boardsize;
 		newState.mainTime = state.mainTime;
 		newState.board = new Board(newState.boardsize);
-
-		// TODO generate new board
 
 		return false;
 	}

@@ -1,6 +1,11 @@
 package jgogears;
 
+<<<<<<< HEAD
 import jgogears.SGF.auto.ParseException;
+=======
+import jgogears.gtp.Statics;
+import jgogears.sgf.auto.ParseException;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc

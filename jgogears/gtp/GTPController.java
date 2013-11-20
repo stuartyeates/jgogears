@@ -2,6 +2,10 @@ package jgogears.gtp;
 
 import java.io.*;
 
+<<<<<<< HEAD:jgogears/gtp/GTPController.java
+=======
+import jgogears.RandomEngine;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/gtp/GTPController.java
 
 // TODO: Auto-generated Javadoc
 /**

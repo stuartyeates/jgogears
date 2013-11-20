@@ -8,6 +8,9 @@ import java.util.LinkedList;
 import jgogears.SGF.SGFGameTree;
 import jgogears.gtp.GTPScore;
 
+import jgogears.gtp.GTPScore;
+import jgogears.sgf.SGFGameTree;
+
 /**
  * External representation of a game of go. This is currently very heavily
  * influenced by SGF, it needs to be generalised.
@@ -30,7 +33,11 @@ public final class Game {
 		try {
 
 			return SGFGameTree.loadFromFile(file);
+<<<<<<< HEAD
 		} catch (jgogears.SGF.auto.TokenMgrError e) {
+=======
+		} catch (jgogears.sgf.auto.TokenMgrError e) {
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 			throw new java.io.IOException("Error reading \"" + file + "\" "
 					+ e.getLocalizedMessage());
 		}

@@ -5,7 +5,10 @@ package jgogears.engine;
 
 import jgogears.*;
 import jgogears.gtp.GTPState;
+<<<<<<< HEAD
 import jgogears.gtp.TwoGTP;
+=======
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc

@@ -1,6 +1,10 @@
 package jgogears.gtp;
 
+<<<<<<< HEAD:jgogears/gtp/GTPInterface.java
 import jgogears.Board;
+=======
+import jgogears.BoardI;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/gtp/GTPInterface.java
 import jgogears.Move;
 
 // TODO: Auto-generated Javadoc

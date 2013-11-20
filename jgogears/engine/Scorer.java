@@ -4,6 +4,7 @@
 package jgogears.engine;
 
 import jgogears.*;
+import jgogears.gtp.Statics;
 
 /**
  * Class to calculate scores using a model and a board.
@@ -112,7 +113,11 @@ public class Scorer {
 						}
 						if (DEBUG_BRANCH)
 							System.err.println("Model::getScores following a "
+<<<<<<< HEAD
 									+ Board.colourString(colour)
+=======
+									+ Statics.colourString(colour)
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 									+ " branch, estimate = " + estimate
 									+ ", childP = " + childP + ", childNP = "
 									+ childNP + ", combination = " + childP

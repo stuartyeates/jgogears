@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Stack;
 
+import jgogears.gtp.Statics;
+import jgogears2.Zobrist;
+
 import junit.framework.TestCase;
 
 /**
@@ -109,34 +112,54 @@ public class BoardTest extends TestCase {
 	 * Test colours.
 	 */
 	public void testColours() {
+<<<<<<< HEAD
 //		assertTrue(Statics.VERTEX_BLACK == Statics.VERTEX_BLACK);
+=======
+//		assertTrue(BoardI.VERTEX_BLACK == BoardI.VERTEX_BLACK);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		assertTrue(Statics.VERTEX_BLACK != Statics.VERTEX_WHITE);
 		assertTrue(Statics.VERTEX_BLACK != Statics.VERTEX_EMPTY);
 		assertTrue(Statics.VERTEX_BLACK != Statics.VERTEX_KO);
 		assertTrue(Statics.VERTEX_BLACK != Statics.VERTEX_OFF_BOARD);
 
 		assertTrue(Statics.VERTEX_WHITE != Statics.VERTEX_BLACK);
+<<<<<<< HEAD
 //		assertTrue(Statics.VERTEX_WHITE == Statics.VERTEX_WHITE);
+=======
+//		assertTrue(BoardI.VERTEX_WHITE == BoardI.VERTEX_WHITE);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		assertTrue(Statics.VERTEX_WHITE != Statics.VERTEX_EMPTY);
 		assertTrue(Statics.VERTEX_WHITE != Statics.VERTEX_KO);
 		assertTrue(Statics.VERTEX_WHITE != Statics.VERTEX_OFF_BOARD);
 
 		assertTrue(Statics.VERTEX_EMPTY != Statics.VERTEX_BLACK);
 		assertTrue(Statics.VERTEX_EMPTY != Statics.VERTEX_WHITE);
+<<<<<<< HEAD
 //		assertTrue(Statics.VERTEX_EMPTY == Statics.VERTEX_EMPTY);
+=======
+//		assertTrue(BoardI.VERTEX_EMPTY == BoardI.VERTEX_EMPTY);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		assertTrue(Statics.VERTEX_EMPTY != Statics.VERTEX_OFF_BOARD);
 
 		assertTrue(Statics.VERTEX_KO != Statics.VERTEX_BLACK);
 		assertTrue(Statics.VERTEX_KO != Statics.VERTEX_WHITE);
 		assertTrue(Statics.VERTEX_KO != Statics.VERTEX_EMPTY);
+<<<<<<< HEAD
 //		assertTrue(Statics.VERTEX_KO == Statics.VERTEX_KO);
+=======
+//		assertTrue(BoardI.VERTEX_KO == BoardI.VERTEX_KO);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		assertTrue(Statics.VERTEX_KO != Statics.VERTEX_OFF_BOARD);
 
 		assertTrue(Statics.VERTEX_OFF_BOARD != Statics.VERTEX_BLACK);
 		assertTrue(Statics.VERTEX_OFF_BOARD != Statics.VERTEX_WHITE);
 		assertTrue(Statics.VERTEX_OFF_BOARD != Statics.VERTEX_EMPTY);
 		assertTrue(Statics.VERTEX_OFF_BOARD != Statics.VERTEX_KO);
+<<<<<<< HEAD
 //		assertTrue(Statics.VERTEX_OFF_BOARD == Statics.VERTEX_OFF_BOARD);
+=======
+//		assertTrue(BoardI.VERTEX_OFF_BOARD == BoardI.VERTEX_OFF_BOARD);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 
 	}
 
@@ -148,6 +171,7 @@ public class BoardTest extends TestCase {
 			for (int j = 0; j < Zobrist.MAX_BOARD_SIZE; j++)
 				for (int k = 0; k < Zobrist.MAX_COLOUR; k++) {
 
+<<<<<<< HEAD
 					Board board1 = new Board();
 					Board board2 = board1.newBoard(new Move((short) 1,
 							(short) 1, Statics.VERTEX_BLACK));
@@ -155,6 +179,15 @@ public class BoardTest extends TestCase {
 							(short) 1, Statics.VERTEX_BLACK));
 					// Board board4 = board2.newBoard(new Move((short) 1,
 					// (short) 1, Statics.VERTEX_BLACK));
+=======
+					BoardI board1 = new Board();
+					BoardI board2 = board1.newBoard(new Move((short) 1,
+							(short) 1, Statics.VERTEX_BLACK));
+					BoardI board3 = board1.newBoard(new Move((short) 1,
+							(short) 1, Statics.VERTEX_BLACK));
+					// BoardI board4 = board2.newBoard(new Move((short) 1,
+					// (short) 1, BoardI.VERTEX_BLACK));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 
 					assertTrue(board1.equals(board1));
 					assertTrue(board2.equals(board2));
@@ -181,6 +214,7 @@ public class BoardTest extends TestCase {
 			for (int j = 0; j < Zobrist.MAX_BOARD_SIZE; j++)
 				for (int k = 0; k < Zobrist.MAX_COLOUR; k++) {
 
+<<<<<<< HEAD
 					Board board1 = new Board();
 					Board board2 = board1.newBoard(new Move((short) 1,
 							(short) 1, Statics.VERTEX_BLACK));
@@ -188,6 +222,15 @@ public class BoardTest extends TestCase {
 							(short) 1, Statics.VERTEX_BLACK));
 					// Board board4 = board2.newBoard(new Move((short) 1,
 					// (short) 1, Statics.VERTEX_BLACK));
+=======
+					BoardI board1 = new Board(true);
+					BoardI board2 = board1.newBoard(new Move((short) 1,
+							(short) 1, Statics.VERTEX_BLACK));
+					BoardI board3 = board1.newBoard(new Move((short) 1,
+							(short) 1, Statics.VERTEX_BLACK));
+					// BoardI board4 = board2.newBoard(new Move((short) 1,
+					// (short) 1, BoardI.VERTEX_BLACK));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 
 					assertTrue(board1.equals(board1));
 					assertTrue(board2.equals(board2));
@@ -214,6 +257,7 @@ public class BoardTest extends TestCase {
 			for (int j = 0; j < Zobrist.MAX_BOARD_SIZE; j++)
 				for (int k = 0; k < Zobrist.MAX_COLOUR; k++) {
 
+<<<<<<< HEAD
 					Board board1 = new Board();
 					Board board2 = board1.newBoard(new Move((short) 1,
 							(short) 1, Statics.VERTEX_BLACK));
@@ -221,6 +265,15 @@ public class BoardTest extends TestCase {
 							(short) 1, Statics.VERTEX_BLACK));
 					// Board board4 = board2.newBoard(new Move((short) 1,
 					// (short) 1, Statics.VERTEX_BLACK));
+=======
+					BoardI board1 = new Board(false);
+					BoardI board2 = board1.newBoard(new Move((short) 1,
+							(short) 1, Statics.VERTEX_BLACK));
+					BoardI board3 = board1.newBoard(new Move((short) 1,
+							(short) 1, Statics.VERTEX_BLACK));
+					// BoardI board4 = board2.newBoard(new Move((short) 1,
+					// (short) 1, BoardI.VERTEX_BLACK));
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 
 					assertTrue(board1.equals(board1));
 					assertTrue(board2.equals(board2));

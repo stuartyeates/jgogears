@@ -6,6 +6,8 @@ package jgogears;
 import java.util.Iterator;
 import java.util.TreeSet;
 
+import jgogears.gtp.Statics;
+
 /**
  * Really simple and fast ruleset
  * 
@@ -63,9 +65,14 @@ public class NoKoRuleSet extends RuleSet {
 	 *            the column
 	 * @return the tree set< vertex>
 	 */
+<<<<<<< HEAD
 	public TreeSet<Vertex> captureshelper(Board board, Move move, int row,
+=======
+	@SuppressWarnings("unused")
+	public TreeSet<Vertex> captureshelper(BoardI board, Move move, int row,
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 			int column) {
-		if (DEBUG && EMPTY.size() != 0)
+		if (DEBUG && (EMPTY.size() != 0))
 			throw new Error("EMPTY not empty");
 		short colour = move.getColour();
 		short acolour = board.getColour(row, column);
@@ -110,7 +117,11 @@ public class NoKoRuleSet extends RuleSet {
 	 * @see jgogears.RuleSet#getLiberties(short, short, jgogears.Board)
 	 */
 	@Override
+<<<<<<< HEAD
 	public TreeSet<Vertex> getLiberties(short rowb, short columnb, Board board) {
+=======
+	public TreeSet<Vertex> getLiberties(short rowb, short columnb, BoardI board) {
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 		if (board.getColour(rowb, columnb) == Statics.VERTEX_EMPTY
 				|| board.getColour(rowb, columnb) == Statics.VERTEX_KO
 				|| board.getColour(rowb, columnb) == Statics.VERTEX_OFF_BOARD) {

@@ -1,5 +1,6 @@
 package jgogears.gtp;
 
+import jgogears.gtp.GTPConstants;
 import junit.framework.TestCase;
 
 // TODO: Auto-generated Javadoc
@@ -16,8 +17,8 @@ public class GnuGoEngineTest extends TestCase {
 	 * Test a.
 	 */
 	public void testA() {
-		if (true)
-			return;
+//		if (true)
+//			return;
 		try {
 			GnuGoEngine engine = new GnuGoEngine();
 			engine.initialise();

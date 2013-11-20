@@ -2,7 +2,11 @@ package jgogears.gtp;
 
 import java.util.TreeSet;
 
+<<<<<<< HEAD:jgogears/gtp/GTPInterfaceRaw.java
 import jgogears.Board;
+=======
+import jgogears.BoardI;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears/gtp/GTPInterfaceRaw.java
 import jgogears.Move;
 import jgogears.Vertex;
 

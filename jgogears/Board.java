@@ -1,8 +1,12 @@
 package jgogears;
 
+<<<<<<< HEAD
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.TreeSet;
+=======
+import jgogears.gtp.Statics;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 
 /**
  * GoBoard represents the state of a Go board at a particular point in time. It
@@ -357,6 +361,7 @@ public class Board {
 	 *            the vertex we're getting the colour of
 	 * @return the colour
 	 */
+<<<<<<< HEAD
 	public short getColour(Vertex vertex) {
 		return this.getColour(vertex.getRow(), vertex.getColumn());
 	}
@@ -424,6 +429,13 @@ public class Board {
 	 */
 	public static final Board newBoard() {
 		return new Board();
+=======
+	protected void init() {
+		this.board = new short[this.size][this.size];
+		for (int i = 0; i < this.size; i++)
+			for (int j = 0; j < this.size; j++)
+				this.board[i][j] = Statics.VERTEX_EMPTY;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032
 	}
 
 	/**

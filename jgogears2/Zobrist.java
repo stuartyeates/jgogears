@@ -1,15 +1,33 @@
-package jgogears;
+package jgogears2;
 
 import java.util.BitSet;
+<<<<<<< HEAD:jgogears/Zobrist.java
+=======
+
+import jgogears.Random;
+import jgogears.gtp.Statics;
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/Zobrist.java
 
 /**
  * Class representing a Zobrist hash, a binary hash of the current board state.
+ * 
+ * All of the magic is in some static initialisation, the constructor and compareTo()
+ * 
  * TODO add proper references
  * 
  * @author syeates@gmail.com
+<<<<<<< HEAD:jgogears/Zobrist.java
+=======
+ * @see ZorbistTest
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/Zobrist.java
  */
 
 public class Zobrist extends BitSet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5031699980490524586L;
 
 	/** The Constant MAX_BOARD_SIZE. */
 	public static final short MAX_BOARD_SIZE = 25;
@@ -64,12 +82,23 @@ public class Zobrist extends BitSet {
 	 */
 	public Zobrist(Zobrist old, int row, int column, int colour) {
 		init();
+<<<<<<< HEAD:jgogears/Zobrist.java
 		if (row > MAX_BOARD_SIZE || row < 0)
 			throw new Error("" + row);
 		if (column > MAX_BOARD_SIZE || column < 0)
 			throw new Error("" + column);
 		if (colour > Statics.VERTEX_MAX || colour < Statics.VERTEX_MIN)
 			throw new Error("" + colour);
+=======
+		if (row >= MAX_BOARD_SIZE || row < 0)
+			throw new Error("Bad row size: " + row);
+		if (column >= MAX_BOARD_SIZE || column < 0)
+			throw new Error("BAd column size: " + column);
+		if (colour >= Statics.VERTEX_MAX || colour < Statics.VERTEX_MIN)
+			throw new Error("Bad colour 1: " + colour);
+		if (colour >= MAX_COLOUR)
+			throw new Error("Bad colour 2:" + colour);
+>>>>>>> 1edbc895dc439fd9b3244e2e6f0eb32186127032:jgogears2/Zobrist.java
 		this.clear();
 		this.xor(old);
 		this.xor(grid[row][column][colour]);
@@ -83,11 +112,11 @@ public class Zobrist extends BitSet {
 	 * @return 0 if equal, otherwise 1/-1
 	 */
 	public int compareTo(Object o) {
+		if (o == null)
+			throw new Error();
 		if (o.getClass() != this.getClass())
 			return this.hashCode() > o.hashCode() ? 1 : -1;
 		Zobrist other = (Zobrist) o;
-		if (other == null)
-			throw new Error();
 		for (int i = 0; i < this.size(); i++)
 			if (this.get(i) != other.get(i))
 				return this.get(i) == true ? 1 : -1;
